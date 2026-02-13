@@ -1,11 +1,11 @@
 # Backend Django
-Django>=5.0,<6.0
+Django>=4.2,<5.0
 djangorestframework>=3.14.0
 django-cors-headers>=4.3.0
 django-filter>=23.5
 
 # Base de données
-# mysqlclient>=2.2.0  # Décommenter pour MySQL
+pymysql>=1.1.0
 
 # Utilitaires
 Pillow>=10.0.0

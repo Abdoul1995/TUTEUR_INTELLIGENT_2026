@@ -62,9 +62,16 @@ export function Dashboard() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Welcome Header */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900">
-            Bonjour, {user?.first_name || user?.username} ! 👋
-          </h1>
+          <div className="flex items-center space-x-4">
+            <h1 className="text-3xl font-bold text-gray-900">
+              Bonjour, {user?.first_name || user?.username} ! 👋
+            </h1>
+            {user?.level && (
+              <span className="px-3 py-1 bg-primary-100 text-primary-800 text-sm font-medium rounded-full uppercase">
+                {user.level}
+              </span>
+            )}
+          </div>
           <p className="text-gray-600 mt-1">
             Voici votre progression aujourd'hui
           </p>

@@ -1,0 +1,1413 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2026-02-10T01:53:58.272Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "4",
+    "object_repr": "subject and verbs (Moyen)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2026-02-10T01:57:34.017Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "4",
+    "object_repr": "subject and verbs (Moyen)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Indices\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2026-02-10T02:04:21.000Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "4",
+    "object_repr": "subject and verbs (Moyen)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Contenu (JSON)\", \"R\\u00e9ponses correctes\", \"Indices\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2026-02-10T02:05:38.428Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "4",
+    "object_repr": "subject and verbs (Moyen)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"R\\u00e9ponses correctes\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2026-02-13T00:43:22.598Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "5",
+    "object_repr": "Analyse de l'eau : détermination du pH (Moyen)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"R\\u00e9ponses correctes\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2026-02-13T00:52:43.273Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "6",
+    "object_repr": "Conjugaison des verbes au présent (Moyen)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"R\\u00e9ponses correctes\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2026-02-13T00:58:02.766Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "6",
+    "object_repr": "Science Physique",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2026-02-13T01:06:56.899Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "9",
+    "object_repr": "Addition de nombres à deux chiffres (Moyen)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"R\\u00e9ponses correctes\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2026-02-13T01:08:42.283Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "9",
+    "object_repr": "Addition de nombres à deux chiffres (Moyen)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "6j838yvssw2pnlqffrhsoc0gsaww5o1f",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyGyVAoevfcbyMLu2qqBpLQn47_bJj3oZQ7z3sxbRVyXMa6N5ziRuiqjTr9dwvzksgN6YLlXnWtZ5inpXdEHbXqoxK_b4f4djNjGbW3F22S2DHBxHAR6y9IRswiioxQgn53pSQQ68NxRIoeQrZA1GXxQny8AkDjU:1vqgoQ:V8Ja_egXQHXQ_vqUOM8R_il6TgUiIShkGIkX2j3OM58",
+    "expire_date": "2026-02-27T00:13:34.007Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "6vnyt78xa391mtx65duu9h7pq2cepjr0",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyGyVAoevfcbyMLu2qqBpLQn47_bJj3oZQ7z3sxbRVyXMa6N5ziRuiqjTr9dwvzksgN6YLlXnWtZ5inpXdEHbXqoxK_b4f4djNjGbW3F22S2DHBxHAR6y9IRswiioxQgn53pSQQ68NxRIoeQrZA1GXxQny8AkDjU:1vqh5H:Na0bk6zrhXW2XF4NY8H-qNmE2L0Umat1n0HkmgUZiDQ",
+    "expire_date": "2026-02-27T00:30:59.142Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "axewfrz1sbqdulsw5v7jlz5pzm8d2yit",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2pAy0AAu3XsGMsOMUjWQlHZlvLtt0oVu_3vvv1XCdSlp7TKnidVZGXX63QjzU-oO-IH13nRudZkn0ruiD9r1tbG8Lof7d1Cwl60GlwMPViyigJHoY2Cm4DCwoPUkwWMODiKNvJEIBNkaIh4HuAFY9fkCAPk4jg:1vpcYH:5bawKZ_pQvogYUnh403m8H_nk7OQXCHFLwR1vHq7ag8",
+    "expire_date": "2026-02-24T01:28:29.151Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "cmdh5nncqdb29fkguhqtaorpkn61l5l0",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyGyVAoevfcbyMLu2qqBpLQn47_bJj3oZQ7z3sxbRVyXMa6N5ziRuiqjTr9dwvzksgN6YLlXnWtZ5inpXdEHbXqoxK_b4f4djNjGbW3F22S2DHBxHAR6y9IRswiioxQgn53pSQQ68NxRIoeQrZA1GXxQny8AkDjU:1vqgki:OSflGsiDBHr1NOeiZm_sVEQT944D6T6CTIt5XGBTsKc",
+    "expire_date": "2026-02-27T00:09:44.028Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "kkbxyqfuy1kn9d91w1058uw74hnct21c",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyGyVAoevfcbyMLu2qqBpLQn47_bJj3oZQ7z3sxbRVyXMa6N5ziRuiqjTr9dwvzksgN6YLlXnWtZ5inpXdEHbXqoxK_b4f4djNjGbW3F22S2DHBxHAR6y9IRswiioxQgn53pSQQ68NxRIoeQrZA1GXxQny8AkDjU:1vqglq:6huRatvCRMMq2ao10mETvktznXO6iDh4DnVBgD6LtoY",
+    "expire_date": "2026-02-27T00:10:54.976Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "qbl6bum2cg8dd4ls2g794u3jbwbkpth4",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2pAy0AAu3XsGMsOMUjWQlHZlvLtt0oVu_3vvv1XCdSlp7TKnidVZGXX63QjzU-oO-IH13nRudZkn0ruiD9r1tbG8Lof7d1Cwl60GlwMPViyigJHoY2Cm4DCwoPUkwWMODiKNvJEIBNkaIh4HuAFY9fkCAPk4jg:1vpcaA:dHj-tyuBq0hKf62OViQcP2_nW9rillAPXZARSZqIni4",
+    "expire_date": "2026-02-24T01:30:26.734Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ujf4c74bnqkyn9s27s681am5vlusthvg",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2pAy0AAu3XsGMsOMUjWQlHZlvLtt0oVu_3vvv1XCdSlp7TKnidVZGXX63QjzU-oO-IH13nRudZkn0ruiD9r1tbG8Lof7d1Cwl60GlwMPViyigJHoY2Cm4DCwoPUkwWMODiKNvJEIBNkaIh4HuAFY9fkCAPk4jg:1vpd14:nAV_B5PQPM27owH6vrNRvHM-o6llkJM64p6ml9_hajo",
+    "expire_date": "2026-02-24T01:58:14.798Z"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "7458e9da5a02e729264936c4af3b46ed847ece3d",
+  "fields": {
+    "user": 1,
+    "created": "2026-02-13T00:13:33.965Z"
+  }
+},
+{
+  "model": "users.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$1000000$beaznWgdvp7JR3aCA9Ngz4$3Og/8km7hj5h8w6gCcWV3Hre4mbNnEJNq8TTpZUr1Sk=",
+    "last_login": "2026-02-13T00:30:59.133Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "Admin",
+    "last_name": "System",
+    "email": "admin@tuteur.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-01-28T23:09:44.887Z",
+    "user_type": "admin",
+    "level": null,
+    "date_of_birth": null,
+    "phone": "",
+    "avatar": "",
+    "bio": "",
+    "is_active_student": true,
+    "created_at": "2026-01-28T23:09:45.708Z",
+    "updated_at": "2026-01-28T23:09:45.708Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "lessons.subject",
+  "pk": 1,
+  "fields": {
+    "name": "Mathématiques",
+    "slug": "mathematiques",
+    "description": "Apprenez les mathématiques de manière interactive",
+    "icon": "calculator",
+    "color": "#3B82F6",
+    "order": 0,
+    "is_active": true
+  }
+},
+{
+  "model": "lessons.subject",
+  "pk": 2,
+  "fields": {
+    "name": "Français",
+    "slug": "francais",
+    "description": "Maîtrisez la langue française",
+    "icon": "book",
+    "color": "#EF4444",
+    "order": 0,
+    "is_active": true
+  }
+},
+{
+  "model": "lessons.subject",
+  "pk": 3,
+  "fields": {
+    "name": "Sciences",
+    "slug": "sciences",
+    "description": "Découvrez les sciences naturelles",
+    "icon": "flask",
+    "color": "#10B981",
+    "order": 0,
+    "is_active": true
+  }
+},
+{
+  "model": "lessons.subject",
+  "pk": 4,
+  "fields": {
+    "name": "Histoire-Géographie",
+    "slug": "histoire-geographie",
+    "description": "Explorez le monde et son histoire",
+    "icon": "globe",
+    "color": "#F59E0B",
+    "order": 0,
+    "is_active": true
+  }
+},
+{
+  "model": "lessons.subject",
+  "pk": 5,
+  "fields": {
+    "name": "Anglais",
+    "slug": "anglais",
+    "description": "Apprenez l'anglais facilement",
+    "icon": "message-circle",
+    "color": "#8B5CF6",
+    "order": 0,
+    "is_active": true
+  }
+},
+{
+  "model": "lessons.subject",
+  "pk": 6,
+  "fields": {
+    "name": "Science Physique",
+    "slug": "science-physique",
+    "description": "la science physique encore appelee physique chimie ou meme PC",
+    "icon": "",
+    "color": "#3B82F6",
+    "order": 0,
+    "is_active": true
+  }
+},
+{
+  "model": "lessons.chapter",
+  "pk": 1,
+  "fields": {
+    "subject": 1,
+    "title": "Nombres et calculs",
+    "slug": "nombres-calculs",
+    "description": "",
+    "order": 0,
+    "is_active": true,
+    "created_at": "2026-01-28T23:26:31.331Z",
+    "updated_at": "2026-01-28T23:26:31.331Z"
+  }
+},
+{
+  "model": "lessons.chapter",
+  "pk": 2,
+  "fields": {
+    "subject": 1,
+    "title": "Géométrie",
+    "slug": "geometrie",
+    "description": "",
+    "order": 1,
+    "is_active": true,
+    "created_at": "2026-01-28T23:26:31.380Z",
+    "updated_at": "2026-01-28T23:26:31.380Z"
+  }
+},
+{
+  "model": "lessons.chapter",
+  "pk": 3,
+  "fields": {
+    "subject": 1,
+    "title": "Mesures",
+    "slug": "mesures",
+    "description": "",
+    "order": 2,
+    "is_active": true,
+    "created_at": "2026-01-28T23:26:31.419Z",
+    "updated_at": "2026-01-28T23:26:31.419Z"
+  }
+},
+{
+  "model": "lessons.chapter",
+  "pk": 4,
+  "fields": {
+    "subject": 1,
+    "title": "Proportionnalité",
+    "slug": "proportionnalite",
+    "description": "",
+    "order": 3,
+    "is_active": true,
+    "created_at": "2026-01-28T23:26:31.444Z",
+    "updated_at": "2026-01-28T23:26:31.444Z"
+  }
+},
+{
+  "model": "lessons.chapter",
+  "pk": 5,
+  "fields": {
+    "subject": 2,
+    "title": "Grammaire",
+    "slug": "grammaire",
+    "description": "",
+    "order": 0,
+    "is_active": true,
+    "created_at": "2026-01-28T23:26:31.479Z",
+    "updated_at": "2026-01-28T23:26:31.479Z"
+  }
+},
+{
+  "model": "lessons.chapter",
+  "pk": 6,
+  "fields": {
+    "subject": 2,
+    "title": "Conjugaison",
+    "slug": "conjugaison",
+    "description": "",
+    "order": 1,
+    "is_active": true,
+    "created_at": "2026-01-28T23:26:31.512Z",
+    "updated_at": "2026-01-28T23:26:31.512Z"
+  }
+},
+{
+  "model": "lessons.chapter",
+  "pk": 7,
+  "fields": {
+    "subject": 2,
+    "title": "Orthographe",
+    "slug": "orthographe",
+    "description": "",
+    "order": 2,
+    "is_active": true,
+    "created_at": "2026-01-28T23:26:31.542Z",
+    "updated_at": "2026-01-28T23:26:31.542Z"
+  }
+},
+{
+  "model": "lessons.chapter",
+  "pk": 8,
+  "fields": {
+    "subject": 2,
+    "title": "Vocabulaire",
+    "slug": "vocabulaire",
+    "description": "",
+    "order": 3,
+    "is_active": true,
+    "created_at": "2026-01-28T23:26:31.568Z",
+    "updated_at": "2026-01-28T23:26:31.568Z"
+  }
+},
+{
+  "model": "lessons.chapter",
+  "pk": 9,
+  "fields": {
+    "subject": 3,
+    "title": "La matière",
+    "slug": "la-matiere",
+    "description": "",
+    "order": 0,
+    "is_active": true,
+    "created_at": "2026-01-28T23:26:31.600Z",
+    "updated_at": "2026-01-28T23:26:31.600Z"
+  }
+},
+{
+  "model": "lessons.chapter",
+  "pk": 10,
+  "fields": {
+    "subject": 3,
+    "title": "Les vivants",
+    "slug": "les-vivants",
+    "description": "",
+    "order": 1,
+    "is_active": true,
+    "created_at": "2026-01-28T23:26:31.626Z",
+    "updated_at": "2026-01-28T23:26:31.626Z"
+  }
+},
+{
+  "model": "lessons.chapter",
+  "pk": 11,
+  "fields": {
+    "subject": 3,
+    "title": "L'Univers",
+    "slug": "l-univers",
+    "description": "",
+    "order": 2,
+    "is_active": true,
+    "created_at": "2026-01-28T23:26:31.657Z",
+    "updated_at": "2026-01-28T23:26:31.657Z"
+  }
+},
+{
+  "model": "lessons.chapter",
+  "pk": 12,
+  "fields": {
+    "subject": 3,
+    "title": "L'énergie",
+    "slug": "l-energie",
+    "description": "",
+    "order": 3,
+    "is_active": true,
+    "created_at": "2026-01-28T23:26:31.687Z",
+    "updated_at": "2026-01-28T23:26:31.687Z"
+  }
+},
+{
+  "model": "lessons.lesson",
+  "pk": 1,
+  "fields": {
+    "chapter": 1,
+    "title": "Les nombres entiers",
+    "slug": "nombres-entiers",
+    "content": "<h2>Les nombres entiers</h2><p>Les nombres entiers sont...</p>",
+    "summary": "Apprenez à manipuler les nombres entiers",
+    "level": "cm1",
+    "duration_minutes": 20,
+    "order": 0,
+    "is_official": true,
+    "is_active": true,
+    "image": "",
+    "video_url": "",
+    "author": null,
+    "created_at": "2026-01-28T23:26:31.733Z",
+    "updated_at": "2026-01-28T23:26:31.733Z"
+  }
+},
+{
+  "model": "lessons.lesson",
+  "pk": 2,
+  "fields": {
+    "chapter": 1,
+    "title": "Les fractions",
+    "slug": "fractions",
+    "content": "<h2>Les fractions</h2><p>Une fraction représente...</p>",
+    "summary": "Comprendre et utiliser les fractions",
+    "level": "cm2",
+    "duration_minutes": 25,
+    "order": 1,
+    "is_official": true,
+    "is_active": true,
+    "image": "",
+    "video_url": "",
+    "author": null,
+    "created_at": "2026-01-28T23:26:31.759Z",
+    "updated_at": "2026-01-28T23:26:31.759Z"
+  }
+},
+{
+  "model": "lessons.lesson",
+  "pk": 3,
+  "fields": {
+    "chapter": 2,
+    "title": "Les figures planes",
+    "slug": "figures-planes",
+    "content": "<h2>Les figures planes</h2><p>Les figures planes sont...</p>",
+    "summary": "Découvrez les différentes figures géométriques",
+    "level": "ce2",
+    "duration_minutes": 15,
+    "order": 0,
+    "is_official": true,
+    "is_active": true,
+    "image": "",
+    "video_url": "",
+    "author": null,
+    "created_at": "2026-01-28T23:26:31.783Z",
+    "updated_at": "2026-01-28T23:26:31.783Z"
+  }
+},
+{
+  "model": "lessons.lesson",
+  "pk": 4,
+  "fields": {
+    "chapter": 5,
+    "title": "Le sujet et le verbe",
+    "slug": "sujet-verbe",
+    "content": "<h2>Le sujet et le verbe</h2><p>Dans une phrase...</p>",
+    "summary": "Identifiez le sujet et le verbe dans une phrase",
+    "level": "ce1",
+    "duration_minutes": 15,
+    "order": 0,
+    "is_official": true,
+    "is_active": true,
+    "image": "",
+    "video_url": "",
+    "author": null,
+    "created_at": "2026-01-28T23:26:31.827Z",
+    "updated_at": "2026-01-28T23:26:31.827Z"
+  }
+},
+{
+  "model": "lessons.lessonview",
+  "pk": 1,
+  "fields": {
+    "lesson": 3,
+    "student": 1,
+    "viewed_at": "2026-02-10T01:33:20.049Z",
+    "completed": true,
+    "completion_percentage": 100
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 1,
+  "fields": {
+    "lesson": null,
+    "subject": 1,
+    "title": "Addition de nombres entiers",
+    "description": "Calculez les additions suivantes",
+    "exercise_type": "qcm",
+    "difficulty": "easy",
+    "level": "ce1",
+    "content": {
+      "question": "Combien font 15 + 27 ?",
+      "options": [
+        "42",
+        "32",
+        "52",
+        "40"
+      ]
+    },
+    "correct_answers": 0,
+    "explanation": "15 + 27 = 42. On additionne les unités (5+7=12) et les dizaines (1+2+1=4).",
+    "hints": [],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "created_at": "2026-01-28T23:26:31.855Z",
+    "updated_at": "2026-01-28T23:26:31.855Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 2,
+  "fields": {
+    "lesson": null,
+    "subject": 1,
+    "title": "Multiplication",
+    "description": "Calculez les multiplications",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "cm1",
+    "content": {
+      "question": "Combien font 12 × 8 ?",
+      "options": [
+        "96",
+        "86",
+        "106",
+        "76"
+      ]
+    },
+    "correct_answers": 0,
+    "explanation": "12 × 8 = 96. On peut calculer (10 × 8) + (2 × 8) = 80 + 16 = 96.",
+    "hints": [],
+    "points": 15,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "created_at": "2026-01-28T23:26:31.885Z",
+    "updated_at": "2026-01-28T23:26:31.885Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 3,
+  "fields": {
+    "lesson": null,
+    "subject": 2,
+    "title": "Le pluriel des noms",
+    "description": "Mettez ces noms au pluriel",
+    "exercise_type": "text",
+    "difficulty": "easy",
+    "level": "ce1",
+    "content": {
+      "question": "Mettez \"cheval\" au pluriel"
+    },
+    "correct_answers": "chevaux",
+    "explanation": "Les noms en -al forment leur pluriel en -aux.",
+    "hints": [],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "created_at": "2026-01-28T23:26:31.918Z",
+    "updated_at": "2026-01-28T23:26:31.918Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 4,
+  "fields": {
+    "lesson": 4,
+    "subject": 5,
+    "title": "subject and verbs",
+    "description": "this exercise will help you to understand how  to conjugate some verbs with some subjects",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "troisieme",
+    "content": {
+      "question": "choose verb and subject",
+      "options": [
+        "who are you ?",
+        "I'm ok",
+        "a man eats some rice ",
+        "Wenderful day"
+      ]
+    },
+    "correct_answers": 2,
+    "explanation": "it is formed by a verb with a subject",
+    "hints": [],
+    "points": 10,
+    "time_limit": 15,
+    "order": 0,
+    "is_active": true,
+    "created_at": "2026-02-10T01:53:58.271Z",
+    "updated_at": "2026-02-10T02:05:38.427Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 5,
+  "fields": {
+    "lesson": null,
+    "subject": 3,
+    "title": "Analyse de l'eau : détermination du pH",
+    "description": "Un échantillon d'eau a été prélevé dans un lac pour déterminer son pH. Le pH est une mesure de l'acidité ou de la basicité de l'eau.",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "quatrieme",
+    "content": {
+      "question": "Quel est l'effet d'un pH élevé sur la vie aquatique ?",
+      "options": [
+        "A : Il favorise la croissance des poissons",
+        "B : Il réduit la quantité d'oxygène dissous",
+        "C : Il modifie la solubilité des minéraux",
+        "D : Il tue les poissons et les plantes"
+      ]
+    },
+    "correct_answers": 2,
+    "explanation": "Un pH élevé signifie que l'eau est basique. Cela peut modifier la solubilité de certains minéraux essentiels pour la vie aquatique, ce qui peut avoir des impacts sur les écosystèmes",
+    "hints": [
+      "Le pH influence la disponibilité des nutriments pour les organismes aquatiques",
+      "Les poissons et les plantes ont des besoins spécifiques en termes de pH pour survivre"
+    ],
+    "points": 15,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "created_at": "2026-02-13T00:40:45.136Z",
+    "updated_at": "2026-02-13T00:43:22.596Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 6,
+  "fields": {
+    "lesson": null,
+    "subject": 2,
+    "title": "Conjugaison des verbes au présent",
+    "description": "Conjuguer correctement les verbes au présent de l'indicatif",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "quatrieme",
+    "content": {
+      "question": "Quelle est la conjugaison correcte du verbe 'finir' à la troisième personne du singulier au présent de l'indicatif ?",
+      "options": [
+        "il finis",
+        "il finit",
+        "il finira",
+        "il finirait"
+      ]
+    },
+    "correct_answers": 2,
+    "explanation": "La conjugaison correcte du verbe 'finir' à la troisième personne du singulier au présent de l'indicatif est 'il finit', car les verbes en -ir prennent la terminaison -it à cette personne.",
+    "hints": [
+      "Rappel des règles de conjugaison des verbes en -ir",
+      "Vérifier les terminaisons des verbes à la troisième personne du singulier"
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "created_at": "2026-02-13T00:44:21.269Z",
+    "updated_at": "2026-02-13T00:52:43.263Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 7,
+  "fields": {
+    "lesson": null,
+    "subject": 3,
+    "title": "La synthèse de l'eau",
+    "description": "Compléter les données manquantes dans l'équation chimique de la synthèse de l'eau",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "troisieme",
+    "content": {
+      "question": "Quels sont les réactifs qui produisent de l'eau lors de la réaction suivante : 2H2 + O2 → ...",
+      "options": [
+        "A) H2O et O2",
+        "B) 2H2O",
+        "C) H2O et H2",
+        "D) O2 et H2"
+      ]
+    },
+    "correct_answers": "B",
+    "explanation": "La synthèse de l'eau est une réaction chimique qui se produit entre l'hydrogène (H2) et l'oxygène (O2) pour former de l'eau (H2O). L'équation chimique équilibrée de cette réaction est : 2H2 + O2 → 2H2O.",
+    "hints": [
+      "Réfléchir aux éléments chimiques présents dans l'eau",
+      "Identifier les réactifs dans une équation chimique",
+      "Comprendre le concept de synthèse chimique"
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "created_at": "2026-02-13T00:53:44.637Z",
+    "updated_at": "2026-02-13T00:53:44.637Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 8,
+  "fields": {
+    "lesson": null,
+    "subject": 1,
+    "title": "Nombres complexes",
+    "description": "Déterminer la forme polaire d'un nombre complexe",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "terminale",
+    "content": {
+      "question": "Quelle est la forme polaire du nombre complexe $z = 3 + 4i$ ?",
+      "options": [
+        "A) $5(\\cos(\\frac{\\pi}{4}) + i\\sin(\\frac{\\pi}{4}))$",
+        "B) $5(\\cos(\\frac{\\pi}{3}) + i\\sin(\\frac{\\pi}{3}))$",
+        "C) $5(\\cos(\\frac{\\pi}{6}) + i\\sin(\\frac{\\pi}{6}))$",
+        "D) $5(\\cos(\\frac{2\\pi}{3}) + i\\sin(\\frac{2\\pi}{3}))$"
+      ]
+    },
+    "correct_answers": "A",
+    "explanation": "La forme polaire d'un nombre complexe $z = a + bi$ est donnée par $z = r(\\cos(\\theta) + i\\sin(\\theta))$, où $r = \\sqrt{a^2 + b^2}$ et $\\theta = \\arctan(\\frac{b}{a})$. Pour $z = 3 + 4i$, nous avons $r = \\sqrt{3^2 + 4^2} = 5$ et $\\theta = \\arctan(\\frac{4}{3}) = \\frac{\\pi}{4}$, donc la forme polaire est $5(\\cos(\\frac{\\pi}{4}) + i\\sin(\\frac{\\pi}{4}))$.",
+    "hints": [
+      "Calculer le module du nombre complexe",
+      "Calculer l'argument du nombre complexe",
+      "Utiliser la formule de la forme polaire"
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "created_at": "2026-02-13T01:00:09.228Z",
+    "updated_at": "2026-02-13T01:00:09.228Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 9,
+  "fields": {
+    "lesson": null,
+    "subject": 1,
+    "title": "Addition de nombres à deux chiffres",
+    "description": "Calculez la somme de deux nombres à deux chiffres",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "ce2",
+    "content": {
+      "question": "Quel est le résultat de 45 + 27 ?",
+      "options": [
+        "62",
+        "67",
+        "72",
+        "75"
+      ]
+    },
+    "correct_answers": 2,
+    "explanation": "Pour additionner 45 et 27, on peut utiliser la méthode de calcul suivante : 40 + 20 = 60, 5 + 7 = 12, puis on additionne 60 et 12 pour obtenir 72.",
+    "hints": [
+      "Utilisez la méthode de calcul par regroupement",
+      "Vérifiez vos calculs étape par étape"
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "created_at": "2026-02-13T01:03:41.523Z",
+    "updated_at": "2026-02-13T01:08:42.281Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 1,
+  "fields": {
+    "exercise": 2,
+    "student": 1,
+    "answer": 0,
+    "is_correct": true,
+    "score": 15,
+    "time_spent": 15,
+    "hints_used": 0,
+    "attempt_number": 1,
+    "created_at": "2026-02-10T01:31:35.952Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 2,
+  "fields": {
+    "exercise": 2,
+    "student": 1,
+    "answer": 1,
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 2,
+    "hints_used": 0,
+    "attempt_number": 2,
+    "created_at": "2026-02-10T01:31:44.004Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 3,
+  "fields": {
+    "exercise": 3,
+    "student": 1,
+    "answer": "chevaux",
+    "is_correct": true,
+    "score": 10,
+    "time_spent": 14,
+    "hints_used": 0,
+    "attempt_number": 1,
+    "created_at": "2026-02-10T01:34:42.731Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 4,
+  "fields": {
+    "exercise": 3,
+    "student": 1,
+    "answer": "chevals",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 6,
+    "hints_used": 0,
+    "attempt_number": 2,
+    "created_at": "2026-02-10T01:34:58.677Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 5,
+  "fields": {
+    "exercise": 3,
+    "student": 1,
+    "answer": "cheveau",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 6,
+    "hints_used": 0,
+    "attempt_number": 3,
+    "created_at": "2026-02-10T01:35:10.883Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 6,
+  "fields": {
+    "exercise": 4,
+    "student": 1,
+    "answer": 2,
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 21,
+    "hints_used": 0,
+    "attempt_number": 1,
+    "created_at": "2026-02-10T02:04:50.955Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 7,
+  "fields": {
+    "exercise": 4,
+    "student": 1,
+    "answer": 3,
+    "is_correct": true,
+    "score": 10,
+    "time_spent": 5,
+    "hints_used": 0,
+    "attempt_number": 2,
+    "created_at": "2026-02-10T02:05:03.109Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 8,
+  "fields": {
+    "exercise": 4,
+    "student": 1,
+    "answer": 2,
+    "is_correct": true,
+    "score": 10,
+    "time_spent": 3,
+    "hints_used": 0,
+    "attempt_number": 3,
+    "created_at": "2026-02-10T02:05:46.519Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 9,
+  "fields": {
+    "exercise": 4,
+    "student": 1,
+    "answer": 2,
+    "is_correct": true,
+    "score": 10,
+    "time_spent": 8,
+    "hints_used": 0,
+    "attempt_number": 4,
+    "created_at": "2026-02-12T23:18:35.607Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 10,
+  "fields": {
+    "exercise": 4,
+    "student": 1,
+    "answer": 3,
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 2,
+    "hints_used": 0,
+    "attempt_number": 5,
+    "created_at": "2026-02-12T23:18:45.158Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 11,
+  "fields": {
+    "exercise": 5,
+    "student": 1,
+    "answer": 1,
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 32,
+    "hints_used": 0,
+    "attempt_number": 1,
+    "created_at": "2026-02-13T00:41:17.735Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 12,
+  "fields": {
+    "exercise": 5,
+    "student": 1,
+    "answer": 2,
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 2,
+    "hints_used": 0,
+    "attempt_number": 2,
+    "created_at": "2026-02-13T00:41:44.189Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 13,
+  "fields": {
+    "exercise": 5,
+    "student": 1,
+    "answer": 3,
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 2,
+    "hints_used": 0,
+    "attempt_number": 3,
+    "created_at": "2026-02-13T00:42:08.699Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 14,
+  "fields": {
+    "exercise": 5,
+    "student": 1,
+    "answer": 1,
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 2,
+    "hints_used": 0,
+    "attempt_number": 4,
+    "created_at": "2026-02-13T00:42:13.695Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 15,
+  "fields": {
+    "exercise": 5,
+    "student": 1,
+    "answer": 0,
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 2,
+    "hints_used": 0,
+    "attempt_number": 5,
+    "created_at": "2026-02-13T00:42:19.602Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 16,
+  "fields": {
+    "exercise": 5,
+    "student": 1,
+    "answer": 2,
+    "is_correct": true,
+    "score": 15,
+    "time_spent": 2,
+    "hints_used": 0,
+    "attempt_number": 6,
+    "created_at": "2026-02-13T00:43:33.945Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 17,
+  "fields": {
+    "exercise": 6,
+    "student": 1,
+    "answer": 1,
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 48,
+    "hints_used": 1,
+    "attempt_number": 1,
+    "created_at": "2026-02-13T00:45:10.105Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 18,
+  "fields": {
+    "exercise": 7,
+    "student": 1,
+    "answer": "D",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 20,
+    "hints_used": 0,
+    "attempt_number": 1,
+    "created_at": "2026-02-13T00:54:05.094Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 19,
+  "fields": {
+    "exercise": 7,
+    "student": 1,
+    "answer": "B",
+    "is_correct": true,
+    "score": 10,
+    "time_spent": 5,
+    "hints_used": 0,
+    "attempt_number": 2,
+    "created_at": "2026-02-13T00:55:02.181Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 20,
+  "fields": {
+    "exercise": 7,
+    "student": 1,
+    "answer": "C",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 16,
+    "hints_used": 1,
+    "attempt_number": 3,
+    "created_at": "2026-02-13T00:58:45.266Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 21,
+  "fields": {
+    "exercise": 7,
+    "student": 1,
+    "answer": "B",
+    "is_correct": true,
+    "score": 10,
+    "time_spent": 2,
+    "hints_used": 0,
+    "attempt_number": 4,
+    "created_at": "2026-02-13T00:59:18.911Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 22,
+  "fields": {
+    "exercise": 8,
+    "student": 1,
+    "answer": "D",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 161,
+    "hints_used": 0,
+    "attempt_number": 1,
+    "created_at": "2026-02-13T01:02:51.194Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 23,
+  "fields": {
+    "exercise": 8,
+    "student": 1,
+    "answer": "A",
+    "is_correct": true,
+    "score": 10,
+    "time_spent": 2,
+    "hints_used": 0,
+    "attempt_number": 2,
+    "created_at": "2026-02-13T01:03:04.179Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 24,
+  "fields": {
+    "exercise": 9,
+    "student": 1,
+    "answer": "C",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 12,
+    "hints_used": 0,
+    "attempt_number": 1,
+    "created_at": "2026-02-13T01:03:54.015Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 25,
+  "fields": {
+    "exercise": 9,
+    "student": 1,
+    "answer": "A",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 4,
+    "hints_used": 0,
+    "attempt_number": 2,
+    "created_at": "2026-02-13T01:06:23.350Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 26,
+  "fields": {
+    "exercise": 9,
+    "student": 1,
+    "answer": "B",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 2,
+    "hints_used": 0,
+    "attempt_number": 3,
+    "created_at": "2026-02-13T01:06:30.920Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 27,
+  "fields": {
+    "exercise": 9,
+    "student": 1,
+    "answer": "D",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 2,
+    "hints_used": 0,
+    "attempt_number": 4,
+    "created_at": "2026-02-13T01:06:36.349Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 28,
+  "fields": {
+    "exercise": 9,
+    "student": 1,
+    "answer": "C",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 24,
+    "hints_used": 1,
+    "attempt_number": 5,
+    "created_at": "2026-02-13T01:07:04.186Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 29,
+  "fields": {
+    "exercise": 9,
+    "student": 1,
+    "answer": "C",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 2,
+    "hints_used": 0,
+    "attempt_number": 6,
+    "created_at": "2026-02-13T01:07:12.106Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 30,
+  "fields": {
+    "exercise": 9,
+    "student": 1,
+    "answer": "C",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 3,
+    "hints_used": 0,
+    "attempt_number": 7,
+    "created_at": "2026-02-13T01:07:19.203Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 31,
+  "fields": {
+    "exercise": 9,
+    "student": 1,
+    "answer": "C",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 2,
+    "hints_used": 0,
+    "attempt_number": 8,
+    "created_at": "2026-02-13T01:07:40.505Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 32,
+  "fields": {
+    "exercise": 9,
+    "student": 1,
+    "answer": "C",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 2,
+    "hints_used": 0,
+    "attempt_number": 9,
+    "created_at": "2026-02-13T01:08:53.500Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 33,
+  "fields": {
+    "exercise": 9,
+    "student": 1,
+    "answer": "C",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 66,
+    "hints_used": 0,
+    "attempt_number": 10,
+    "created_at": "2026-02-13T09:13:30.453Z"
+  }
+},
+{
+  "model": "progress.studentprogress",
+  "pk": 1,
+  "fields": {
+    "student": 1,
+    "total_lessons_viewed": 1,
+    "total_exercises_completed": 5,
+    "total_quizzes_completed": 0,
+    "total_points": 0,
+    "current_streak": 0,
+    "longest_streak": 0,
+    "last_activity": null,
+    "weekly_goal": 5,
+    "created_at": "2026-02-10T01:28:29.273Z",
+    "updated_at": "2026-02-13T00:37:29.465Z"
+  }
+},
+{
+  "model": "progress.achievement",
+  "pk": 1,
+  "fields": {
+    "name": "Première leçon",
+    "description": "Terminez votre première leçon",
+    "achievement_type": "lessons",
+    "icon": "book-open",
+    "color": "#3B82F6",
+    "requirement": 1
+  }
+},
+{
+  "model": "progress.achievement",
+  "pk": 2,
+  "fields": {
+    "name": "Apprenti",
+    "description": "Terminez 10 leçons",
+    "achievement_type": "lessons",
+    "icon": "graduation-cap",
+    "color": "#10B981",
+    "requirement": 10
+  }
+},
+{
+  "model": "progress.achievement",
+  "pk": 3,
+  "fields": {
+    "name": "Premier exercice",
+    "description": "Réussissez votre premier exercice",
+    "achievement_type": "exercises",
+    "icon": "check-circle",
+    "color": "#F59E0B",
+    "requirement": 1
+  }
+},
+{
+  "model": "progress.achievement",
+  "pk": 4,
+  "fields": {
+    "name": "Série de 3 jours",
+    "description": "Connectez-vous 3 jours de suite",
+    "achievement_type": "streak",
+    "icon": "flame",
+    "color": "#EF4444",
+    "requirement": 3
+  }
+},
+{
+  "model": "progress.achievement",
+  "pk": 5,
+  "fields": {
+    "name": "Expert",
+    "description": "Obtenez 1000 points",
+    "achievement_type": "score",
+    "icon": "star",
+    "color": "#8B5CF6",
+    "requirement": 1000
+  }
+}
+]
