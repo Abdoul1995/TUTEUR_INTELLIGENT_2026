@@ -72,8 +72,8 @@ Application de tuteur intelligent accessible à tous - Une solution éducative n
 ### 1. Cloner le projet
 
 ```bash
-git clone https://github.com/votre-repo/tuteur-intelligent.git
-cd tuteur-intelligent
+git clone https://github.com/abdoul1995/TUTEUR_INTELLIGENT_2026.git
+cd TUTEUR_INTELLIGENT_2026
 ```
 
 ### 2. Configuration du Backend
@@ -281,9 +281,8 @@ Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de 
 
 Pour toute question ou suggestion :
 
-- Email : contact@tuteur-intelligent.fr
-- Site web : https://tuteur-intelligent.fr
-- Twitter : [@TuteurIntelligent](https://twitter.com/TuteurIntelligent)
+- Email : salgo397@gmail.com
+- Site web : 
 
 ## 🙏 Remerciements
 
