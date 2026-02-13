@@ -1,0 +1,18 @@
+# Backend Django
+Django>=5.0,<6.0
+djangorestframework>=3.14.0
+django-cors-headers>=4.3.0
+django-filter>=23.5
+
+# Base de données
+# mysqlclient>=2.2.0  # Décommenter pour MySQL
+
+# Utilitaires
+Pillow>=10.0.0
+python-dotenv>=1.0.0
+
+# Serveur de production
+gunicorn>=21.2.0
+
+# AI
+openai>=1.0.0

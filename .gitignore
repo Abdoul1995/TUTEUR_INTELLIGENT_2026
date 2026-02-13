@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
@@ -7,6 +8,18 @@ __pycache__/
 *.so
 
 # Distribution / packaging
+=======
+# Environnement virtuel
+venv/
+env/
+ENV/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+>>>>>>> 27e5663 (integration de l'IA)
 .Python
 build/
 develop-eggs/
@@ -20,6 +33,7 @@ parts/
 sdist/
 var/
 wheels/
+<<<<<<< HEAD
 share/python-wheels/
 *.egg-info/
 .installed.cfg
@@ -56,10 +70,18 @@ cover/
 *.pot
 
 # Django stuff:
+=======
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Django
+>>>>>>> 27e5663 (integration de l'IA)
 *.log
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
+<<<<<<< HEAD
 
 # Flask stuff:
 instance/
@@ -205,3 +227,28 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+=======
+media/
+staticfiles/
+
+# Environnement
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+>>>>>>> 27e5663 (integration de l'IA)
