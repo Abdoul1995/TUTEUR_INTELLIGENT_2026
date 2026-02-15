@@ -79,10 +79,17 @@ class LessonViewSet(viewsets.ReadOnlyModelViewSet):
         if subject:
             queryset = queryset.filter(chapter__subject__slug=subject)
         
-        # Filtrer par niveau
-        level = self.request.query_params.get('level', None)
-        if level:
-            queryset = queryset.filter(level=level)
+        # Filtrer par niveau (paramètre URL)
+        level_param = self.request.query_params.get('level', None)
+        if level_param:
+            queryset = queryset.filter(level=level_param)
+            
+        # Restriction d'accès par niveau de l'élève
+        user = self.request.user
+        if user.is_authenticated and user.user_type == 'student':
+            from users.utils import get_allowed_levels
+            allowed_levels = get_allowed_levels(user.level)
+            queryset = queryset.filter(level__in=allowed_levels)
         
         # Filtrer par recherche
         search = self.request.query_params.get('search', None)

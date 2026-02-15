@@ -45,7 +45,20 @@ export function Register() {
       await register(formData)
       navigate('/dashboard')
     } catch (err: any) {
-      setError(err.response?.data?.error || 'Erreur lors de l\'inscription')
+      console.error('Registration error:', err)
+      if (err.response?.data) {
+        // Handle DRF validation errors (e.g. { username: ['Exists'], password: ['Too short'] })
+        const data = err.response.data
+        if (data.error) {
+          setError(data.error)
+        } else {
+          // Join all error messages
+          const messages = Object.values(data).flat().join(', ')
+          setError(messages || 'Erreur lors de l\'inscription')
+        }
+      } else {
+        setError('Erreur lors de l\'inscription')
+      }
     } finally {
       setIsLoading(false)
     }

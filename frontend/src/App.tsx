@@ -24,12 +24,36 @@ function App() {
           <Route index element={<Home />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
-          <Route path="lessons" element={<Lessons />} />
-          <Route path="lessons/:slug" element={<LessonDetail />} />
-          <Route path="exercises" element={<Exercises />} />
-          <Route path="exercises/:id" element={<ExerciseDetail />} />
-          <Route path="quizzes" element={<Quizzes />} />
-          <Route path="quizzes/:id" element={<QuizDetail />} />
+          <Route path="lessons" element={
+            <ProtectedRoute>
+              <Lessons />
+            </ProtectedRoute>
+          } />
+          <Route path="lessons/:slug" element={
+            <ProtectedRoute>
+              <LessonDetail />
+            </ProtectedRoute>
+          } />
+          <Route path="exercises" element={
+            <ProtectedRoute>
+              <Exercises />
+            </ProtectedRoute>
+          } />
+          <Route path="exercises/:id" element={
+            <ProtectedRoute>
+              <ExerciseDetail />
+            </ProtectedRoute>
+          } />
+          <Route path="quizzes" element={
+            <ProtectedRoute>
+              <Quizzes />
+            </ProtectedRoute>
+          } />
+          <Route path="quizzes/:id" element={
+            <ProtectedRoute>
+              <QuizDetail />
+            </ProtectedRoute>
+          } />
           <Route path="dashboard" element={
             <ProtectedRoute>
               <Dashboard />

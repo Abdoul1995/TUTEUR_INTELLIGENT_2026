@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { MessageCircle, X, Send, Bot, User } from 'lucide-react';
 import { aiService } from '../../services/ai.service';
+import { useAuth } from '../../contexts/AuthContext';
 import clsx from 'clsx';
 
 interface Message {
@@ -9,6 +10,7 @@ interface Message {
 }
 
 export const ChatWidget: React.FC = () => {
+    const { isAuthenticated } = useAuth();
     const [isOpen, setIsOpen] = useState(false);
     const [messages, setMessages] = useState<Message[]>([]);
     const [inputValue, setInputValue] = useState('');
@@ -50,6 +52,8 @@ export const ChatWidget: React.FC = () => {
             setIsLoading(false);
         }
     };
+
+    if (!isAuthenticated) return null;
 
     return (
         <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
