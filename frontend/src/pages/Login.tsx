@@ -157,14 +157,6 @@ export function Login() {
             </p>
           </div>
 
-          {/* Demo Credentials */}
-          <div className="mt-8 p-4 bg-gray-50 rounded-lg">
-            <p className="text-sm text-gray-600 text-center">
-              <strong>Compte démo :</strong><br />
-              Nom d'utilisateur : <code className="bg-gray-200 px-1 rounded">admin</code><br />
-              Mot de passe : <code className="bg-gray-200 px-1 rounded">admin123</code>
-            </p>
-          </div>
         </div>
       </div>
     </div>
