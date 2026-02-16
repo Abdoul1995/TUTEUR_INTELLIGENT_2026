@@ -45,7 +45,7 @@ class AIService:
         except Exception as e:
             return {"error": str(e)}
 
-    def generate_exercise(self, subject, level, topic, difficulty='medium'):
+    def generate_exercise(self, subject, level, topic, difficulty='medium', exercise_type='qcm'):
         """
         Generate a new exercise based on criteria.
         Returns a JSON object compatible with the Exercise model.
@@ -53,15 +53,51 @@ class AIService:
         if not self.client:
             return {"error": "Groq API key not configured."}
 
+        # Define format instructions based on exercise type
+        if exercise_type == 'qcm':
+            format_instructions = (
+                "- type: 'qcm'\n"
+                "- content: Un objet JSON contenant la question et les choix (ex: {question: '...', options: ['A', 'B', 'C', 'D']})\n"
+                "- correct_answers: L'index de la réponse correcte (0, 1, 2 ou 3) OU la lettre ('A')\n"
+            )
+        else:  # classic
+            format_instructions = (
+                "- type: 'classic'\n"
+                "- content: Un objet JSON contenant 'text' (énoncé de l'exercice) et 'questions' (une liste de questions)\n"
+                "- correct_answers: Une liste de réponses correspondant aux questions ou un texte explicatif complet\n"
+            )
+
+        # Language instruction based on subject
+        language_instruction = ""
+        subject_lower = subject.lower()
+        if "anglais" in subject_lower or "english" in subject_lower:
+            language_instruction = "IMPORTANT: Le contenu de l'exercice (texte, questions, choix) DOIT être en ANGLAIS. Seules les consignes peuvent être en français si nécessaire."
+        elif "espagnol" in subject_lower:
+             language_instruction = "IMPORTANT: Le contenu de l'exercice DOIT être en ESPAGNOL."
+        elif "allemand" in subject_lower:
+             language_instruction = "IMPORTANT: Le contenu de l'exercice DOIT être en ALLEMAND."
+
+        # Map difficulty to French for better LLM understanding
+        difficulty_map = {
+            'easy': 'Facile',
+            'medium': 'Moyen',
+            'hard': 'Difficile'
+        }
+        diff_french = difficulty_map.get(difficulty, difficulty)
+
+        print(f"DEBUG: Generating exercise with type={exercise_type}, difficulty={diff_french}")
+
         prompt = (
             f"Génère un exercice de {subject} pour un niveau {level} sur le thème '{topic}'. "
-            f"Difficulté: {difficulty}. "
+            f"Difficulté demandée: {diff_french} (Respecte scrupuleusement cette difficulté). "
+            f"Type d'exercice imposé: {exercise_type}. "
+            f"{language_instruction}\n"
             "Le format de sortie doit être un JSON valide avec les clés suivantes:\n"
             "- title: Titre de l'exercice\n"
             "- description: Énoncé de l'exercice\n"
-            "- type: 'qcm' (pour ce prototype, on se concentre sur les QCM)\n"
-            "- content: Un objet JSON contenant la question et les choix (ex: {question: '...', options: ['A', 'B', 'C', 'D']})\n"
-            "- correct_answers: La réponse correcte (ex: 'A')\n"
+            "- type: Le type d'exercice ('qcm' ou 'classic')\n"
+            "- difficulty: La difficulté ('Facile', 'Moyen', 'Difficile')\n"
+            f"{format_instructions}"
             "- explanation: Une explication de la réponse\n"
             "- hints: Une liste d'indices (strings)\n"
             "- points: Valeur en points (ex: 10)\n"

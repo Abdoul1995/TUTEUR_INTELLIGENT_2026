@@ -10,9 +10,8 @@ import {
   ArrowRight,
   Flame,
   Star,
-  Zap
 } from 'lucide-react'
-import type { Lesson, Quiz, Progress, SubjectProgress, WeakArea } from '../types'
+import type { Lesson, Progress, SubjectProgress, WeakArea } from '../types'
 
 export function Dashboard() {
   const { user } = useAuth()
@@ -24,7 +23,6 @@ export function Dashboard() {
     weak_areas?: WeakArea[]
   }>({})
   const [recommendedLessons, setRecommendedLessons] = useState<Lesson[]>([])
-  const [upcomingQuizzes, setUpcomingQuizzes] = useState<Quiz[]>([])
 
   useEffect(() => {
     loadDashboard()
@@ -32,14 +30,12 @@ export function Dashboard() {
 
   const loadDashboard = async () => {
     try {
-      const [dashboardData, lessonsData, quizzesData] = await Promise.all([
+      const [dashboardData, lessonsData] = await Promise.all([
         api.getDashboard(),
-        api.getRecommendedLessons(),
-        api.getQuizzes({ level: user?.level })
+        api.getRecommendedLessons()
       ])
       setDashboard(dashboardData)
       setRecommendedLessons(lessonsData.results || lessonsData)
-      setUpcomingQuizzes(quizzesData.results?.slice(0, 3) || quizzesData.slice(0, 3))
     } catch (error) {
       console.error('Error loading dashboard:', error)
     } finally {
@@ -256,36 +252,6 @@ export function Dashboard() {
               </div>
             )}
 
-            {/* Upcoming Quizzes */}
-            <div className="card p-6">
-              <div className="flex items-center mb-4">
-                <Zap className="w-5 h-5 text-yellow-500 mr-2" />
-                <h2 className="text-lg font-semibold text-gray-900">
-                  Quiz à venir
-                </h2>
-              </div>
-
-              {upcomingQuizzes.length > 0 ? (
-                <div className="space-y-3">
-                  {upcomingQuizzes.map((quiz) => (
-                    <Link
-                      key={quiz.id}
-                      to={`/quizzes/${quiz.id}`}
-                      className="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
-                    >
-                      <p className="font-medium text-gray-900">{quiz.title}</p>
-                      <p className="text-sm text-gray-500">
-                        {quiz.exercise_count} exercices
-                      </p>
-                    </Link>
-                  ))}
-                </div>
-              ) : (
-                <p className="text-gray-500 text-center py-4">
-                  Aucun quiz disponible
-                </p>
-              )}
-            </div>
 
             {/* Quick Actions */}
             <div className="card p-6">

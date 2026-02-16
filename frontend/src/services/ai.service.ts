@@ -13,13 +13,20 @@ export const aiService = {
         }
     },
 
-    generateExercise: async (subject: string, level: string, topic: string, difficulty: string = 'medium') => {
+    generateExercise: async (
+        subject: string,
+        level: string,
+        topic: string,
+        difficulty: string = 'medium',
+        exerciseType: 'qcm' | 'classic' = 'qcm'
+    ) => {
         try {
             const response = await axios.post(`${API_URL}/generate-exercise/`, {
                 subject,
                 level,
                 topic,
-                difficulty
+                difficulty,
+                exercise_type: exerciseType
             });
             return response.data;
         } catch (error) {

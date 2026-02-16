@@ -28,12 +28,16 @@ class GenerateExerciseView(APIView):
         level = request.data.get('level')
         topic = request.data.get('topic')
         difficulty = request.data.get('difficulty', 'medium')
+        exercise_type = request.data.get('exercise_type', 'qcm')
+        
+        print(f"DEBUG: GenerateExerciseView - Data: {request.data}")
+        print(f"DEBUG: exercise_type_extracted: {exercise_type}")
 
         if not all([subject, level, topic]):
             return Response({"error": "Missing required parameters"}, status=status.HTTP_400_BAD_REQUEST)
 
         ai_service = AIService()
-        exercise_data = ai_service.generate_exercise(subject, level, topic, difficulty)
+        exercise_data = ai_service.generate_exercise(subject, level, topic, difficulty, exercise_type)
 
         if "error" in exercise_data:
             return Response(exercise_data, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

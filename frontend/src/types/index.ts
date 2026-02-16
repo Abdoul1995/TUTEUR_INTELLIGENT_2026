@@ -76,7 +76,7 @@ export interface Exercise {
   id: number
   title: string
   description: string
-  exercise_type: 'qcm' | 'text' | 'number' | 'matching' | 'fill_blank' | 'ordering'
+  exercise_type: 'qcm' | 'classic'
   type_display: string
   difficulty: 'easy' | 'medium' | 'hard'
   difficulty_display: string
@@ -93,6 +93,7 @@ export interface Exercise {
   explanation: string
   attempts_count?: number
   best_score?: number
+  correct_answers?: any
 }
 
 export interface ExerciseAttempt {

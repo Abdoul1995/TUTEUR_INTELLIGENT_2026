@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import api from '../services/api'
+import { aiService } from '../services/ai.service'
 import {
   Brain,
   ChevronLeft,
@@ -10,6 +11,7 @@ import {
   XCircle,
   ArrowRight,
   RotateCcw,
+  Sparkles,
   Star
 } from 'lucide-react'
 import type { Exercise } from '../types'
@@ -26,11 +28,13 @@ export function ExerciseDetail() {
   const [timeSpent, setTimeSpent] = useState(0)
   const [isSubmitting, setIsSubmitting] = useState(false)
 
+
   useEffect(() => {
     if (id) {
       loadExercise()
     }
   }, [id])
+
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -92,6 +96,45 @@ export function ExerciseDetail() {
     setTimeSpent(0)
   }
 
+  const handleRegenerate = async () => {
+    if (!exercise) return
+
+    if (!window.confirm("Voulez-vous générer un nouvel exercice similaire ?")) return;
+
+    setIsSubmitting(true)
+    try {
+      const ex = exercise as any
+      // Generate new content
+      const newExerciseData = await aiService.generateExercise(
+        ex.subject_name || ex.title, // Fallback to title if subject name missing
+        exercise.level,
+        exercise.title,
+        exercise.difficulty, // This is 'easy'/'medium'/'hard' from DB
+        'classic'
+      )
+
+      // Save it
+      const dataToSave = {
+        ...newExerciseData,
+        subject: ex.subject,
+        level: exercise.level,
+        difficulty: exercise.difficulty,
+        exercise_type: 'classic',
+        points: 10
+      }
+
+      const savedExercise = await api.createExercise(dataToSave)
+      navigate(`/exercises/${savedExercise.id}`)
+
+    } catch (error) {
+      console.error('Error generating exercise:', error)
+      alert("Erreur lors de la régénération")
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
+
   const renderQuestion = () => {
     if (!exercise) return null
 
@@ -105,8 +148,8 @@ export function ExerciseDetail() {
                 onClick={() => setAnswer(index)}
                 disabled={result !== null}
                 className={`w-full p-4 rounded-xl border-2 text-left transition-all ${answer === index
-                    ? 'border-primary-500 bg-primary-50'
-                    : 'border-gray-200 hover:border-primary-300'
+                  ? 'border-primary-500 bg-primary-50'
+                  : 'border-gray-200 hover:border-primary-300'
                   } ${result ? 'cursor-not-allowed' : ''}`}
               >
                 <div className="flex items-center">
@@ -121,27 +164,76 @@ export function ExerciseDetail() {
           </div>
         )
 
-      case 'text':
+      case 'classic':
         return (
-          <textarea
-            value={answer || ''}
-            onChange={(e) => setAnswer(e.target.value)}
-            disabled={result !== null}
-            className="input w-full h-32 resize-none"
-            placeholder="Votre réponse..."
-          />
-        )
+          <div className="space-y-8">
+            {/* Subject Text */}
+            {exercise.content.text && (
+              <div className="p-6 bg-gray-50 rounded-xl border border-gray-200">
+                <h3 className="font-semibold text-gray-900 mb-4 flex items-center">
+                  <Brain className="w-5 h-5 mr-2 text-primary-600" />
+                  Sujet / Énoncé
+                </h3>
+                <div className="prose max-w-none text-gray-700 whitespace-pre-wrap leading-relaxed">
+                  {exercise.content.text}
+                </div>
+              </div>
+            )}
 
-      case 'number':
-        return (
-          <input
-            type="number"
-            value={answer || ''}
-            onChange={(e) => setAnswer(parseFloat(e.target.value))}
-            disabled={result !== null}
-            className="input w-full"
-            placeholder="Votre réponse..."
-          />
+            {/* Questions List */}
+            {exercise.content.questions && (
+              <div className="space-y-4">
+                <h3 className="font-semibold text-gray-900 mb-4">Questions</h3>
+                {exercise.content.questions.map((question: string, index: number) => (
+                  <div key={index} className="flex gap-4 p-4 bg-white border border-gray-100 rounded-lg shadow-sm">
+                    <div className="flex-shrink-0 w-8 h-8 bg-primary-100 text-primary-700 rounded-full flex items-center justify-center font-bold text-sm">
+                      {index + 1}
+                    </div>
+                    <div className="text-gray-700 pt-1">{question}</div>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* Manual Toggle for Answers (Classic Mode) */}
+            <div className="pt-6 border-t border-gray-200">
+              <button
+                onClick={() => setShowHint(!showHint)} // Reusing showHint state for simplicity, or add new state
+                className="flex items-center justify-center w-full py-3 px-4 rounded-xl border-2 border-primary-100 text-primary-700 hover:bg-primary-50 transition-colors"
+                title="Voir la correction"
+              >
+                {showHint ? 'Masquer la correction' : 'Voir la correction'}
+              </button>
+
+              {showHint && exercise.correct_answers && (
+                <div className="mt-6 p-6 bg-green-50 rounded-xl border border-green-200 animate-in fade-in slide-in-from-top-4">
+                  <h3 className="font-semibold text-green-900 mb-4 flex items-center">
+                    <CheckCircle2 className="w-5 h-5 mr-2" />
+                    Corrigé Type
+                  </h3>
+                  <div className="space-y-4">
+                    {Array.isArray(exercise.correct_answers) ? (
+                      exercise.correct_answers.map((ans: string, i: number) => (
+                        <div key={i} className="flex gap-3">
+                          <span className="font-bold text-green-700">{i + 1}.</span>
+                          <span className="text-green-800">{ans}</span>
+                        </div>
+                      ))
+                    ) : (
+                      <div className="text-green-800 whitespace-pre-wrap">
+                        {String(exercise.correct_answers)}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Note for classic exercises */}
+            <p className="text-center text-sm text-gray-500 italic mt-4">
+              Cet exercice est une fiche de travail. Faites-le sur papier ou à l'oral, puis vérifiez avec la correction.
+            </p>
+          </div>
         )
 
       default:
@@ -202,7 +294,7 @@ export function ExerciseDetail() {
           {/* Title & Difficulty */}
           <div className="flex items-center justify-between mb-6">
             <span className={`badge ${exercise.difficulty === 'easy' ? 'badge-green' :
-                exercise.difficulty === 'medium' ? 'badge-yellow' : 'badge-red'
+              exercise.difficulty === 'medium' ? 'badge-yellow' : 'badge-red'
               }`}>
               {exercise.difficulty_display}
             </span>
@@ -276,42 +368,70 @@ export function ExerciseDetail() {
 
           {/* Actions */}
           <div className="flex flex-col sm:flex-row gap-4">
-            {!result ? (
+            {exercise.exercise_type === 'classic' ? (
               <>
-                {exercise.hints && exercise.hints.length > 0 && hintsUsed < exercise.hints.length && (
-                  <button
-                    onClick={handleHint}
-                    className="btn-outline flex items-center justify-center"
-                  >
-                    <Lightbulb className="w-4 h-4 mr-2" />
-                    Demander un indice (-2 pts)
-                  </button>
-                )}
                 <button
-                  onClick={handleSubmit}
-                  disabled={answer === null || isSubmitting}
-                  className="btn-primary flex-1"
+                  onClick={() => navigate('/exercises')}
+                  className="btn-outline flex items-center justify-center flex-1"
                 >
-                  {isSubmitting ? 'Vérification...' : 'Valider ma réponse'}
+                  Terminer
+                </button>
+                <button
+                  onClick={handleRegenerate}
+                  disabled={isSubmitting}
+                  className="btn-primary flex items-center justify-center flex-1"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <div className="animate-spin w-4 h-4 border-2 border-white/30 border-t-white rounded-full mr-2"></div>
+                      Génération...
+                    </>
+                  ) : (
+                    <>
+                      <Sparkles className="w-4 h-4 mr-2" />
+                      Régénérer
+                    </>
+                  )}
                 </button>
               </>
             ) : (
-              <>
-                <button
-                  onClick={resetExercise}
-                  className="btn-outline flex items-center justify-center"
-                >
-                  <RotateCcw className="w-4 h-4 mr-2" />
-                  Réessayer
-                </button>
-                <button
-                  onClick={() => navigate('/exercises')}
-                  className="btn-primary flex items-center justify-center"
-                >
-                  Autres exercices
-                  <ArrowRight className="w-4 h-4 ml-2" />
-                </button>
-              </>
+              !result ? (
+                <>
+                  {exercise.hints && exercise.hints.length > 0 && hintsUsed < exercise.hints.length && (
+                    <button
+                      onClick={handleHint}
+                      className="btn-outline flex items-center justify-center"
+                    >
+                      <Lightbulb className="w-4 h-4 mr-2" />
+                      Demander un indice (-2 pts)
+                    </button>
+                  )}
+                  <button
+                    onClick={handleSubmit}
+                    disabled={answer === null || isSubmitting}
+                    className="btn-primary flex-1"
+                  >
+                    {isSubmitting ? 'Vérification...' : 'Valider ma réponse'}
+                  </button>
+                </>
+              ) : (
+                <>
+                  <button
+                    onClick={resetExercise}
+                    className="btn-outline flex items-center justify-center"
+                  >
+                    <RotateCcw className="w-4 h-4 mr-2" />
+                    Réessayer
+                  </button>
+                  <button
+                    onClick={() => navigate('/exercises')}
+                    className="btn-primary flex items-center justify-center"
+                  >
+                    Autres exercices
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </button>
+                </>
+              )
             )}
           </div>
         </div>

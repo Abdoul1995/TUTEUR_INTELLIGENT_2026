@@ -37,7 +37,7 @@ class ExerciseCreateSerializer(serializers.ModelSerializer):
 
 
 class ExerciseDetailSerializer(serializers.ModelSerializer):
-    """Sérialiseur détail pour les exercices (sans réponses)."""
+    """Sérialiseur détail pour les exercices."""
     
     subject_name = serializers.CharField(source='subject.name', read_only=True)
     lesson_title = serializers.CharField(source='lesson.title', read_only=True)
@@ -54,6 +54,13 @@ class ExerciseDetailSerializer(serializers.ModelSerializer):
             'lesson', 'lesson_title', 'content', 'hints', 'explanation',
             'points', 'time_limit', 'attempts_count', 'best_score'
         ]
+
+    def to_representation(self, instance):
+        """Include correct_answers only for classic exercises."""
+        ret = super().to_representation(instance)
+        if instance.exercise_type == 'classic':
+            ret['correct_answers'] = instance.correct_answers
+        return ret
     
     def get_attempts_count(self, obj):
         request = self.context.get('request')
@@ -66,7 +73,6 @@ class ExerciseDetailSerializer(serializers.ModelSerializer):
         if request and request.user.is_authenticated:
             best = obj.attempts.filter(student=request.user).order_by('-score').first()
             return best.score if best else 0
-        return 0
 
 
 class ExerciseAnswerSerializer(serializers.Serializer):
@@ -100,6 +106,19 @@ class ExerciseAttemptSerializer(serializers.ModelSerializer):
         ]
 
 
+class QuizExerciseSerializer(serializers.ModelSerializer):
+    """Sérialiseur pour les exercices dans un quiz (inclut le contenu sans les réponses)."""
+    
+    type_display = serializers.CharField(source='get_exercise_type_display', read_only=True)
+    
+    class Meta:
+        model = Exercise
+        fields = [
+            'id', 'title', 'description', 'exercise_type', 'type_display',
+            'difficulty', 'points', 'content', 'time_limit' # Added content
+        ]
+
+
 class QuizListSerializer(serializers.ModelSerializer):
     """Sérialiseur liste pour les quiz."""
     
@@ -124,7 +143,7 @@ class QuizDetailSerializer(serializers.ModelSerializer):
     
     subject_name = serializers.CharField(source='subject.name', read_only=True)
     lesson_title = serializers.CharField(source='lesson.title', read_only=True)
-    exercises = ExerciseListSerializer(many=True, read_only=True)
+    exercises = QuizExerciseSerializer(many=True, read_only=True) # Used new serializer
     
     class Meta:
         model = Quiz

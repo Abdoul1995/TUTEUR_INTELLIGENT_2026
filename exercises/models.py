@@ -19,11 +19,7 @@ class Exercise(models.Model):
     
     EXERCISE_TYPES = [
         ('qcm', 'QCM'),
-        ('text', 'Réponse texte'),
-        ('number', 'Réponse numérique'),
-        ('matching', 'Association'),
-        ('fill_blank', 'Remplir les blancs'),
-        ('ordering', 'Ordonnancement'),
+        ('classic', 'Classique (Fiche d\'exercices)'),
     ]
     
     lesson = models.ForeignKey(

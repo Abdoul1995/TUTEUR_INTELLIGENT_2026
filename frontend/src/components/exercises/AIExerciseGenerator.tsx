@@ -15,7 +15,8 @@ export const AIExerciseGenerator: React.FC<AIExerciseGeneratorProps> = ({ subjec
         subject: '',
         level: '',
         topic: '',
-        difficulty: 'medium'
+        difficulty: 'medium',
+        exerciseType: 'qcm' as 'qcm' | 'classic'
     });
     const [generatedExercise, setGeneratedExercise] = useState<any>(null);
 
@@ -41,7 +42,8 @@ export const AIExerciseGenerator: React.FC<AIExerciseGeneratorProps> = ({ subjec
                 formData.subject,
                 formData.level,
                 formData.topic,
-                formData.difficulty
+                formData.difficulty,
+                formData.exerciseType
             );
             setGeneratedExercise(exercise);
         } catch (error) {
@@ -59,7 +61,7 @@ export const AIExerciseGenerator: React.FC<AIExerciseGeneratorProps> = ({ subjec
                 className="flex items-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-4 py-2 rounded-lg shadow-md hover:from-purple-700 hover:to-indigo-700 transition-all font-medium"
             >
                 <Sparkles className="w-5 h-5" />
-                Générer avec l'IA
+                Générer un exercice de votre choix
             </button>
         );
     }
@@ -70,7 +72,7 @@ export const AIExerciseGenerator: React.FC<AIExerciseGeneratorProps> = ({ subjec
                 <div className="p-6 border-b border-gray-100 flex justify-between items-center">
                     <div className="flex items-center gap-2 text-purple-600">
                         <Bot className="w-6 h-6" />
-                        <h2 className="text-xl font-bold">Générateur d'Exercices IA</h2>
+                        <h2 className="text-xl font-bold">Générer un exercice de votre choix</h2>
                     </div>
                     <button onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-gray-600">
                         Fermer
@@ -150,6 +152,40 @@ export const AIExerciseGenerator: React.FC<AIExerciseGeneratorProps> = ({ subjec
                                 </div>
                             </div>
 
+                            <div>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">Type d'exercice</label>
+                                <div className="flex gap-4">
+                                    <label className="flex items-center gap-2 cursor-pointer p-3 border rounded-xl hover:bg-gray-50 flex-1 border-gray-200 has-[:checked]:border-purple-500 has-[:checked]:bg-purple-50 transition-all">
+                                        <input
+                                            type="radio"
+                                            name="exerciseType"
+                                            value="qcm"
+                                            checked={formData.exerciseType === 'qcm'}
+                                            onChange={e => setFormData({ ...formData, exerciseType: e.target.value as 'qcm' | 'classic' })}
+                                            className="text-purple-600 focus:ring-purple-500"
+                                        />
+                                        <div className="flex flex-col">
+                                            <span className="font-medium">QCM</span>
+                                            <span className="text-xs text-gray-500">Question à choix multiples</span>
+                                        </div>
+                                    </label>
+                                    <label className="flex items-center gap-2 cursor-pointer p-3 border rounded-xl hover:bg-gray-50 flex-1 border-gray-200 has-[:checked]:border-purple-500 has-[:checked]:bg-purple-50 transition-all">
+                                        <input
+                                            type="radio"
+                                            name="exerciseType"
+                                            value="classic"
+                                            checked={formData.exerciseType === 'classic'}
+                                            onChange={e => setFormData({ ...formData, exerciseType: e.target.value as 'qcm' | 'classic' })}
+                                            className="text-purple-600 focus:ring-purple-500"
+                                        />
+                                        <div className="flex flex-col">
+                                            <span className="font-medium">Classique</span>
+                                            <span className="text-xs text-gray-500">Énoncé et questions libres</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
                             <button
                                 type="submit"
                                 disabled={loading}
@@ -174,24 +210,47 @@ export const AIExerciseGenerator: React.FC<AIExerciseGeneratorProps> = ({ subjec
                                 <div className="flex justify-between items-start mb-2">
                                     <h3 className="text-xl font-bold text-gray-900">{generatedExercise.title}</h3>
                                     <span className="bg-purple-200 text-purple-800 text-xs px-2 py-1 rounded-full uppercase font-bold">
-                                        {generatedExercise.difficulty || 'Moyen'}
+                                        {generatedExercise.difficulty || formData.difficulty || 'Moyen'}
                                     </span>
                                 </div>
                                 <p className="text-gray-700 mb-4">{generatedExercise.description}</p>
 
                                 {/* Display Question Content Preview */}
                                 <div className="bg-white p-4 rounded-lg border border-purple-100 shadow-sm">
-                                    <p className="font-medium mb-3">{generatedExercise.content.question}</p>
-                                    <div className="space-y-2">
-                                        {generatedExercise.content.options?.map((opt: string, idx: number) => (
-                                            <div key={idx} className="flex items-center gap-3 p-2 rounded hover:bg-gray-50 border border-transparent hover:border-gray-200 transition-colors">
-                                                <div className="w-6 h-6 rounded-full bg-gray-100 text-gray-500 flex items-center justify-center text-xs font-bold">
-                                                    {String.fromCharCode(65 + idx)}
+                                    {generatedExercise.content.question && (
+                                        <p className="font-medium mb-3">{generatedExercise.content.question}</p>
+                                    )}
+
+                                    {/* QCM Preview */}
+                                    {generatedExercise.content.options && (
+                                        <div className="space-y-2">
+                                            {generatedExercise.content.options.map((opt: string, idx: number) => (
+                                                <div key={idx} className="flex items-center gap-3 p-2 rounded hover:bg-gray-50 border border-transparent hover:border-gray-200 transition-colors">
+                                                    <div className="w-6 h-6 rounded-full bg-gray-100 text-gray-500 flex items-center justify-center text-xs font-bold">
+                                                        {String.fromCharCode(65 + idx)}
+                                                    </div>
+                                                    <span>{opt}</span>
                                                 </div>
-                                                <span>{opt}</span>
-                                            </div>
-                                        ))}
-                                    </div>
+                                            ))}
+                                        </div>
+                                    )}
+
+                                    {/* Classic Preview */}
+                                    {generatedExercise.content.text && (
+                                        <div className="mb-4 text-gray-700 italic border-l-4 border-purple-200 pl-3">
+                                            {generatedExercise.content.text}
+                                        </div>
+                                    )}
+                                    {generatedExercise.content.questions && (
+                                        <div className="space-y-3">
+                                            {generatedExercise.content.questions.map((q: string, idx: number) => (
+                                                <div key={idx} className="bg-gray-50 p-3 rounded-lg">
+                                                    <span className="font-bold text-purple-600 mr-2">{idx + 1}.</span>
+                                                    {q}
+                                                </div>
+                                            ))}
+                                        </div>
+                                    )}
                                 </div>
 
                                 <div className="mt-4 flex gap-2 text-sm text-gray-500">
@@ -211,7 +270,9 @@ export const AIExerciseGenerator: React.FC<AIExerciseGeneratorProps> = ({ subjec
                                         onExerciseGenerated({
                                             ...generatedExercise,
                                             level: formData.level,
-                                            subject: formData.subject
+                                            subject: formData.subject,
+                                            difficulty: formData.difficulty,
+                                            exercise_type: formData.exerciseType
                                         });
                                         setIsOpen(false);
                                     }}

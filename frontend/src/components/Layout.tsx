@@ -1,15 +1,14 @@
-import { Outlet, Link, useLocation } from 'react-router-dom'
+import { Outlet, Link, useLocation, useNavigate } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
-import { 
-  BookOpen, 
-  Home, 
-  User, 
-  LogOut, 
-  BarChart3, 
+import {
+  BookOpen,
+  Home,
+  User,
+  LogOut,
+  BarChart3,
   GraduationCap,
   Menu,
   X,
-  Brain,
   ClipboardList
 } from 'lucide-react'
 import { useState } from 'react'
@@ -17,13 +16,13 @@ import { useState } from 'react'
 export function Layout() {
   const { user, isAuthenticated, logout } = useAuth()
   const location = useLocation()
+  const navigate = useNavigate()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
   const navigation = [
     { name: 'Accueil', href: '/', icon: Home },
     { name: 'Leçons', href: '/lessons', icon: BookOpen },
     { name: 'Exercices', href: '/exercises', icon: ClipboardList },
-    { name: 'Quiz', href: '/quizzes', icon: Brain },
   ]
 
   const authNavigation = [
@@ -37,6 +36,11 @@ export function Layout() {
       return location.pathname === '/'
     }
     return location.pathname.startsWith(path)
+  }
+
+  const handleLogout = async () => {
+    await logout()
+    navigate('/')
   }
 
   return (
@@ -63,16 +67,15 @@ export function Layout() {
                 <Link
                   key={item.name}
                   to={item.href}
-                  className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                    isActive(item.href)
-                      ? 'bg-primary-50 text-primary-700'
-                      : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
-                  }`}
+                  className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${isActive(item.href)
+                    ? 'bg-primary-50 text-primary-700'
+                    : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                    }`}
                 >
                   {item.name}
                 </Link>
               ))}
-              
+
               {isAuthenticated && (
                 <>
                   <div className="h-6 w-px bg-gray-200 mx-2" />
@@ -80,11 +83,10 @@ export function Layout() {
                     <Link
                       key={item.name}
                       to={item.href}
-                      className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                        isActive(item.href)
-                          ? 'bg-primary-50 text-primary-700'
-                          : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
-                      }`}
+                      className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors ${isActive(item.href)
+                        ? 'bg-primary-50 text-primary-700'
+                        : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                        }`}
                     >
                       {item.name}
                     </Link>
@@ -101,8 +103,8 @@ export function Layout() {
                     {user?.first_name} {user?.last_name}
                   </span>
                   <button
-                    onClick={logout}
-                    className="btn-outline text-sm"
+                    onClick={handleLogout}
+                    className="flex items-center px-3 py-2 rounded-lg text-sm font-medium text-red-600 hover:bg-red-50 hover:text-red-700 transition-colors"
                   >
                     <LogOut className="w-4 h-4 mr-2" />
                     Déconnexion
@@ -145,17 +147,16 @@ export function Layout() {
                   key={item.name}
                   to={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`flex items-center px-3 py-2 rounded-lg text-sm font-medium ${
-                    isActive(item.href)
-                      ? 'bg-primary-50 text-primary-700'
-                      : 'text-gray-600 hover:bg-gray-50'
-                  }`}
+                  className={`flex items-center px-3 py-2 rounded-lg text-sm font-medium ${isActive(item.href)
+                    ? 'bg-primary-50 text-primary-700'
+                    : 'text-gray-600 hover:bg-gray-50'
+                    }`}
                 >
                   <item.icon className="w-5 h-5 mr-3" />
                   {item.name}
                 </Link>
               ))}
-              
+
               {isAuthenticated && (
                 <>
                   <div className="border-t border-gray-100 my-2" />
@@ -164,11 +165,10 @@ export function Layout() {
                       key={item.name}
                       to={item.href}
                       onClick={() => setIsMobileMenuOpen(false)}
-                      className={`flex items-center px-3 py-2 rounded-lg text-sm font-medium ${
-                        isActive(item.href)
-                          ? 'bg-primary-50 text-primary-700'
-                          : 'text-gray-600 hover:bg-gray-50'
-                      }`}
+                      className={`flex items-center px-3 py-2 rounded-lg text-sm font-medium ${isActive(item.href)
+                        ? 'bg-primary-50 text-primary-700'
+                        : 'text-gray-600 hover:bg-gray-50'
+                        }`}
                     >
                       <item.icon className="w-5 h-5 mr-3" />
                       {item.name}
@@ -177,7 +177,7 @@ export function Layout() {
                   <div className="border-t border-gray-100 my-2" />
                   <button
                     onClick={() => {
-                      logout()
+                      handleLogout()
                       setIsMobileMenuOpen(false)
                     }}
                     className="flex items-center w-full px-3 py-2 rounded-lg text-sm font-medium text-red-600 hover:bg-red-50"
@@ -187,7 +187,7 @@ export function Layout() {
                   </button>
                 </>
               )}
-              
+
               {!isAuthenticated && (
                 <>
                   <div className="border-t border-gray-100 my-2" />

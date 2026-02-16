@@ -9,8 +9,6 @@ import { Lessons } from './pages/Lessons'
 import { LessonDetail } from './pages/LessonDetail'
 import { Exercises } from './pages/Exercises'
 import { ExerciseDetail } from './pages/ExerciseDetail'
-import { Quizzes } from './pages/Quizzes'
-import { QuizDetail } from './pages/QuizDetail'
 import { Progress } from './pages/Progress'
 import { Profile } from './pages/Profile'
 import { ProtectedRoute } from './components/ProtectedRoute'
@@ -42,16 +40,6 @@ function App() {
           <Route path="exercises/:id" element={
             <ProtectedRoute>
               <ExerciseDetail />
-            </ProtectedRoute>
-          } />
-          <Route path="quizzes" element={
-            <ProtectedRoute>
-              <Quizzes />
-            </ProtectedRoute>
-          } />
-          <Route path="quizzes/:id" element={
-            <ProtectedRoute>
-              <QuizDetail />
             </ProtectedRoute>
           } />
           <Route path="dashboard" element={
