@@ -3,6 +3,7 @@ Sérialiseurs pour les utilisateurs.
 """
 from rest_framework import serializers
 from django.contrib.auth import get_user_model
+from django.contrib.auth.password_validation import validate_password
 from .models import ParentStudentLink
 
 User = get_user_model()
@@ -24,7 +25,11 @@ class UserSerializer(serializers.ModelSerializer):
 class UserCreateSerializer(serializers.ModelSerializer):
     """Sérialiseur pour la création d'utilisateur."""
     
-    password = serializers.CharField(write_only=True, min_length=8)
+    password = serializers.CharField(write_only=True)
+    
+    def validate_password(self, value):
+        validate_password(value)
+        return value
     
     class Meta:
         model = User
@@ -66,3 +71,23 @@ class ParentStudentLinkSerializer(serializers.ModelSerializer):
         model = ParentStudentLink
         fields = ['id', 'parent', 'student', 'parent_name', 'student_name', 'created_at']
         read_only_fields = ['created_at']
+
+
+class PasswordResetSerializer(serializers.Serializer):
+    """Sérialiseur pour la demande de réinitialisation de mot de passe."""
+    email = serializers.EmailField()
+
+
+class PasswordResetConfirmSerializer(serializers.Serializer):
+    """Sérialiseur pour la confirmation de réinitialisation de mot de passe."""
+    new_password = serializers.CharField(write_only=True)
+    new_password_confirm = serializers.CharField(write_only=True)
+
+    def validate_new_password(self, value):
+        validate_password(value)
+        return value
+
+    def validate(self, data):
+        if data['new_password'] != data['new_password_confirm']:
+            raise serializers.ValidationError("Les mots de passe ne correspondent pas.")
+        return data

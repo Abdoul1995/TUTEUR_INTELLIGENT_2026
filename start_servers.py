@@ -14,7 +14,7 @@ def start_backend():
     print("🚀 Démarrage du backend Django...")
     backend_process = subprocess.Popen(
         [sys.executable, 'manage.py', 'runserver', '8000'],
-        cwd='/mnt/okcomputer/output/tuteur-intelligent',
+        cwd=os.path.dirname(os.path.abspath(__file__)),
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
     )
@@ -27,7 +27,7 @@ def start_frontend():
     print("🚀 Démarrage du frontend React...")
     frontend_process = subprocess.Popen(
         ['npm', 'run', 'dev'],
-        cwd='/mnt/okcomputer/output/tuteur-intelligent/frontend',
+        cwd=os.path.join(os.path.dirname(os.path.abspath(__file__)), 'frontend'),
         stdout=subprocess.PIPE,
         stderr=subprocess.PIPE,
     )

@@ -67,8 +67,28 @@ export function Register() {
   const nextStep = () => {
     if (step === 1) {
       if (!formData.username || !formData.email || !formData.password) {
-        setError('Veuillez remplir tous les champs')
-        return
+        setError('Veuillez remplir tous les champs obligatoires (*)');
+        return;
+      }
+
+      // Email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(formData.email)) {
+        setError('Saisissez une adresse e-mail valide.');
+        return;
+      }
+
+      // Full Password validation
+      const passwordErrors = [];
+      if (formData.password.length < 8) passwordErrors.push('8 caractères minimum');
+      if (!/[A-Z]/.test(formData.password)) passwordErrors.push('une majuscule');
+      if (!/[a-z]/.test(formData.password)) passwordErrors.push('une minuscule');
+      if (!/\d/.test(formData.password)) passwordErrors.push('un chiffre');
+      if (!/[ !@#$%^&*(),.?":{}|<>]/.test(formData.password)) passwordErrors.push('un caractère spécial');
+
+      if (passwordErrors.length > 0) {
+        setError(`Le mot de passe doit contenir : ${passwordErrors.join(', ')}.`);
+        return;
       }
     }
     setError('')
@@ -179,7 +199,7 @@ export function Register() {
                     </button>
                   </div>
                   <p className="mt-1 text-xs text-gray-500">
-                    Minimum 8 caractères
+                    8+ caractères, majuscule, minuscule, chiffre et caractère spécial.
                   </p>
                 </div>
 
@@ -195,6 +215,24 @@ export function Register() {
 
             {step === 2 && (
               <>
+                <div className="grid grid-cols-1 gap-4">
+                  <div>
+                    <label htmlFor="user_type" className="label">
+                      Je suis un...
+                    </label>
+                    <select
+                      id="user_type"
+                      className="input"
+                      value={formData.user_type}
+                      onChange={(e) => setFormData({ ...formData, user_type: e.target.value, level: e.target.value === 'student' ? formData.level : '' })}
+                    >
+                      <option value="student">Élève</option>
+                      <option value="teacher">Enseignant</option>
+                      <option value="parent">Parent</option>
+                    </select>
+                  </div>
+                </div>
+
                 <div className="grid grid-cols-2 gap-4">
                   <div>
                     <label htmlFor="first_name" className="label">
@@ -225,24 +263,26 @@ export function Register() {
                   </div>
                 </div>
 
-                <div>
-                  <label htmlFor="level" className="label">
-                    Niveau scolaire
-                  </label>
-                  <select
-                    id="level"
-                    className="input"
-                    value={formData.level}
-                    onChange={(e) => setFormData({ ...formData, level: e.target.value })}
-                  >
-                    <option value="">Sélectionnez votre niveau</option>
-                    {LEVELS.map((level) => (
-                      <option key={level.value} value={level.value}>
-                        {level.label}
-                      </option>
-                    ))}
-                  </select>
-                </div>
+                {formData.user_type === 'student' && (
+                  <div>
+                    <label htmlFor="level" className="label">
+                      Niveau scolaire
+                    </label>
+                    <select
+                      id="level"
+                      className="input"
+                      value={formData.level}
+                      onChange={(e) => setFormData({ ...formData, level: e.target.value })}
+                    >
+                      <option value="">Sélectionnez votre niveau</option>
+                      {LEVELS.map((level) => (
+                        <option key={level.value} value={level.value}>
+                          {level.label}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                )}
 
                 <div className="flex items-start">
                   <input
@@ -253,11 +293,11 @@ export function Register() {
                   />
                   <label htmlFor="terms" className="ml-2 text-sm text-gray-600">
                     J'accepte les{' '}
-                    <Link to="/terms" className="text-primary-600 hover:text-primary-700">
+                    <Link to="/terms" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-700">
                       conditions d'utilisation
                     </Link>{' '}
                     et la{' '}
-                    <Link to="/privacy" className="text-primary-600 hover:text-primary-700">
+                    <Link to="/privacy" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-700">
                       politique de confidentialité
                     </Link>
                   </label>

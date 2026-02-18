@@ -18,7 +18,8 @@ class ExerciseListSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'title', 'description', 'exercise_type', 'type_display',
             'difficulty', 'difficulty_display', 'level', 'subject', 'subject_name',
-            'lesson', 'lesson_title', 'points', 'time_limit', 'order'
+            'lesson', 'lesson_title', 'points', 'time_limit', 'order',
+            'creator', 'is_ai_generated'
         ]
 
 
@@ -32,7 +33,8 @@ class ExerciseCreateSerializer(serializers.ModelSerializer):
             'id', 'title', 'description', 'exercise_type',
             'difficulty', 'level', 'subject', 'lesson',
             'content', 'correct_answers', 'explanation', 'hints',
-            'points', 'time_limit', 'order', 'is_active'
+            'points', 'time_limit', 'order', 'is_active',
+            'creator', 'is_ai_generated'
         ]
 
 
@@ -52,7 +54,8 @@ class ExerciseDetailSerializer(serializers.ModelSerializer):
             'id', 'title', 'description', 'exercise_type', 'type_display',
             'difficulty', 'difficulty_display', 'level', 'subject', 'subject_name',
             'lesson', 'lesson_title', 'content', 'hints', 'explanation',
-            'points', 'time_limit', 'attempts_count', 'best_score'
+            'points', 'time_limit', 'attempts_count', 'best_score',
+            'creator', 'is_ai_generated'
         ]
 
     def to_representation(self, instance):

@@ -62,6 +62,16 @@ class ApiService {
     return response.data
   }
 
+  async requestPasswordReset(email: string) {
+    const response = await this.client.post('/users/password-reset/', { email })
+    return response.data
+  }
+
+  async confirmPasswordReset(uidb64: string, token: string, data: any) {
+    const response = await this.client.post(`/users/password-reset-confirm/${uidb64}/${token}/`, data)
+    return response.data
+  }
+
   // Subjects
   async getSubjects() {
     const response = await this.client.get('/lessons/subjects/')

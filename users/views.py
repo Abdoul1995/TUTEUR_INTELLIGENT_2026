@@ -6,6 +6,7 @@ from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated, AllowAny
 from rest_framework.authtoken.models import Token
+from django.db import models
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth import get_user_model
 from .models import ParentStudentLink
@@ -55,10 +56,19 @@ class UserViewSet(viewsets.ModelViewSet):
         """Connexion d'un utilisateur."""
         serializer = LoginSerializer(data=request.data)
         if serializer.is_valid():
-            username = serializer.validated_data['username']
+            login_id = serializer.validated_data['username'] # Can be username or email
             password = serializer.validated_data['password']
-            user = authenticate(username=username, password=password)
             
+            # Try to find user by username or email
+            user_to_check = User.objects.filter(models.Q(username=login_id) | models.Q(email=login_id)).first()
+            
+            if not user_to_check:
+                return Response({
+                    'error': 'Utilisateur non trouvé'
+                }, status=status.HTTP_401_UNAUTHORIZED)
+
+            user = authenticate(request, username=user_to_check.username, password=password)
+
             if user:
                 # Créer ou récupérer le token
                 token, created = Token.objects.get_or_create(user=user)
@@ -68,8 +78,9 @@ class UserViewSet(viewsets.ModelViewSet):
                     'user': UserSerializer(user).data,
                     'token': token.key
                 })
+            
             return Response({
-                'error': 'Nom d\'utilisateur ou mot de passe incorrect'
+                'error': 'Mot de passe incorrect'
             }, status=status.HTTP_401_UNAUTHORIZED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     

@@ -67,6 +67,15 @@ class Exercise(models.Model):
     )
     order = models.PositiveIntegerField(default=0, verbose_name='Ordre')
     is_active = models.BooleanField(default=True, verbose_name='Actif')
+    creator = models.ForeignKey(
+        User,
+        on_delete=models.SET_NULL,
+        related_name='created_exercises',
+        verbose_name='Créateur',
+        blank=True,
+        null=True
+    )
+    is_ai_generated = models.BooleanField(default=False, verbose_name='Généré par IA')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     

@@ -11,6 +11,10 @@ import { Exercises } from './pages/Exercises'
 import { ExerciseDetail } from './pages/ExerciseDetail'
 import { Progress } from './pages/Progress'
 import { Profile } from './pages/Profile'
+import { ForgotPassword } from './pages/ForgotPassword'
+import { ResetPassword } from './pages/ResetPassword'
+import { TermsOfService } from './pages/TermsOfService'
+import { PrivacyPolicy } from './pages/PrivacyPolicy'
 import { ProtectedRoute } from './components/ProtectedRoute'
 import { ChatWidget } from './components/ai/ChatWidget'
 
@@ -22,6 +26,10 @@ function App() {
           <Route index element={<Home />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
+          <Route path="forgot-password" element={<ForgotPassword />} />
+          <Route path="reset-password/:uid/:token" element={<ResetPassword />} />
+          <Route path="terms" element={<TermsOfService />} />
+          <Route path="privacy" element={<PrivacyPolicy />} />
           <Route path="lessons" element={
             <ProtectedRoute>
               <Lessons />
