@@ -7,7 +7,7 @@ from .views import UserViewSet, ParentStudentLinkViewSet
 from .password_reset_views import PasswordResetRequestView, PasswordResetConfirmView
 
 router = DefaultRouter()
-router.register(r'users', UserViewSet)
+router.register(r'', UserViewSet, basename='user')
 router.register(r'links', ParentStudentLinkViewSet)
 
 urlpatterns = [

@@ -11,8 +11,7 @@ export function TermsOfService() {
                     onClick={() => navigate(-1)}
                     className="inline-flex items-center text-primary-600 hover:text-primary-700 mb-8 font-medium"
                 >
-                    {/* <ArrowLeft className="w-4 h-4 mr-2" /> retour*/}
-
+                    <ArrowLeft className="w-4 h-4 mr-2" /> retour
                 </button>
 
                 <div className="card p-8 lg:p-12">

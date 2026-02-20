@@ -1,0 +1,29 @@
+name: tuteur_intelligent_mobile
+description: A new Flutter project for Tuteur Intelligent.
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  http: ^1.1.0
+  shared_preferences: ^2.2.2
+  flutter_riverpod: ^2.4.9
+  riverpod_annotation: ^2.3.3
+  google_fonts: ^6.1.0
+  lucide_icons: ^0.257.0
+  intl: ^0.18.1
+  flutter_secure_storage: ^9.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  build_runner: ^2.4.7
+  riverpod_generator: ^2.3.9
+
+flutter:
+  uses-material-design: true

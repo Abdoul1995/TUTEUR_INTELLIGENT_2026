@@ -96,7 +96,7 @@ class LessonViewSet(viewsets.ReadOnlyModelViewSet):
         if search:
             queryset = queryset.filter(title__icontains=search)
         
-        return queryset
+        return queryset.order_by('level', 'order')
     
     @action(detail=True, methods=['post'], permission_classes=[IsAuthenticated])
     def mark_viewed(self, request, slug=None):

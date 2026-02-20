@@ -119,7 +119,7 @@ class Lesson(models.Model):
     class Meta:
         verbose_name = 'Leçon'
         verbose_name_plural = 'Leçons'
-        ordering = ['order', 'title']
+        ordering = ['level', 'order', 'title']
         unique_together = ['chapter', 'slug']
     
     def __str__(self):

@@ -57,14 +57,15 @@ class AIService:
         if exercise_type == 'qcm':
             format_instructions = (
                 "- type: 'qcm'\n"
-                "- content: Un objet JSON contenant la question et les choix (ex: {question: '...', options: ['A', 'B', 'C', 'D']})\n"
-                "- correct_answers: L'index de la réponse correcte (0, 1, 2 ou 3) OU la lettre ('A')\n"
+                "- content: Un objet JSON contenant 'questions' (une liste d'objets, chaque objet ayant 'question' et 'options' qui est une liste de 4 choix)\n"
+                "- correct_answers: Une liste contenant les index des bonnes réponses (ex: [0, 1]) correspondant à chaque question dans 'content.questions'\n"
+                "IMPORTANT pour QCM: Chaque objet question dans 'content.questions' DOIT aussi avoir une clé 'correct_option' (int, 0-3) pour la validation immédiate sur mobile.\n"
             )
         else:  # classic
             format_instructions = (
                 "- type: 'classic'\n"
-                "- content: Un objet JSON contenant 'text' (énoncé de l'exercice) et 'questions' (une liste de questions)\n"
-                "- correct_answers: Une liste de réponses correspondant aux questions ou un texte explicatif complet\n"
+                "- content: Un objet JSON contenant 'text' (l'énoncé détaillé de l'exercice) et 'questions' (une liste facultative d'objets ou strings pour les sous-questions)\n"
+                "- correct_answers: Une liste de réponses clés ou de textes explicatifs correspondant à l'exercice\n"
             )
 
         # Language instruction based on subject
@@ -88,20 +89,25 @@ class AIService:
         print(f"DEBUG: Generating exercise with type={exercise_type}, difficulty={diff_french}")
 
         prompt = (
-            f"Génère un exercice de {subject} pour un niveau {level} sur le thème '{topic}'. "
-            f"Difficulté demandée: {diff_french} (Respecte scrupuleusement cette difficulté). "
-            f"Type d'exercice imposé: {exercise_type}. "
-            f"{language_instruction}\n"
-            "Le format de sortie doit être un JSON valide avec les clés suivantes:\n"
-            "- title: Titre de l'exercice\n"
-            "- description: Énoncé de l'exercice\n"
-            "- type: Le type d'exercice ('qcm' ou 'classic')\n"
-            "- difficulty: La difficulté ('Facile', 'Moyen', 'Difficile')\n"
-            f"{format_instructions}"
-            "- explanation: Une explication de la réponse\n"
-            "- hints: Une liste d'indices (strings)\n"
-            "- points: Valeur en points (ex: 10)\n"
-            "Réponds UNIQUEMENT avec le JSON complet, sans texte avant ni après."
+            f"Génère un exercice de {subject} pour un niveau {level} sur le thème '{topic}'.\n"
+            f"Difficulté: {diff_french}.\n"
+            f"Type: {exercise_type}.\n"
+            f"{language_instruction}\n\n"
+            "Tu DOIS répondre avec un JSON valide respectant cette structure exacte :\n"
+            "{\n"
+            "  \"title\": \"Titre de l'exercice\",\n"
+            "  \"description\": \"Brève description ou consigne\",\n"
+            "  \"type\": \"" + exercise_type + "\",\n"
+            "  \"difficulty\": \"" + difficulty + "\",\n"
+            "  \"content\": { ... voir format_instructions ... },\n"
+            "  \"correct_answers\": [ ... ],\n"
+            "  \"explanation\": \"Explication pédagogique\",\n"
+            "  \"hints\": [\"Indice 1\", \"Indice 2\"],\n"
+            "  \"points\": 10\n"
+            "}\n\n"
+            "Format spécifique pour 'content' :\n"
+            f"{format_instructions}\n"
+            "Réponds UNIQUEMENT avec le JSON, pas de texte superflu."
         )
 
         try:
