@@ -1,0 +1,38 @@
+Analyzing mobile_app...                                         
+
+   info • Statements in an if should be enclosed in a block • lib/screens/ai/ai_generate_exercise_screen.dart:72:11 • curly_braces_in_flow_control_structures
+   info • 'value' is deprecated and shouldn't be used. Use initialValue instead. This will set the initial value for the form field. This feature was deprecated after v3.33.0-1.0.pre • lib/screens/ai/ai_generate_exercise_screen.dart:112:23 • deprecated_member_use
+   info • 'value' is deprecated and shouldn't be used. Use initialValue instead. This will set the initial value for the form field. This feature was deprecated after v3.33.0-1.0.pre • lib/screens/ai/ai_generate_exercise_screen.dart:122:23 • deprecated_member_use
+   info • Statements in an if should be enclosed in a block • lib/screens/auth/register_screen.dart:58:9 • curly_braces_in_flow_control_structures
+   info • Statements in an if should be enclosed in a block • lib/screens/auth/register_screen.dart:60:9 • curly_braces_in_flow_control_structures
+   info • Statements in an if should be enclosed in a block • lib/screens/auth/register_screen.dart:63:9 • curly_braces_in_flow_control_structures
+   info • 'value' is deprecated and shouldn't be used. Use initialValue instead. This will set the initial value for the form field. This feature was deprecated after v3.33.0-1.0.pre • lib/screens/auth/register_screen.dart:346:11 • deprecated_member_use
+   info • 'value' is deprecated and shouldn't be used. Use initialValue instead. This will set the initial value for the form field. This feature was deprecated after v3.33.0-1.0.pre • lib/screens/auth/register_screen.dart:361:13 • deprecated_member_use
+   info • The private field _answers could be 'final' • lib/screens/exercises/exercise_screen.dart:13:18 • prefer_final_fields
+   info • 'groupValue' is deprecated and shouldn't be used. Use a RadioGroup ancestor to manage group value instead. This feature was deprecated after v3.32.0-0.0.pre • lib/screens/exercises/exercise_screen.dart:89:21 • deprecated_member_use
+   info • 'onChanged' is deprecated and shouldn't be used. Use RadioGroup to handle value change instead. This feature was deprecated after v3.32.0-0.0.pre • lib/screens/exercises/exercise_screen.dart:90:21 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/screens/exercises/exercise_screen.dart:97:44 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/screens/exercises/exercise_screen.dart:98:56 • deprecated_member_use
+   info • Unnecessary use of 'toList' in a spread • lib/screens/exercises/exercise_screen.dart:160:14 • unnecessary_to_list_in_spreads
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/screens/home/dashboard_screen.dart:195:22 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/screens/home/dashboard_screen.dart:197:41 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/screens/home/dashboard_screen.dart:225:44 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/screens/home/dashboard_screen.dart:326:48 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/screens/lessons/lesson_detail_screen.dart:115:50 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/screens/lessons/subject_list_screen.dart:66:59 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/screens/profile/profile_screen.dart:139:33 • deprecated_member_use
+   info • Statements in an if should be enclosed in a block • lib/screens/progress/progress_screen.dart:41:7 • curly_braces_in_flow_control_structures
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/screens/progress/progress_screen.dart:73:22 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/screens/progress/progress_screen.dart:75:41 • deprecated_member_use
+   info • Don't invoke 'print' in production code • lib/services/api_service.dart:25:5 • avoid_print
+   info • Don't invoke 'print' in production code • lib/services/api_service.dart:30:7 • avoid_print
+   info • Don't invoke 'print' in production code • lib/services/api_service.dart:33:7 • avoid_print
+   info • Don't invoke 'print' in production code • lib/services/api_service.dart:41:5 • avoid_print
+   info • Don't invoke 'print' in production code • lib/services/api_service.dart:42:5 • avoid_print
+   info • Don't invoke 'print' in production code • lib/services/api_service.dart:47:7 • avoid_print
+   info • Don't invoke 'print' in production code • lib/services/api_service.dart:50:7 • avoid_print
+   info • Don't invoke 'print' in production code • lib/services/auth_service.dart:20:7 • avoid_print
+   info • Don't invoke 'print' in production code • lib/services/auth_service.dart:59:7 • avoid_print
+   info • Don't invoke 'print' in production code • lib/services/auth_service.dart:102:7 • avoid_print
+
+34 issues found. (ran in 2.2s)

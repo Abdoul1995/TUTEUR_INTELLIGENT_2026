@@ -45,7 +45,7 @@ class AIService:
         except Exception as e:
             return {"error": str(e)}
 
-    def generate_exercise(self, subject, level, topic, difficulty='medium', exercise_type='qcm'):
+    def generate_exercise(self, subject, level, topic, difficulty='medium', exercise_type='qcm', language='fr'):
         """
         Generate a new exercise based on criteria.
         Returns a JSON object compatible with the Exercise model.
@@ -53,6 +53,7 @@ class AIService:
         if not self.client:
             return {"error": "Groq API key not configured."}
 
+        subject_lower = subject.lower()
         # Define format instructions based on exercise type
         if exercise_type == 'qcm':
             format_instructions = (
@@ -64,13 +65,21 @@ class AIService:
         else:  # classic
             format_instructions = (
                 "- type: 'classic'\n"
-                "- content: Un objet JSON contenant 'text' (l'énoncé détaillé de l'exercice) et 'questions' (une liste facultative d'objets ou strings pour les sous-questions)\n"
-                "- correct_answers: Une liste de réponses clés ou de textes explicatifs correspondant à l'exercice\n"
+                "- content: Un objet JSON contenant 'text' (l'énoncé détaillé de l'exercice) et 'questions' (une liste de strings pour les sous-questions)\n"
+                "IMPORTANT pour Classic: 'correct_answers' DOIT OBLIGATOIREMENT être une liste (array) contenant EXACTEMENT le même nombre d'éléments que la liste 'content.questions'. "
+                "N'oubliez aucune question dans la correction, especially the very last one. Chaque élément de 'correct_answers' doit être la correction détaillée de la question correspondante au même index.\n"
             )
 
-        # Language instruction based on subject
-        language_instruction = ""
-        subject_lower = subject.lower()
+        # LaTeX instruction for math
+        math_instruction = ""
+        if "math" in subject_lower:
+            math_instruction = "IMPORTANT: Puisque c'est un exercice de mathématiques, utilise la notation LaTeX pour toutes les expressions mathématiques (ex: $x^2$, $\\frac{1}{2}$, $\\sqrt{x}$). Toutes les formules doivent être entourées de symboles $.\n"
+
+        # Language instruction
+        lang_name = "Français" if language == 'fr' else "Anglais"
+        language_instruction = f"IMPORTANT: L'exercice (titre, description, questions, options, explications) DOIT être rédigé entièrement en {lang_name}."
+        
+        # Override if it's a specific language subject
         if "anglais" in subject_lower or "english" in subject_lower:
             language_instruction = "IMPORTANT: Le contenu de l'exercice (texte, questions, choix) DOIT être en ANGLAIS. Seules les consignes peuvent être en français si nécessaire."
         elif "espagnol" in subject_lower:
@@ -78,21 +87,22 @@ class AIService:
         elif "allemand" in subject_lower:
              language_instruction = "IMPORTANT: Le contenu de l'exercice DOIT être en ALLEMAND."
 
-        # Map difficulty to French for better LLM understanding
-        difficulty_map = {
-            'easy': 'Facile',
-            'medium': 'Moyen',
-            'hard': 'Difficile'
-        }
-        diff_french = difficulty_map.get(difficulty, difficulty)
+        # Map difficulty to French/English for better LLM understanding
+        if language == 'en':
+            difficulty_map = {'easy': 'Easy', 'medium': 'Medium', 'hard': 'Hard'}
+        else:
+            difficulty_map = {'easy': 'Facile', 'medium': 'Moyen', 'hard': 'Difficile'}
+            
+        diff_label = difficulty_map.get(difficulty, difficulty)
 
-        print(f"DEBUG: Generating exercise with type={exercise_type}, difficulty={diff_french}")
+        print(f"DEBUG: Generating exercise with type={exercise_type}, difficulty={diff_label}, language={language}")
 
         prompt = (
             f"Génère un exercice de {subject} pour un niveau {level} sur le thème '{topic}'.\n"
-            f"Difficulté: {diff_french}.\n"
+            f"Difficulté: {diff_label}.\n"
             f"Type: {exercise_type}.\n"
-            f"{language_instruction}\n\n"
+            f"{language_instruction}\n"
+            f"{math_instruction}\n\n"
             "Tu DOIS répondre avec un JSON valide respectant cette structure exacte :\n"
             "{\n"
             "  \"title\": \"Titre de l'exercice\",\n"

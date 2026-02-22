@@ -1,16 +1,19 @@
 import React, { useState } from 'react';
 import { Bot, Sparkles, BookOpen, GraduationCap, Layers } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import { aiService } from '../../services/ai.service';
 import { Subject } from '../../types';
 
 interface AIExerciseGeneratorProps {
-    subjects: Subject[];
+    subjects?: Subject[];
     onExerciseGenerated: (exercise: any) => void;
 }
 
-export const AIExerciseGenerator: React.FC<AIExerciseGeneratorProps> = ({ subjects, onExerciseGenerated }) => {
+export const AIExerciseGenerator: React.FC<AIExerciseGeneratorProps> = ({ subjects = [], onExerciseGenerated }) => {
+    const { t, i18n } = useTranslation();
     const [isOpen, setIsOpen] = useState(false);
     const [loading, setLoading] = useState(false);
+    const [localSubjects, setLocalSubjects] = useState<Subject[]>(subjects);
     const [formData, setFormData] = useState({
         subject: '',
         level: '',
@@ -19,6 +22,18 @@ export const AIExerciseGenerator: React.FC<AIExerciseGeneratorProps> = ({ subjec
         exerciseType: 'qcm' as 'qcm' | 'classic'
     });
     const [generatedExercise, setGeneratedExercise] = useState<any>(null);
+
+    React.useEffect(() => {
+        if (subjects.length > 0) {
+            setLocalSubjects(subjects);
+        } else {
+            import('../../services/api').then(({ api }) => {
+                api.getSubjects().then(data => {
+                    setLocalSubjects(data.results || data);
+                }).catch(err => console.error("Error loading subjects:", err));
+            });
+        }
+    }, [subjects]);
 
     const levels = [
         { value: 'cp1', label: 'CP1' }, { value: 'cp2', label: 'CP2' },
@@ -43,12 +58,13 @@ export const AIExerciseGenerator: React.FC<AIExerciseGeneratorProps> = ({ subjec
                 formData.level,
                 formData.topic,
                 formData.difficulty,
-                formData.exerciseType
+                formData.exerciseType,
+                i18n.language
             );
             setGeneratedExercise(exercise);
         } catch (error) {
             console.error(error);
-            alert("Erreur lors de la génération de l'exercice");
+            alert(t('ai_gen.error_msg'));
         } finally {
             setLoading(false);
         }
@@ -61,7 +77,7 @@ export const AIExerciseGenerator: React.FC<AIExerciseGeneratorProps> = ({ subjec
                 className="flex items-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-4 py-2 rounded-lg shadow-md hover:from-purple-700 hover:to-indigo-700 transition-all font-medium"
             >
                 <Sparkles className="w-5 h-5" />
-                Générer un exercice de votre choix
+                {t('ai_gen.trigger_button')}
             </button>
         );
     }
@@ -72,10 +88,10 @@ export const AIExerciseGenerator: React.FC<AIExerciseGeneratorProps> = ({ subjec
                 <div className="p-6 border-b border-gray-100 flex justify-between items-center">
                     <div className="flex items-center gap-2 text-purple-600">
                         <Bot className="w-6 h-6" />
-                        <h2 className="text-xl font-bold">Générer un exercice de votre choix</h2>
+                        <h2 className="text-xl font-bold">{t('ai_gen.modal_title')}</h2>
                     </div>
                     <button onClick={() => setIsOpen(false)} className="text-gray-400 hover:text-gray-600">
-                        Fermer
+                        {t('ai_gen.close')}
                     </button>
                 </div>
 
@@ -84,7 +100,7 @@ export const AIExerciseGenerator: React.FC<AIExerciseGeneratorProps> = ({ subjec
                         <form onSubmit={handleGenerate} className="space-y-4">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-1">Matière</label>
+                                    <label className="block text-sm font-medium text-gray-700 mb-1">{t('ai_gen.label_subject')}</label>
                                     <div className="relative">
                                         <BookOpen className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
                                         <select
@@ -93,14 +109,14 @@ export const AIExerciseGenerator: React.FC<AIExerciseGeneratorProps> = ({ subjec
                                             onChange={e => setFormData({ ...formData, subject: e.target.value })}
                                             required
                                         >
-                                            <option value="">Choisir une matière</option>
-                                            {subjects.map(s => <option key={s.id} value={s.name}>{s.name}</option>)}
+                                            <option value="">{t('ai_gen.select_subject')}</option>
+                                            {localSubjects.map(s => <option key={s.id} value={s.name}>{s.name}</option>)}
                                         </select>
                                     </div>
                                 </div>
 
                                 <div>
-                                    <label className="block text-sm font-medium text-gray-700 mb-1">Niveau</label>
+                                    <label className="block text-sm font-medium text-gray-700 mb-1">{t('ai_gen.label_level')}</label>
                                     <div className="relative">
                                         <GraduationCap className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
                                         <select
@@ -109,7 +125,7 @@ export const AIExerciseGenerator: React.FC<AIExerciseGeneratorProps> = ({ subjec
                                             onChange={e => setFormData({ ...formData, level: e.target.value })}
                                             required
                                         >
-                                            <option value="">Choisir un niveau</option>
+                                            <option value="">{t('ai_gen.select_level')}</option>
                                             {levels.map(l => <option key={l.value} value={l.value}>{l.label}</option>)}
                                         </select>
                                     </div>
@@ -117,7 +133,7 @@ export const AIExerciseGenerator: React.FC<AIExerciseGeneratorProps> = ({ subjec
                             </div>
 
                             <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-1">Difficulté</label>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">{t('ai_gen.label_difficulty')}</label>
                                 <div className="flex gap-4">
                                     {['easy', 'medium', 'hard'].map(diff => (
                                         <label key={diff} className="flex items-center gap-2 cursor-pointer">
@@ -130,7 +146,9 @@ export const AIExerciseGenerator: React.FC<AIExerciseGeneratorProps> = ({ subjec
                                                 className="text-purple-600 focus:ring-purple-500"
                                             />
                                             <span className="capitalize">{
-                                                diff === 'easy' ? 'Facile' : diff === 'medium' ? 'Moyen' : 'Difficile'
+                                                diff === 'easy' ? t('ai_gen.diff_easy') :
+                                                    diff === 'medium' ? t('ai_gen.diff_medium') :
+                                                        t('ai_gen.diff_hard')
                                             }</span>
                                         </label>
                                     ))}
@@ -138,13 +156,13 @@ export const AIExerciseGenerator: React.FC<AIExerciseGeneratorProps> = ({ subjec
                             </div>
 
                             <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-1">Sujet / Thème</label>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">{t('ai_gen.label_topic')}</label>
                                 <div className="relative">
                                     <Layers className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
                                     <input
                                         type="text"
                                         className="w-full pl-9 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-purple-500"
-                                        placeholder="Ex: Fractions, Verbes du 1er groupe, La révolution française..."
+                                        placeholder={t('ai_gen.placeholder_topic')}
                                         value={formData.topic}
                                         onChange={e => setFormData({ ...formData, topic: e.target.value })}
                                         required
@@ -153,7 +171,7 @@ export const AIExerciseGenerator: React.FC<AIExerciseGeneratorProps> = ({ subjec
                             </div>
 
                             <div>
-                                <label className="block text-sm font-medium text-gray-700 mb-1">Type d'exercice</label>
+                                <label className="block text-sm font-medium text-gray-700 mb-1">{t('ai_gen.label_type')}</label>
                                 <div className="flex gap-4">
                                     <label className="flex items-center gap-2 cursor-pointer p-3 border rounded-xl hover:bg-gray-50 flex-1 border-gray-200 has-[:checked]:border-purple-500 has-[:checked]:bg-purple-50 transition-all">
                                         <input
@@ -165,8 +183,8 @@ export const AIExerciseGenerator: React.FC<AIExerciseGeneratorProps> = ({ subjec
                                             className="text-purple-600 focus:ring-purple-500"
                                         />
                                         <div className="flex flex-col">
-                                            <span className="font-medium">QCM</span>
-                                            <span className="text-xs text-gray-500">Question à choix multiples</span>
+                                            <span className="font-medium">{t('ai_gen.type_qcm')}</span>
+                                            <span className="text-xs text-gray-500">{t('ai_gen.type_qcm_desc')}</span>
                                         </div>
                                     </label>
                                     <label className="flex items-center gap-2 cursor-pointer p-3 border rounded-xl hover:bg-gray-50 flex-1 border-gray-200 has-[:checked]:border-purple-500 has-[:checked]:bg-purple-50 transition-all">
@@ -179,8 +197,8 @@ export const AIExerciseGenerator: React.FC<AIExerciseGeneratorProps> = ({ subjec
                                             className="text-purple-600 focus:ring-purple-500"
                                         />
                                         <div className="flex flex-col">
-                                            <span className="font-medium">Classique</span>
-                                            <span className="text-xs text-gray-500">Énoncé et questions libres</span>
+                                            <span className="font-medium">{t('ai_gen.type_classic')}</span>
+                                            <span className="text-xs text-gray-500">{t('ai_gen.type_classic_desc')}</span>
                                         </div>
                                     </label>
                                 </div>
@@ -194,12 +212,12 @@ export const AIExerciseGenerator: React.FC<AIExerciseGeneratorProps> = ({ subjec
                                 {loading ? (
                                     <>
                                         <div className="animate-spin w-5 h-5 border-2 border-white/30 border-t-white rounded-full"></div>
-                                        Génération en cours...
+                                        {t('ai_gen.button_generating')}
                                     </>
                                 ) : (
                                     <>
                                         <Sparkles className="w-5 h-5" />
-                                        Générer l'exercice
+                                        {t('ai_gen.button_generate')}
                                     </>
                                 )}
                             </button>
@@ -241,20 +259,40 @@ export const AIExerciseGenerator: React.FC<AIExerciseGeneratorProps> = ({ subjec
                                             {generatedExercise.content.text}
                                         </div>
                                     )}
-                                    {generatedExercise.content.questions && (
-                                        <div className="space-y-3">
-                                            {generatedExercise.content.questions.map((q: string, idx: number) => (
-                                                <div key={idx} className="bg-gray-50 p-3 rounded-lg">
-                                                    <span className="font-bold text-purple-600 mr-2">{idx + 1}.</span>
-                                                    {q}
-                                                </div>
-                                            ))}
+                                    {generatedExercise.content.questions && Array.isArray(generatedExercise.content.questions) && (
+                                        <div className="space-y-3 mt-4">
+                                            {generatedExercise.content.questions.map((q: any, idx: number) => {
+                                                if (typeof q === 'string') {
+                                                    return (
+                                                        <div key={idx} className="bg-gray-50 p-3 rounded-lg">
+                                                            <span className="font-bold text-purple-600 mr-2">{idx + 1}.</span>
+                                                            {q}
+                                                        </div>
+                                                    );
+                                                }
+                                                return (
+                                                    <div key={idx} className="bg-gray-50 p-3 rounded-lg">
+                                                        <span className="font-bold text-purple-600 mr-2">{idx + 1}.</span>
+                                                        <span>{q.question || q.text || ''}</span>
+                                                        {q.options && Array.isArray(q.options) && (
+                                                            <div className="mt-2 pl-6 space-y-1">
+                                                                {q.options.map((opt: string, i: number) => (
+                                                                    <div key={i} className="text-sm text-gray-600 flex items-center gap-2">
+                                                                        <div className="w-5 h-5 rounded-full bg-white border border-gray-300 text-xs flex items-center justify-center">{String.fromCharCode(65 + i)}</div>
+                                                                        {opt}
+                                                                    </div>
+                                                                ))}
+                                                            </div>
+                                                        )}
+                                                    </div>
+                                                );
+                                            })}
                                         </div>
                                     )}
                                 </div>
 
                                 <div className="mt-4 flex gap-2 text-sm text-gray-500">
-                                    <span className="italic">L'exercice est prêt à être résolu !</span>
+                                    <span className="italic">{t('ai_gen.ready_msg')}</span>
                                 </div>
                             </div>
 
@@ -263,22 +301,16 @@ export const AIExerciseGenerator: React.FC<AIExerciseGeneratorProps> = ({ subjec
                                     onClick={() => setGeneratedExercise(null)}
                                     className="flex-1 px-4 py-3 border border-gray-300 text-gray-700 font-medium rounded-xl hover:bg-gray-50 transition-colors"
                                 >
-                                    Générer un autre
+                                    {t('ai_gen.button_generate_another')}
                                 </button>
                                 <button
                                     onClick={() => {
-                                        onExerciseGenerated({
-                                            ...generatedExercise,
-                                            level: formData.level,
-                                            subject: formData.subject,
-                                            difficulty: formData.difficulty,
-                                            exercise_type: formData.exerciseType
-                                        });
+                                        onExerciseGenerated(generatedExercise);
                                         setIsOpen(false);
                                     }}
                                     className="flex-1 px-4 py-3 bg-green-600 text-white font-bold rounded-xl shadow-lg hover:bg-green-700 transition-colors"
                                 >
-                                    Commencer cet exercice
+                                    {t('ai_gen.button_start')}
                                 </button>
                             </div>
                         </div>

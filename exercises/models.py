@@ -140,6 +140,43 @@ class ExerciseAttempt(models.Model):
         super().save(*args, **kwargs)
 
 
+class ExerciseResource(models.Model):
+    """Ressource complémentaire (ex: PDF) pour un exercice."""
+    
+    RESOURCE_TYPES = [
+        ('pdf', 'PDF'),
+        ('image', 'Image'),
+        ('other', 'Autre'),
+    ]
+    
+    exercise = models.ForeignKey(
+        Exercise, 
+        on_delete=models.CASCADE, 
+        related_name='resources',
+        verbose_name='Exercice'
+    )
+    title = models.CharField(max_length=200, verbose_name='Titre')
+    resource_type = models.CharField(
+        max_length=20, 
+        choices=RESOURCE_TYPES,
+        default='pdf',
+        verbose_name='Type'
+    )
+    file = models.FileField(
+        upload_to='exercise_resources/', 
+        verbose_name='Fichier'
+    )
+    order = models.PositiveIntegerField(default=0, verbose_name='Ordre')
+    
+    class Meta:
+        verbose_name = 'Ressource d\'exercice'
+        verbose_name_plural = 'Ressources d\'exercices'
+        ordering = ['order']
+    
+    def __str__(self):
+        return f"{self.exercise.title} - {self.title}"
+
+
 class Quiz(models.Model):
     """Quiz composé de plusieurs exercices."""
     

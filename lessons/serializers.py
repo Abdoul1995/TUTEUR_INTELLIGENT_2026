@@ -75,7 +75,7 @@ class LessonListSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'title', 'slug', 'summary', 'level', 'chapter', 
             'chapter_title', 'subject_name', 'duration_minutes',
-            'order', 'image', 'is_official'
+            'order', 'image', 'is_official', 'pdf_content'
         ]
 
 
@@ -93,7 +93,7 @@ class LessonDetailSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'title', 'slug', 'content', 'summary', 'level',
             'chapter', 'duration_minutes', 'order', 'is_official',
-            'image', 'video_url', 'author', 'author_name',
+            'image', 'video_url', 'pdf_content', 'author', 'author_name',
             'resources', 'is_viewed', 'completion_percentage',
             'created_at', 'updated_at'
         ]

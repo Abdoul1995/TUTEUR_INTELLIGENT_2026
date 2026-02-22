@@ -55,6 +55,7 @@ export interface Lesson {
   is_official: boolean
   image?: string
   video_url?: string
+  pdf_content?: string
   resources?: LessonResource[]
   is_viewed?: boolean
   completion_percentage?: number
@@ -69,6 +70,14 @@ export interface LessonResource {
   file?: string
   url?: string
   description: string
+  order: number
+}
+
+export interface ExerciseResource {
+  id: number
+  title: string
+  resource_type: 'pdf' | 'image' | 'other'
+  file: string
   order: number
 }
 
@@ -94,6 +103,7 @@ export interface Exercise {
   attempts_count?: number
   best_score?: number
   correct_answers?: any
+  resources?: ExerciseResource[]
 }
 
 export interface ExerciseAttempt {

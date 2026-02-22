@@ -62,27 +62,16 @@ export function Exercises() {
 
   const handleExerciseGenerated = async (exerciseData: any) => {
     try {
-      // Prepare data for saving
-      const dataToSave = {
-        ...exerciseData,
+      // The backend already creates and saves the exercise during generation.
+      // We just need to navigate to the new exercise page.
+      if (exerciseData && exerciseData.id) {
+        navigate(`/exercises/${exerciseData.id}`)
+      } else {
+        throw new Error("L'identifiant de l'exercice est manquant.");
       }
-
-      // Find subject ID if possible
-      const subjectObj = subjects.find(s => s.name === exerciseData.subject || s.slug === exerciseData.subject)
-      if (subjectObj) {
-        dataToSave.subject = subjectObj.id
-      }
-
-      // Set default values
-      if (!dataToSave.difficulty) dataToSave.difficulty = 'medium'
-      if (!dataToSave.exercise_type) dataToSave.exercise_type = 'qcm'
-      if (!dataToSave.points) dataToSave.points = 10
-
-      const newExercise = await api.createExercise(dataToSave)
-      navigate(`/exercises/${newExercise.id}`)
     } catch (error) {
-      console.error("Error creating exercise:", error)
-      alert("Erreur lors de la sauvegarde de l'exercice.")
+      console.error("Error navigating to exercise:", error)
+      alert("Erreur lors de l'ouverture de l'exercice généré.")
     }
   }
 
@@ -187,8 +176,8 @@ export function Exercises() {
                 selectedDifficulty === diff.value ? '' : diff.value
               )}
               className={`flex items-center px-4 py-2 rounded-lg transition-colors ${selectedDifficulty === diff.value
-                  ? `bg-${diff.color}-200`
-                  : 'bg-white hover:bg-gray-50'
+                ? `bg-${diff.color}-200`
+                : 'bg-white hover:bg-gray-50'
                 }`}
             >
               <div className={`w-3 h-3 rounded-full bg-${diff.color}-500 mr-2`} />

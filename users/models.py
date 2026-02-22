@@ -60,6 +60,11 @@ class User(AbstractUser):
         null=True,
         verbose_name='Photo de profil'
     )
+    subject = models.CharField(
+        max_length=100,
+        blank=True,
+        verbose_name='Matière enseignée'
+    )
     bio = models.TextField(
         blank=True,
         verbose_name='Biographie'

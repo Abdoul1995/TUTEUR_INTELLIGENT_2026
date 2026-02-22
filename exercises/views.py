@@ -79,7 +79,12 @@ class ExerciseViewSet(viewsets.ModelViewSet):
         if user.is_authenticated and user.user_type == 'student':
             from users.utils import get_allowed_levels
             allowed_levels = get_allowed_levels(user.level)
-            queryset = queryset.filter(level__in=allowed_levels)
+            # L'élève peut voir les exercices de son niveau (et inférieurs), 
+            # MAIS aussi tous les exercices qu'il a générés lui-même, peu importe le niveau
+            queryset = queryset.filter(
+                models.Q(level__in=allowed_levels) | 
+                models.Q(creator=user)
+            )
         
         # Filtrer par difficulté
         difficulty = self.request.query_params.get('difficulty', None)
@@ -108,10 +113,44 @@ class ExerciseViewSet(viewsets.ModelViewSet):
         
         # Vérifier la réponse
         correct_answers = exercise.correct_answers
-        is_correct = self._check_answer(answer, correct_answers, exercise.exercise_type)
         
-        # Calculer le score
-        score = exercise.points if is_correct else 0
+        # Calculate partial score for QCM arrays
+        if exercise.exercise_type == 'qcm' and isinstance(answer, list) and isinstance(correct_answers, list):
+            correct_count: int = 0
+            total_questions = len(correct_answers)
+            
+            # Normalize correct answers
+            norm_correct = []
+            for c in correct_answers:
+                if isinstance(c, str) and c.upper() in ['A', 'B', 'C', 'D']:
+                    val = str(ord(c.upper()) - 65)
+                    norm_correct.append(val)
+                else:
+                    norm_correct.append(str(c))
+                    
+            # Normalize provided answers
+            norm_answer = []
+            for a in answer:
+                if isinstance(a, int) or (isinstance(a, str) and a.isdigit()):
+                    norm_answer.append(str(a))
+                else:
+                    norm_answer.append(str(a).upper())
+            
+            # Count matches
+            for i in range(min(len(norm_answer), len(norm_correct))):
+                if norm_answer[i] == norm_correct[i]:
+                    correct_count += 1
+                    
+            is_correct = correct_count == total_questions
+            score_out_of_total = correct_count
+            max_possible = total_questions
+        else:
+            is_correct = self._check_answer(answer, correct_answers, exercise.exercise_type)
+            score_out_of_total = exercise.points if is_correct else 0
+            max_possible = exercise.points
+        
+        # Calculer le score (legacy approach for non-qcm arrays)
+        score = score_out_of_total
         if hints_used > 0:
             score = max(0, score - (hints_used * 2))  # Pénalité pour indices
         
@@ -129,9 +168,10 @@ class ExerciseViewSet(viewsets.ModelViewSet):
         result = {
             'is_correct': is_correct,
             'score': score,
+            'max_score': max_possible,
             'correct_answer': correct_answers,
             'explanation': exercise.explanation,
-            'message': 'Bravo !' if is_correct else 'Ce n\'est pas la bonne réponse. Réessayez !'
+            'message': 'Bravo !' if is_correct else 'Exercice terminé'
         }
         
         return Response(result)
@@ -139,7 +179,34 @@ class ExerciseViewSet(viewsets.ModelViewSet):
     def _check_answer(self, answer, correct_answers, exercise_type):
         """Vérifier si la réponse est correcte selon le type d'exercice."""
         if exercise_type == 'qcm':
-            return answer == correct_answers
+            # Handle AI generated list of letters vs list of integers
+            if isinstance(answer, list) and isinstance(correct_answers, list):
+                if len(answer) != len(correct_answers):
+                    return False
+                
+                norm_answer = []
+                for a in answer:
+                    if isinstance(a, int) or (isinstance(a, str) and a.isdigit()):
+                        norm_answer.append(str(a))
+                    else:
+                        norm_answer.append(str(a).upper())
+                        
+                norm_correct = []
+                for c in correct_answers:
+                    if isinstance(c, str) and c.upper() in ['A', 'B', 'C', 'D']:
+                        val = str(ord(c.upper()) - 65)
+                        norm_correct.append(val)
+                    else:
+                        norm_correct.append(str(c))
+                        
+                return norm_answer == norm_correct
+            # Handle legacy string/int fallback
+            if isinstance(answer, int) and isinstance(correct_answers, str):
+                if correct_answers.upper() in ['A', 'B', 'C', 'D']:
+                    return str(answer) == str(ord(correct_answers.upper()) - 65)
+            
+            # Direct string comparison
+            return str(answer) == str(correct_answers)
         elif exercise_type == 'text':
             return answer.lower().strip() == correct_answers.lower().strip()
         elif exercise_type == 'number':

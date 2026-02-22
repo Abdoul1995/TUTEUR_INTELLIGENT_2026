@@ -104,6 +104,12 @@ class Lesson(models.Model):
         null=True,
         verbose_name='Image'
     )
+    pdf_content = models.FileField(
+        upload_to='lessons/pdfs/',
+        blank=True,
+        null=True,
+        verbose_name='Contenu PDF'
+    )
     video_url = models.URLField(blank=True, verbose_name='URL Vidéo')
     author = models.ForeignKey(
         User, 

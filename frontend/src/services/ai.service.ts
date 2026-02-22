@@ -1,11 +1,9 @@
-import axios from 'axios';
-
-const API_URL = 'http://localhost:8000/api/ai';
+import { api } from './api';
 
 export const aiService = {
     chat: async (messages: any[]) => {
         try {
-            const response = await axios.post(`${API_URL}/chat/`, { messages });
+            const response = await api.client.post('ai/chat/', { messages });
             return response.data;
         } catch (error) {
             console.error('Error in AI chat:', error);
@@ -18,15 +16,17 @@ export const aiService = {
         level: string,
         topic: string,
         difficulty: string = 'medium',
-        exerciseType: 'qcm' | 'classic' = 'qcm'
+        exerciseType: 'qcm' | 'classic' = 'qcm',
+        language: string = 'fr'
     ) => {
         try {
-            const response = await axios.post(`${API_URL}/generate-exercise/`, {
+            const response = await api.client.post('ai/generate-exercise/', {
                 subject,
                 level,
                 topic,
                 difficulty,
-                exercise_type: exerciseType
+                exercise_type: exerciseType,
+                language
             });
             return response.data;
         } catch (error) {

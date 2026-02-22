@@ -1,5 +1,6 @@
 import { Outlet, Link, useLocation, useNavigate } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
+import { useTranslation } from 'react-i18next'
 import {
   BookOpen,
   Home,
@@ -9,7 +10,8 @@ import {
   GraduationCap,
   Menu,
   X,
-  ClipboardList
+  ClipboardList,
+  Languages
 } from 'lucide-react'
 import { useState } from 'react'
 
@@ -17,18 +19,24 @@ export function Layout() {
   const { user, isAuthenticated, logout } = useAuth()
   const location = useLocation()
   const navigate = useNavigate()
+  const { t, i18n } = useTranslation()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
+  const toggleLanguage = () => {
+    const newLang = i18n.language === 'fr' ? 'en' : 'fr'
+    i18n.changeLanguage(newLang)
+  }
+
   const navigation = [
-    { name: 'Accueil', href: '/', icon: Home },
-    { name: 'Leçons', href: '/lessons', icon: BookOpen },
-    { name: 'Exercices', href: '/exercises', icon: ClipboardList },
+    { name: t('nav.home'), href: '/', icon: Home },
+    { name: t('nav.lessons'), href: '/lessons', icon: BookOpen },
+    { name: t('nav.exercises'), href: '/exercises', icon: ClipboardList },
   ]
 
   const authNavigation = [
-    { name: 'Tableau de bord', href: '/dashboard', icon: BarChart3 },
-    { name: 'Progression', href: '/progress', icon: GraduationCap },
-    { name: 'Profil', href: '/profile', icon: User },
+    { name: t('nav.dashboard'), href: '/dashboard', icon: BarChart3 },
+    { name: t('nav.progress'), href: '/progress', icon: GraduationCap },
+    { name: t('nav.profile'), href: '/profile', icon: User },
   ]
 
   const isActive = (path: string) => {
@@ -97,6 +105,16 @@ export function Layout() {
 
             {/* Auth Buttons */}
             <div className="hidden md:flex items-center space-x-3">
+              {/* Language Switcher */}
+              <button
+                onClick={toggleLanguage}
+                className="p-2 rounded-lg text-gray-600 hover:bg-gray-100 flex items-center space-x-1"
+                title={i18n.language === 'fr' ? 'Switch to English' : 'Passer en Français'}
+              >
+                <Languages className="w-5 h-5" />
+                <span className="text-xs font-bold uppercase">{i18n.language}</span>
+              </button>
+
               {isAuthenticated ? (
                 <div className="flex items-center space-x-3">
                   <span className="text-sm text-gray-600">
@@ -107,16 +125,16 @@ export function Layout() {
                     className="flex items-center px-3 py-2 rounded-lg text-sm font-medium text-red-600 hover:bg-red-50 hover:text-red-700 transition-colors"
                   >
                     <LogOut className="w-4 h-4 mr-2" />
-                    Déconnexion
+                    {t('nav.logout')}
                   </button>
                 </div>
               ) : (
                 <div className="flex items-center space-x-2">
                   <Link to="/login" className="btn-outline text-sm">
-                    Connexion
+                    {t('nav.login')}
                   </Link>
                   <Link to="/register" className="btn-primary text-sm">
-                    S'inscrire
+                    {t('nav.register')}
                   </Link>
                 </div>
               )}
@@ -176,6 +194,14 @@ export function Layout() {
                   ))}
                   <div className="border-t border-gray-100 my-2" />
                   <button
+                    onClick={toggleLanguage}
+                    className="flex items-center w-full px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-50 uppercase"
+                  >
+                    <Languages className="w-5 h-5 mr-3" />
+                    {i18n.language === 'fr' ? 'English' : 'Français'}
+                  </button>
+                  <div className="border-t border-gray-100 my-2" />
+                  <button
                     onClick={() => {
                       handleLogout()
                       setIsMobileMenuOpen(false)
@@ -183,7 +209,7 @@ export function Layout() {
                     className="flex items-center w-full px-3 py-2 rounded-lg text-sm font-medium text-red-600 hover:bg-red-50"
                   >
                     <LogOut className="w-5 h-5 mr-3" />
-                    Déconnexion
+                    {t('nav.logout')}
                   </button>
                 </>
               )}
@@ -191,13 +217,21 @@ export function Layout() {
               {!isAuthenticated && (
                 <>
                   <div className="border-t border-gray-100 my-2" />
+                  <button
+                    onClick={toggleLanguage}
+                    className="flex items-center w-full px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-50 uppercase"
+                  >
+                    <Languages className="w-5 h-5 mr-3" />
+                    {i18n.language === 'fr' ? 'English' : 'Français'}
+                  </button>
+                  <div className="border-t border-gray-100 my-2" />
                   <Link
                     to="/login"
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="flex items-center px-3 py-2 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-50"
                   >
                     <User className="w-5 h-5 mr-3" />
-                    Connexion
+                    {t('nav.login')}
                   </Link>
                   <Link
                     to="/register"
@@ -205,7 +239,7 @@ export function Layout() {
                     className="flex items-center px-3 py-2 rounded-lg text-sm font-medium text-primary-600 hover:bg-primary-50"
                   >
                     <GraduationCap className="w-5 h-5 mr-3" />
-                    S'inscrire
+                    {t('nav.register')}
                   </Link>
                 </>
               )}

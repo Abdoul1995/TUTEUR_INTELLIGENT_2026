@@ -12,21 +12,53 @@ import {
   ArrowRight,
   RotateCcw,
   Sparkles,
-  Star
+  Star,
+  Download,
+  FileText,
+  Maximize2,
+  X
 } from 'lucide-react'
+import { InlineMath } from 'react-katex'
 import type { Exercise } from '../types'
+
+const LatexRenderer = ({ text }: { text: string }) => {
+  if (!text) return null;
+
+  // Split by $ but keep the $ as part of the match
+  const parts = text.split(/(\$[^$]+\$)/g);
+
+  return (
+    <>
+      {parts.map((part, i) => {
+        if (part.startsWith('$') && part.endsWith('$')) {
+          const mathContent = part.slice(1, -1);
+          return <InlineMath key={i} math={mathContent} />;
+        }
+        return <span key={i}>{part}</span>;
+      })}
+    </>
+  );
+};
+
+const getMediaUrl = (url: string) => {
+  if (!url) return '';
+  if (url.startsWith('http')) return url;
+  const baseUrl = import.meta.env.VITE_API_URL?.replace('/api', '') || 'http://localhost:8000';
+  return `${baseUrl}${url.startsWith('/') ? '' : '/'}${url}`;
+};
 
 export function ExerciseDetail() {
   const { id } = useParams<{ id: string }>()
   const navigate = useNavigate()
   const [exercise, setExercise] = useState<Exercise | null>(null)
   const [loading, setLoading] = useState(true)
-  const [answer, setAnswer] = useState<any>(null)
+  const [answer, setAnswer] = useState<any>(null) // Can be number or number[]
   const [result, setResult] = useState<any>(null)
   const [showHint, setShowHint] = useState(false)
   const [hintsUsed, setHintsUsed] = useState(0)
   const [timeSpent, setTimeSpent] = useState(0)
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [fullscreenPdf, setFullscreenPdf] = useState<string | null>(null)
 
 
   useEffect(() => {
@@ -63,10 +95,13 @@ export function ExerciseDetail() {
     try {
       let submitAnswer = answer
 
-      // Convert index to letter for QCM
-      if (exercise?.exercise_type === 'qcm' && typeof answer === 'number') {
-        submitAnswer = String.fromCharCode(65 + answer)
-      }
+      // For standard single-question QCM, answer might be a number, just leave it as integer or 
+      // array of integers. The backend check_answer logic currently expects string letters? Let's check backend.
+      // Wait, let's keep it as the index if that's what backend evaluates against, but the current backend evaluates:
+      // exercise.correct_answers. For AI QCM, correct_answers is an array of ints `[2, 0, 1]`. 
+      // For standard QCM, it might be an index `2`. So sending `answer` directly (int or int array) is CORRECT.
+      // The previous code converted it to A/B/C/D format which is likely wrong for the new DB schema where `correct_answers` are ints.
+      /* Removing the Character conversion */
 
       const response = await api.submitExercise(parseInt(id!), {
         answer: submitAnswer,
@@ -140,6 +175,89 @@ export function ExerciseDetail() {
 
     switch (exercise.exercise_type) {
       case 'qcm':
+        // Check if this is a multi-question AI QCM
+        if (exercise.content.questions && Array.isArray(exercise.content.questions)) {
+          const currentAnswers = Array.isArray(answer) ? answer : new Array(exercise.content.questions.length).fill(-1);
+
+          const handleMultiAnswer = (qIndex: number, optIndex: number) => {
+            const newAnswers = [...currentAnswers];
+            newAnswers[qIndex] = optIndex;
+            setAnswer(newAnswers.includes(-1) ? newAnswers : newAnswers); // Keep tracking but could just setAnswer directly
+            setAnswer(newAnswers);
+          };
+
+          const getCorrectIndex = (ans: any) => {
+            if (typeof ans === 'string' && /^[A-Da-d]$/.test(ans)) {
+              return ans.toUpperCase().charCodeAt(0) - 65;
+            }
+            return Number(ans);
+          };
+
+          return (
+            <div className="space-y-6">
+              {exercise.content.questions.map((q: any, qIndex: number) => {
+                const correctOptIndex = result && result.correct_answer ? getCorrectIndex(result.correct_answer[qIndex]) : -1;
+                const isQuestionCorrect = result && Array.isArray(answer) && answer[qIndex] === correctOptIndex;
+
+                return (
+                  <div key={qIndex} className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
+                    <h3 className="font-semibold text-gray-900 mb-4 flex items-start">
+                      <span className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center font-bold text-xs mr-3 mt-0.5 ${result ? (isQuestionCorrect ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700') : 'bg-primary-100 text-primary-700'
+                        }`}>
+                        {qIndex + 1}
+                      </span>
+                      <LatexRenderer text={q.question || q.text || ''} />
+                    </h3>
+                    <div className="space-y-3">
+                      {q.options?.map((option: string, optIndex: number) => {
+                        const isCorrectOption = result && correctOptIndex === optIndex;
+                        const isSelectedOption = Array.isArray(answer) && answer[qIndex] === optIndex;
+
+                        let buttonClass = 'border-gray-200 hover:border-primary-300';
+                        let dotClass = 'border-gray-300';
+
+                        if (result) {
+                          if (isCorrectOption) {
+                            buttonClass = 'border-green-500 bg-green-50';
+                            dotClass = 'border-green-500 bg-green-500';
+                          } else if (isSelectedOption && !isCorrectOption) {
+                            buttonClass = 'border-red-500 bg-red-50';
+                            dotClass = 'border-red-500 bg-red-500';
+                          } else {
+                            buttonClass = 'border-gray-200 opacity-50';
+                          }
+                        } else if (isSelectedOption) {
+                          buttonClass = 'border-primary-500 bg-primary-50';
+                          dotClass = 'border-primary-500 bg-primary-500';
+                        }
+
+                        return (
+                          <button
+                            key={optIndex}
+                            onClick={() => handleMultiAnswer(qIndex, optIndex)}
+                            disabled={result !== null}
+                            className={`w-full p-4 rounded-xl border-2 text-left transition-all ${buttonClass} ${result ? 'cursor-not-allowed' : ''}`}
+                          >
+                            <div className="flex items-center">
+                              <div className={`w-6 h-6 rounded-full border-2 mr-3 flex items-center justify-center ${dotClass}`}>
+                                {((isSelectedOption && !result) || (result && (isSelectedOption || isCorrectOption))) && <div className="w-2 h-2 bg-white rounded-full" />}
+                              </div>
+                              <span className={isCorrectOption ? 'font-medium text-green-800' : (isSelectedOption && result && !isCorrectOption ? 'text-red-800 line-through' : '')}>
+                                <LatexRenderer text={option} />
+                              </span>
+                            </div>
+                          </button>
+                        );
+                      })}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          )
+        }
+
+        // Standard single-question QCM
         return (
           <div className="space-y-3">
             {exercise.content.options?.map((option: string, index: number) => (
@@ -157,7 +275,7 @@ export function ExerciseDetail() {
                     }`}>
                     {answer === index && <div className="w-2 h-2 bg-white rounded-full" />}
                   </div>
-                  <span>{option}</span>
+                  <span><LatexRenderer text={option} /></span>
                 </div>
               </button>
             ))}
@@ -175,7 +293,7 @@ export function ExerciseDetail() {
                   Sujet / Énoncé
                 </h3>
                 <div className="prose max-w-none text-gray-700 whitespace-pre-wrap leading-relaxed">
-                  {exercise.content.text}
+                  <LatexRenderer text={exercise.content.text} />
                 </div>
               </div>
             )}
@@ -189,7 +307,9 @@ export function ExerciseDetail() {
                     <div className="flex-shrink-0 w-8 h-8 bg-primary-100 text-primary-700 rounded-full flex items-center justify-center font-bold text-sm">
                       {index + 1}
                     </div>
-                    <div className="text-gray-700 pt-1">{question}</div>
+                    <div className="text-gray-700 pt-1">
+                      <LatexRenderer text={question} />
+                    </div>
                   </div>
                 ))}
               </div>
@@ -216,12 +336,14 @@ export function ExerciseDetail() {
                       exercise.correct_answers.map((ans: string, i: number) => (
                         <div key={i} className="flex gap-3">
                           <span className="font-bold text-green-700">{i + 1}.</span>
-                          <span className="text-green-800">{ans}</span>
+                          <span className="text-green-800">
+                            <LatexRenderer text={ans} />
+                          </span>
                         </div>
                       ))
                     ) : (
                       <div className="text-green-800 whitespace-pre-wrap">
-                        {String(exercise.correct_answers)}
+                        <LatexRenderer text={String(exercise.correct_answers)} />
                       </div>
                     )}
                   </div>
@@ -306,14 +428,16 @@ export function ExerciseDetail() {
           </h1>
 
           {exercise.description && (
-            <p className="text-gray-600 mb-6">{exercise.description}</p>
+            <div className="text-gray-600 mb-6">
+              <LatexRenderer text={exercise.description} />
+            </div>
           )}
 
           {/* Question */}
           {exercise.content.question && (
             <div className="bg-gray-50 rounded-xl p-6 mb-6">
               <p className="text-lg font-medium text-gray-900">
-                {exercise.content.question}
+                <LatexRenderer text={exercise.content.question} />
               </p>
             </div>
           )}
@@ -325,45 +449,136 @@ export function ExerciseDetail() {
                 <Lightbulb className="w-5 h-5 text-yellow-600 mr-2 mt-0.5" />
                 <div>
                   <p className="font-medium text-yellow-800 mb-1">Indice {hintsUsed}</p>
-                  <p className="text-yellow-700">{exercise.hints[hintsUsed - 1]}</p>
+                  <p className="text-yellow-700">
+                    <LatexRenderer text={exercise.hints[hintsUsed - 1]} />
+                  </p>
                 </div>
               </div>
             </div>
           )}
 
           {/* Answer Input */}
-          <div className="mb-6">
+          <div className="mb-8">
             {renderQuestion()}
           </div>
 
+          {/* Attached Resources (PDFs) */}
+          {exercise.resources && exercise.resources.length > 0 && (
+            <div className="mb-8 space-y-6">
+              <h2 className="text-xl font-bold text-gray-900 border-b pb-2">
+                Documents annexes
+              </h2>
+              {exercise.resources.map((resource) => (
+                <div key={resource.id} className="card p-6 border border-gray-200 shadow-sm">
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-lg font-semibold text-gray-800 flex items-center">
+                      <FileText className="w-5 h-5 mr-2 text-primary-600" />
+                      {resource.title}
+                    </h3>
+                    <div className="flex items-center space-x-4">
+                      {resource.resource_type === 'pdf' && (
+                        <button
+                          onClick={() => setFullscreenPdf(getMediaUrl(resource.file))}
+                          className="flex items-center text-sm text-gray-600 hover:text-gray-900 font-medium"
+                        >
+                          <Maximize2 className="w-4 h-4 mr-1" />
+                          Aperçu plein écran
+                        </button>
+                      )}
+                      <a
+                        href={getMediaUrl(resource.file)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center text-sm text-primary-600 hover:text-primary-700 font-medium"
+                      >
+                        <Download className="w-4 h-4 mr-1" />
+                        Télécharger
+                      </a>
+                    </div>
+                  </div>
+
+                  {resource.resource_type === 'pdf' && (
+                    <div className="w-full h-[600px] border border-gray-200 rounded-xl overflow-hidden bg-gray-50 flex flex-col items-center justify-center p-4">
+                      <object
+                        data={`${getMediaUrl(resource.file)}#toolbar=0`}
+                        type="application/pdf"
+                        className="w-full h-full"
+                      >
+                        <p className="text-gray-500 mb-4">
+                          Votre navigateur ne peut pas afficher directement ce fichier PDF.
+                        </p>
+                        <a
+                          href={getMediaUrl(resource.file)}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="btn-primary"
+                        >
+                          <Download className="w-4 h-4 mr-2" />
+                          Télécharger le fichier
+                        </a>
+                      </object>
+                    </div>
+                  )}
+                  {resource.resource_type === 'image' && (
+                    <div className="w-full rounded-xl overflow-hidden border border-gray-200">
+                      <img src={getMediaUrl(resource.file)} alt={resource.title} className="w-full h-auto object-contain" />
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
+
           {/* Result */}
           {result && (
-            <div className={`mb-6 p-6 rounded-xl ${result.is_correct ? 'bg-green-50 border border-green-200' : 'bg-red-50 border border-red-200'
-              }`}>
-              <div className="flex items-center mb-4">
-                {result.is_correct ? (
-                  <CheckCircle2 className="w-8 h-8 text-green-600 mr-3" />
-                ) : (
-                  <XCircle className="w-8 h-8 text-red-600 mr-3" />
-                )}
+            exercise.exercise_type === 'qcm' ? (
+              <div className={`mb-6 p-6 rounded-xl border ${result.is_correct ? 'bg-green-50 border-green-200' : 'bg-gray-50 border-gray-200'} flex items-center justify-between`}>
                 <div>
-                  <p className={`text-lg font-semibold ${result.is_correct ? 'text-green-800' : 'text-red-800'
-                    }`}>
-                    {result.message}
+                  <p className={`text-lg font-semibold ${result.is_correct ? 'text-green-800' : 'text-gray-800'}`}>
+                    {result.is_correct ? 'Parfait !' : 'Exercice terminé'}
                   </p>
                   <p className="text-sm text-gray-600">
-                    Score: {result.score}/{exercise.points} points
+                    Score: {result.score}/{result.max_score || exercise.points} {exercise.exercise_type === 'qcm' ? '' : 'points'}
                   </p>
                 </div>
+                {result.is_correct ? (
+                  <CheckCircle2 className="w-8 h-8 text-green-600" />
+                ) : (
+                  <div className="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center text-gray-500 font-bold">
+                    {result.score}
+                  </div>
+                )}
               </div>
-
-              {result.explanation && (
-                <div className="mt-4 pt-4 border-t border-gray-200">
-                  <p className="font-medium text-gray-700 mb-2">Explication:</p>
-                  <p className="text-gray-600">{result.explanation}</p>
+            ) : (
+              <div className={`mb-6 p-6 rounded-xl ${result.is_correct ? 'bg-green-50 border border-green-200' : 'bg-red-50 border border-red-200'
+                }`}>
+                <div className="flex items-center mb-4">
+                  {result.is_correct ? (
+                    <CheckCircle2 className="w-8 h-8 text-green-600 mr-3" />
+                  ) : (
+                    <XCircle className="w-8 h-8 text-red-600 mr-3" />
+                  )}
+                  <div>
+                    <p className={`text-lg font-semibold ${result.is_correct ? 'text-green-800' : 'text-red-800'
+                      }`}>
+                      {result.message}
+                    </p>
+                    <p className="text-sm text-gray-600">
+                      Score: {result.score}/{exercise.points} points
+                    </p>
+                  </div>
                 </div>
-              )}
-            </div>
+
+                {result.explanation && (
+                  <div className="mt-4 pt-4 border-t border-gray-200">
+                    <p className="font-medium text-gray-700 mb-2">Explication:</p>
+                    <p className="text-gray-600">
+                      <LatexRenderer text={result.explanation} />
+                    </p>
+                  </div>
+                )}
+              </div>
+            )
           )}
 
           {/* Actions */}
@@ -408,7 +623,11 @@ export function ExerciseDetail() {
                   )}
                   <button
                     onClick={handleSubmit}
-                    disabled={answer === null || isSubmitting}
+                    disabled={
+                      answer === null ||
+                      (Array.isArray(answer) && answer.includes(-1)) ||
+                      isSubmitting
+                    }
                     className="btn-primary flex-1"
                   >
                     {isSubmitting ? 'Vérification...' : 'Valider ma réponse'}
@@ -436,6 +655,41 @@ export function ExerciseDetail() {
           </div>
         </div>
       </div>
+
+      {/* Fullscreen PDF Modal */}
+      {fullscreenPdf && (
+        <div className="fixed inset-0 z-50 bg-black/90 flex flex-col">
+          <div className="flex justify-end p-4">
+            <button
+              onClick={() => setFullscreenPdf(null)}
+              className="flex items-center text-white hover:text-gray-300 bg-white/10 px-4 py-2 rounded-full transition-colors font-medium"
+            >
+              <X className="w-5 h-5 mr-2" />
+              Fermer l'aperçu
+            </button>
+          </div>
+          <div className="flex-1 w-full p-4 pt-0">
+            <object
+              data={`${fullscreenPdf}#toolbar=0`}
+              type="application/pdf"
+              className="w-full h-full bg-white rounded-lg overflow-hidden"
+            >
+              <div className="flex flex-col items-center justify-center h-full text-white">
+                <p className="mb-4">Votre navigateur ne peut pas afficher ce fichier en plein écran.</p>
+                <a
+                  href={fullscreenPdf}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary"
+                >
+                  <Download className="w-4 h-4 mr-2" />
+                  Ouvrir le fichier
+                </a>
+              </div>
+            </object>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

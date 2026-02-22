@@ -25,15 +25,32 @@ class ChatView(APIView):
 class GenerateExerciseView(APIView):
     permission_classes = [IsAuthenticated]
 
+    # Map any human-readable level name → DB slug code
+    LEVEL_MAP = {
+        'cp1': 'cp1', 'cp2': 'cp2', 'ce1': 'ce1', 'ce2': 'ce2',
+        'cm1': 'cm1', 'cm2': 'cm2',
+        '6ème': 'sixieme', '6eme': 'sixieme', 'sixieme': 'sixieme', '6e': 'sixieme',
+        '5ème': 'cinquieme', '5eme': 'cinquieme', 'cinquieme': 'cinquieme', '5e': 'cinquieme',
+        '4ème': 'quatrieme', '4eme': 'quatrieme', 'quatrieme': 'quatrieme', '4e': 'quatrieme',
+        '3ème': 'troisieme', '3eme': 'troisieme', 'troisieme': 'troisieme', '3e': 'troisieme',
+        'seconde': 'seconde', '2nde': 'seconde',
+        'première': 'premiere', 'premiere': 'premiere', '1ère': 'premiere', '1ere': 'premiere',
+        'terminale': 'terminale', 'tle': 'terminale',
+    }
+
     def post(self, request):
         subject_name = request.data.get('subject')
-        level = request.data.get('level')
+        level_raw = request.data.get('level', '')
         topic = request.data.get('topic')
         difficulty = request.data.get('difficulty', 'medium')
         exercise_type = request.data.get('exercise_type', 'qcm')
+        language = request.data.get('language', 'fr')
         
-        if not all([subject_name, level, topic]):
+        if not all([subject_name, level_raw, topic]):
             return Response({"error": "Missing required parameters"}, status=status.HTTP_400_BAD_REQUEST)
+
+        # Normalize level to DB code
+        level = self.LEVEL_MAP.get(level_raw.lower(), level_raw.lower())
 
         # Find subject - more robust lookup
         subject = Subject.objects.filter(name__iexact=subject_name).first()
@@ -44,11 +61,12 @@ class GenerateExerciseView(APIView):
              subject = Subject.objects.filter(slug__iexact=subject_name.lower().replace(' ', '-')).first()
         
         if not subject:
-            print(f"DEBUG: Subject '{subject_name}' not found in DB")
-            return Response({"error": f"Matière '{subject_name}' non trouvée dans la base de données."}, status=status.HTTP_404_NOT_FOUND)
+            import logging
+            logging.warning(f"Subject '{subject_name}' not found in DB. Available subjects: {list(Subject.objects.values_list('name', flat=True))}")
+            return Response({"error": f"Matière '{subject_name}' non trouvée. Vérifiez que la matière est créée dans l'administration."}, status=status.HTTP_404_NOT_FOUND)
 
         ai_service = AIService()
-        exercise_data = ai_service.generate_exercise(subject.name, level, topic, difficulty, exercise_type)
+        exercise_data = ai_service.generate_exercise(subject.name, level_raw, topic, difficulty, exercise_type, language)
 
         if "error" in exercise_data:
             return Response(exercise_data, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
@@ -70,10 +88,12 @@ class GenerateExerciseView(APIView):
                 creator=request.user,
                 is_ai_generated=True
             )
-            print(f"DEBUG: Exercise saved with ID {exercise.id}")
+            import logging
+            logging.info(f"AI Exercise saved with ID {exercise.id} for user {request.user}")
             
             serializer = ExerciseDetailSerializer(exercise, context={'request': request})
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         except Exception as e:
-            print(f"DEBUG: Error saving exercise: {str(e)}")
+            import logging
+            logging.error(f"Error saving AI exercise: {str(e)}", exc_info=True)
             return Response({"error": f"Erreur lors de la sauvegarde de l'exercice : {str(e)}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

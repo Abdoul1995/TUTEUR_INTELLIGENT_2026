@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import { useAuth } from '../contexts/AuthContext'
+import { useTranslation } from 'react-i18next'
 import {
   BookOpen,
   Brain,
@@ -13,33 +14,35 @@ import {
 
 export function Home() {
   const { isAuthenticated } = useAuth()
+  const { t } = useTranslation()
+
   const features = [
     {
       icon: BookOpen,
-      title: 'Leçons interactives',
-      description: 'Accédez à des leçons conformes au programme officiel, expliquées de manière simple et ludique.',
+      title: t('home.feature_lessons_title'),
+      description: t('home.feature_lessons_desc'),
     },
     {
       icon: Brain,
-      title: 'Exercices adaptatifs',
-      description: 'Pratiquez avec des exercices qui s\'adaptent à votre niveau et votre rythme d\'apprentissage.',
+      title: t('home.feature_exercises_title'),
+      description: t('home.feature_exercises_desc'),
     },
     {
       icon: Target,
-      title: 'Révision intelligente',
-      description: 'Identifiez vos points faibles et recevez des recommandations personnalisées.',
+      title: t('home.feature_revision_title'),
+      description: t('home.feature_revision_desc'),
     },
     {
       icon: TrendingUp,
-      title: 'Suivi de progression',
-      description: 'Visualisez votre évolution et célébrez vos réussites avec des badges.',
+      title: t('home.feature_progress_title'),
+      description: t('home.feature_progress_desc'),
     },
   ]
 
   const levels = [
-    { name: 'Primaire', range: 'CP1 - CM2', color: 'bg-green-500' },
-    { name: 'Collège', range: '6ème - 3ème', color: 'bg-blue-500' },
-    { name: 'Lycée', range: 'Seconde - Terminale', color: 'bg-purple-500' },
+    { name: t('home.level_primary'), range: 'CP1 - CM2', color: 'bg-green-500' },
+    { name: t('home.level_middle'), range: '6ème - 3ème', color: 'bg-blue-500' },
+    { name: t('home.level_high'), range: 'Seconde - Terminale', color: 'bg-purple-500' },
   ]
 
   return (
@@ -53,25 +56,24 @@ export function Home() {
             <div>
               <div className="inline-flex items-center px-4 py-2 rounded-full bg-white/10 backdrop-blur-sm text-sm font-medium mb-6">
                 <Award className="w-4 h-4 mr-2" />
-                Application éducative intelligente
+                {t('home.hero_badge')}
               </div>
               <h1 className="text-4xl lg:text-6xl font-bold leading-tight mb-6">
-                Apprenez à votre rythme avec un{' '}
-                <span className="text-yellow-300">tuteur intelligent</span>
+                {t('home.hero_title')}{' '}
+                <span className="text-yellow-300">{t('home.hero_title_highlight')}</span>
               </h1>
               <p className="text-xl text-primary-100 mb-8 leading-relaxed">
-                Une solution éducative numérique conçue pour accompagner les élèves
-                du primaire et du secondaire dans leur apprentissage quotidien.
+                {t('home.hero_subtitle')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 {!isAuthenticated ? (
                   <Link to="/register" className="btn bg-white text-primary-700 hover:bg-primary-50 text-lg px-8 py-3">
-                    Commencer gratuitement
+                    {t('home.start_free')}
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                 ) : (
                   <Link to="/dashboard" className="btn bg-white text-primary-700 hover:bg-primary-50 text-lg px-8 py-3">
-                    Mon Tableau de Bord
+                    {t('home.my_dashboard')}
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Link>
                 )}
@@ -80,15 +82,15 @@ export function Home() {
               <div className="mt-10 flex items-center space-x-6 text-sm text-primary-100">
                 <div className="flex items-center">
                   <CheckCircle2 className="w-5 h-5 mr-2" />
-                  Gratuit
+                  {t('home.tag_free')}
                 </div>
                 <div className="flex items-center">
                   <CheckCircle2 className="w-5 h-5 mr-2" />
-                  Sans publicité
+                  {t('home.tag_no_ads')}
                 </div>
                 <div className="flex items-center">
                   <CheckCircle2 className="w-5 h-5 mr-2" />
-                  Programme officiel
+                  {t('home.tag_official')}
                 </div>
               </div>
             </div>
@@ -101,22 +103,22 @@ export function Home() {
                     <div className="bg-white/20 rounded-2xl p-6 text-center">
                       <BookOpen className="w-10 h-10 mx-auto mb-3" />
                       <div className="text-3xl font-bold">500+</div>
-                      <div className="text-primary-100">Leçons</div>
+                      <div className="text-primary-100">{t('home.stats_lessons')}</div>
                     </div>
                     <div className="bg-white/20 rounded-2xl p-6 text-center">
                       <Brain className="w-10 h-10 mx-auto mb-3" />
                       <div className="text-3xl font-bold">2000+</div>
-                      <div className="text-primary-100">Exercices</div>
+                      <div className="text-primary-100">{t('home.stats_exercises')}</div>
                     </div>
                     <div className="bg-white/20 rounded-2xl p-6 text-center">
                       <Users className="w-10 h-10 mx-auto mb-3" />
                       <div className="text-3xl font-bold">10K+</div>
-                      <div className="text-primary-100">Élèves</div>
+                      <div className="text-primary-100">{t('home.stats_students')}</div>
                     </div>
                     <div className="bg-white/20 rounded-2xl p-6 text-center">
                       <Target className="w-10 h-10 mx-auto mb-3" />
                       <div className="text-3xl font-bold">95%</div>
-                      <div className="text-primary-100">Réussite</div>
+                      <div className="text-primary-100">{t('home.stats_success')}</div>
                     </div>
                   </div>
                 </div>
@@ -131,11 +133,10 @@ export function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Fonctionnalités principales
+              {t('home.features_title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Tout ce dont vous avez besoin pour réussir votre scolarité,
-              dans une seule application.
+              {t('home.features_subtitle')}
             </p>
           </div>
 
@@ -162,10 +163,10 @@ export function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Pour tous les niveaux
+              {t('home.levels_title')}
             </h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Du primaire au lycée, trouvez le contenu adapté à votre niveau scolaire.
+              {t('home.levels_subtitle')}
             </p>
           </div>
 
@@ -184,7 +185,7 @@ export function Home() {
                     to={`/lessons?level=${level.name.toLowerCase()}`}
                     className="inline-flex items-center text-primary-600 font-medium hover:text-primary-700"
                   >
-                    Voir les leçons
+                    {t('home.view_lessons')}
                     <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </div>
@@ -198,11 +199,10 @@ export function Home() {
       <section className="py-20 bg-primary-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-            Prêt à commencer votre apprentissage ?
+            {t('home.cta_title')}
           </h2>
           <p className="text-xl text-primary-100 mb-8">
-            Rejoignez des milliers d'élèves qui utilisent déjà Tuteur Intelligent
-            pour améliorer leurs résultats scolaires.
+            {t('home.cta_subtitle')}
           </p>
           {!isAuthenticated && (
             <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -210,7 +210,7 @@ export function Home() {
                 to="/register"
                 className="btn bg-white text-primary-700 hover:bg-primary-50 text-lg px-8 py-3"
               >
-                Créer un compte gratuit
+                {t('home.create_account')}
               </Link>
             </div>
           )}
@@ -220,7 +220,7 @@ export function Home() {
                 to="/dashboard"
                 className="btn bg-white text-primary-700 hover:bg-primary-50 text-lg px-8 py-3"
               >
-                Accéder à mon espace
+                {t('home.access_space')}
               </Link>
             </div>
           )}

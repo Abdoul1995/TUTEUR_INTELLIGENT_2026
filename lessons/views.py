@@ -22,6 +22,20 @@ class SubjectViewSet(viewsets.ReadOnlyModelViewSet):
     permission_classes = [AllowAny]
     lookup_field = 'slug'
 
+    @action(detail=False, methods=['get'])
+    def by_level(self, request):
+        """Retourner les matières ayant des leçons pour le niveau donné."""
+        level = request.query_params.get('level', None)
+        if not level:
+            return Response({'error': 'level parameter required'}, status=status.HTTP_400_BAD_REQUEST)
+        subjects = Subject.objects.filter(
+            is_active=True,
+            chapters__lessons__level=level,
+            chapters__lessons__is_active=True
+        ).distinct()
+        serializer = self.get_serializer(subjects, many=True)
+        return Response(serializer.data)
+
 
 class ChapterViewSet(viewsets.ReadOnlyModelViewSet):
     """ViewSet pour les chapitres."""

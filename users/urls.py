@@ -11,7 +11,7 @@ router.register(r'', UserViewSet, basename='user')
 router.register(r'links', ParentStudentLinkViewSet)
 
 urlpatterns = [
-    path('', include(router.urls)),
     path('password-reset/', PasswordResetRequestView.as_view(), name='password_reset'),
     path('password-reset-confirm/<uidb64>/<token>/', PasswordResetConfirmView.as_view(), name='password_reset_confirm'),
+    path('', include(router.urls)),
 ]

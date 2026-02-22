@@ -2,7 +2,13 @@
 Admin pour les exercices.
 """
 from django.contrib import admin
-from .models import Exercise, ExerciseAttempt, Quiz, QuizAttempt
+from .models import Exercise, ExerciseAttempt, Quiz, QuizAttempt, ExerciseResource
+
+
+class ExerciseResourceInline(admin.TabularInline):
+    """Inline pour les ressources d'exercice."""
+    model = ExerciseResource
+    extra = 1
 
 
 @admin.register(Exercise)
@@ -15,6 +21,7 @@ class ExerciseAdmin(admin.ModelAdmin):
     ]
     list_filter = ['exercise_type', 'difficulty', 'level', 'subject', 'is_active']
     search_fields = ['title', 'description']
+    inlines = [ExerciseResourceInline]
 
 
 @admin.register(ExerciseAttempt)

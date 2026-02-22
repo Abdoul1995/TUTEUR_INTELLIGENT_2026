@@ -79,7 +79,9 @@ npm run dev
 cd mobile_app
 flutter pub get
 # Assurez-vous d'avoir un émulateur ou appareil connecté
-flutter run
+flutter run 
+ou
+flutter run -d <le nom de l'émulateur ou appareil connecté>
 ```
 
 ## 📁 Structure du projet

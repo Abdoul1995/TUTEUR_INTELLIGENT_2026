@@ -2,7 +2,15 @@
 Sérialiseurs pour les exercices.
 """
 from rest_framework import serializers
-from .models import Exercise, ExerciseAttempt, Quiz, QuizAttempt
+from .models import Exercise, ExerciseAttempt, Quiz, QuizAttempt, ExerciseResource
+
+
+class ExerciseResourceSerializer(serializers.ModelSerializer):
+    """Sérialiseur pour les ressources d'exercice."""
+    
+    class Meta:
+        model = ExerciseResource
+        fields = ['id', 'title', 'resource_type', 'file', 'order']
 
 
 class ExerciseListSerializer(serializers.ModelSerializer):
@@ -47,6 +55,7 @@ class ExerciseDetailSerializer(serializers.ModelSerializer):
     type_display = serializers.CharField(source='get_exercise_type_display', read_only=True)
     attempts_count = serializers.SerializerMethodField()
     best_score = serializers.SerializerMethodField()
+    resources = ExerciseResourceSerializer(many=True, read_only=True)
     
     class Meta:
         model = Exercise
@@ -55,7 +64,7 @@ class ExerciseDetailSerializer(serializers.ModelSerializer):
             'difficulty', 'difficulty_display', 'level', 'subject', 'subject_name',
             'lesson', 'lesson_title', 'content', 'hints', 'explanation',
             'points', 'time_limit', 'attempts_count', 'best_score',
-            'creator', 'is_ai_generated'
+            'creator', 'is_ai_generated', 'resources'
         ]
 
     def to_representation(self, instance):
@@ -91,6 +100,7 @@ class ExerciseResultSerializer(serializers.Serializer):
     
     is_correct = serializers.BooleanField()
     score = serializers.IntegerField()
+    max_score = serializers.IntegerField(required=False)
     correct_answer = serializers.JSONField()
     explanation = serializers.CharField()
     message = serializers.CharField()
