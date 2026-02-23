@@ -9,6 +9,7 @@ services:
   - type: web
     name: tuteur-backend
     env: python
+    pythonVersion: "3.12.8"
     buildCommand: "pip install -r requirements.txt && python manage.py collectstatic --noinput && python manage.py migrate"
     startCommand: "gunicorn backend.wsgi:application"
     envVars:
@@ -22,4 +23,6 @@ services:
         value: "False"
       - key: FRONTEND_URL
         #  le lien vers  frontend hébergé sur Vercel
-        value: "https://tuteur-intelligent.vercel.app" 
+        value: "https://tuteur-intelligent.vercel.app"
+      - key: PYTHON_VERSION
+        value: "3.12.8"
