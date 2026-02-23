@@ -15,7 +15,7 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-dev-key-change-in-producti
 
 DEBUG = os.getenv('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '*']
+ALLOWED_HOSTS = ['tuteur-backend.onrender.com','localhost','127.0.0.1','*']
 render_hostname = os.getenv('RENDER_EXTERNAL_HOSTNAME')
 if render_hostname:
     ALLOWED_HOSTS.append(render_hostname)
