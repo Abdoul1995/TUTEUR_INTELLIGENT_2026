@@ -8,7 +8,9 @@ import {
   Play,
   FileText,
   Download,
-  ExternalLink
+  ExternalLink,
+  Maximize2,
+  X
 } from 'lucide-react'
 import type { Lesson } from '../types'
 
@@ -33,6 +35,7 @@ export function LessonDetail() {
   const navigate = useNavigate()
   const [lesson, setLesson] = useState<Lesson | null>(null)
   const [loading, setLoading] = useState(true)
+  const [fullscreenPdf, setFullscreenPdf] = useState<string | null>(null)
 
   useEffect(() => {
     if (slug) {
@@ -167,15 +170,24 @@ export function LessonDetail() {
                       <h2 className="text-xl font-semibold text-gray-900">
                         Support de cours (PDF)
                       </h2>
-                      <a
-                        href={getMediaUrl(lesson.pdf_content)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center text-sm text-primary-600 hover:text-primary-700 font-medium"
-                      >
-                        <Download className="w-4 h-4 mr-1" />
-                        Télécharger le PDF
-                      </a>
+                      <div className="flex items-center space-x-4">
+                        <button
+                          onClick={() => setFullscreenPdf(getMediaUrl(lesson.pdf_content!))}
+                          className="flex items-center text-sm text-gray-600 hover:text-gray-900 font-medium"
+                        >
+                          <Maximize2 className="w-4 h-4 mr-1" />
+                          Aperçu plein écran
+                        </button>
+                        <a
+                          href={getMediaUrl(lesson.pdf_content)}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center text-sm text-primary-600 hover:text-primary-700 font-medium"
+                        >
+                          <Download className="w-4 h-4 mr-1" />
+                          Télécharger le PDF
+                        </a>
+                      </div>
                     </div>
                     <div className="w-full h-[600px] border border-gray-200 rounded-xl overflow-hidden shadow-sm bg-gray-50 flex flex-col items-center justify-center text-center p-4">
                       <object
@@ -263,6 +275,41 @@ export function LessonDetail() {
           </div>
         </div>
       </div>
+
+      {/* Fullscreen PDF Modal */}
+      {fullscreenPdf && (
+        <div className="fixed inset-0 z-50 bg-black/90 flex flex-col">
+          <div className="flex justify-end p-4">
+            <button
+              onClick={() => setFullscreenPdf(null)}
+              className="flex items-center text-white hover:text-gray-300 bg-white/10 px-4 py-2 rounded-full transition-colors font-medium"
+            >
+              <X className="w-5 h-5 mr-2" />
+              Fermer l'aperçu
+            </button>
+          </div>
+          <div className="flex-1 w-full p-4 pt-0">
+            <object
+              data={`${fullscreenPdf}#toolbar=0`}
+              type="application/pdf"
+              className="w-full h-full bg-white rounded-lg overflow-hidden"
+            >
+              <div className="flex flex-col items-center justify-center h-full text-white">
+                <p className="mb-4">Votre navigateur ne peut pas afficher ce fichier en plein écran.</p>
+                <a
+                  href={fullscreenPdf}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary"
+                >
+                  <Download className="w-4 h-4 mr-2" />
+                  Ouvrir le fichier
+                </a>
+              </div>
+            </object>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
