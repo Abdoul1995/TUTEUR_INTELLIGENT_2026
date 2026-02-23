@@ -38,7 +38,7 @@ Application de tuteur intelligent accessible à tous - Une solution éducative n
 
 ### Backend
 - **Django 5.0** & **Django REST Framework**
-- **SQLite** (Développement) & **MySQL** (Production)
+- **MySQL** (Développement) & **PostgreSQL** (Production)
 - **OpenAI/Groq** : Intégration de l'IA
 
 ### Frontend Web

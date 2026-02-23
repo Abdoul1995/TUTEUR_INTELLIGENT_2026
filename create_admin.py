@@ -9,7 +9,7 @@ django.setup()
 User = get_user_model()
 
 username = 'salgo'
-password = 'salgo397'
+password = 'salgo397' 
 email = 'salgoabdoulaziz3@gmail.com'
 
 if not User.objects.filter(username=username).exists():
