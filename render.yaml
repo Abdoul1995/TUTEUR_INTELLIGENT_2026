@@ -21,21 +21,5 @@ services:
       - key: DEBUG
         value: "False"
       - key: FRONTEND_URL
-        # On met le lien vers le frontend (Ajustez si URL différente)
-        value: "https://tuteur-frontend.onrender.com" 
-
-  # 2. APPLICATION WEB FRONTEND (React / Vite)
-  - type: web
-    name: tuteur-frontend
-    env: static
-    buildCommand: "cd frontend && npm install && npm run build"
-    staticPublishPath: "./frontend/dist"
-    envVars:
-      - key: VITE_API_URL
-        # On pointe vers l'API backend déployée (Ajustez si l'URL est différente)
-        value: "https://tuteur-backend.onrender.com/api"
-    # Configuration "SPA" pour que React Router prenne la main sur toutes les URLs
-    routes:
-      - type: rewrite
-        source: /*
-        destination: /index.html
+        # Mettez ici le lien vers votre frontend hébergé sur Vercel
+        value: "https://votre-site-vercel.vercel.app" 
