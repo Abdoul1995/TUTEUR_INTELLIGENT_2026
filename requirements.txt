@@ -11,8 +11,11 @@ pymysql>=1.1.0
 Pillow>=10.0.0
 python-dotenv>=1.0.0
 
-# Serveur de production
+# Serveur de production et Hébergement (Render)
 gunicorn>=21.2.0
+whitenoise[brotli]>=6.6.0
+dj-database-url>=2.1.0
+psycopg2-binary>=2.9.9
 
 # AI
 openai>=1.0.0
