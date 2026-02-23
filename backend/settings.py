@@ -15,10 +15,16 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-dev-key-change-in-producti
 
 DEBUG = os.getenv('DEBUG', 'True') == 'True'
 
-ALLOWED_HOSTS = ['tuteur-backend.onrender.com','localhost','127.0.0.1','*']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+# Render injecte RENDER_EXTERNAL_HOSTNAME automatiquement
 render_hostname = os.getenv('RENDER_EXTERNAL_HOSTNAME')
 if render_hostname:
     ALLOWED_HOSTS.append(render_hostname)
+# Permet d'ajouter des domaines custom via variable d'env
+extra_hosts = os.getenv('ALLOWED_HOSTS_EXTRA', '')
+if extra_hosts:
+    ALLOWED_HOSTS.extend([h.strip() for h in extra_hosts.split(',')])
+
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -74,7 +80,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'backend.wsgi.application'
 
 # Database
-# Use SQLite locally, PostgreSQL on Render
+# Use SQLite locally, PostgreSQL in production (Koyeb or any DATABASE_URL provider)
 if os.getenv('DATABASE_URL'):
     DATABASES = {
         'default': dj_database_url.config(

@@ -21,5 +21,5 @@ services:
       - key: DEBUG
         value: "False"
       - key: FRONTEND_URL
-        # Mettez ici le lien vers votre frontend hébergé sur Vercel
-        value: "https://votre-site-vercel.vercel.app" 
+        #  le lien vers  frontend hébergé sur Vercel
+        value: "https://tuteur-intelligent.vercel.app" 
