@@ -10,6 +10,9 @@ class AIService:
         self.api_key = os.getenv('GROQ_API_KEY')
         self.client = None
         if self.api_key:
+            # Masked logging for security
+            masked_key = f"{self.api_key[:6]}...{self.api_key[-4:]}" if len(self.api_key) > 10 else "***"
+            self.logger.info(f"GROQ_API_KEY found: {masked_key}")
             try:
                 self.client = OpenAI(
                     base_url="https://api.groq.com/openai/v1",
