@@ -25,4 +25,4 @@ services:
         #  le lien vers  frontend hébergé sur Vercel
         value: "https://tuteur-intelligent.vercel.app"
       - key: PYTHON_VERSION
-        value: "3.12.8"
+        value: "3.12.8" #c'est la verdion de python  
