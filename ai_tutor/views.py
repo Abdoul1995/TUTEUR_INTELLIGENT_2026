@@ -1,3 +1,4 @@
+import logging
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
@@ -6,6 +7,8 @@ from .services import AIService
 from exercises.models import Exercise, Subject
 from exercises.serializers import ExerciseDetailSerializer
 
+logger = logging.getLogger(__name__)
+
 class ChatView(APIView):
     permission_classes = [IsAuthenticated]
 
@@ -13,9 +16,6 @@ class ChatView(APIView):
         messages = request.data.get('messages', [])
         if not messages:
             return Response({"error": "No messages provided"}, status=status.HTTP_400_BAD_REQUEST)
-
-        import logging
-        logger = logging.getLogger(__name__)
         
         try:
             ai_service = AIService()
@@ -69,12 +69,8 @@ class GenerateExerciseView(APIView):
              subject = Subject.objects.filter(slug__iexact=subject_name.lower().replace(' ', '-')).first()
         
         if not subject:
-            import logging
-            logging.warning(f"Subject '{subject_name}' not found in DB. Available subjects: {list(Subject.objects.values_list('name', flat=True))}")
+            logger.warning(f"Subject '{subject_name}' not found in DB. Available subjects: {list(Subject.objects.values_list('name', flat=True))}")
             return Response({"error": f"Matière '{subject_name}' non trouvée. Vérifiez que la matière est créée dans l'administration."}, status=status.HTTP_404_NOT_FOUND)
-
-        import logging
-        logger = logging.getLogger(__name__)
 
         ai_service = AIService()
         exercise_data = ai_service.generate_exercise(subject.name, level_raw, topic, difficulty, exercise_type, language)
@@ -100,12 +96,10 @@ class GenerateExerciseView(APIView):
                 creator=request.user,
                 is_ai_generated=True
             )
-            import logging
-            logging.info(f"AI Exercise saved with ID {exercise.id} for user {request.user}")
+            logger.info(f"AI Exercise saved with ID {exercise.id} for user {request.user}")
             
             serializer = ExerciseDetailSerializer(exercise, context={'request': request})
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         except Exception as e:
-            import logging
-            logging.error(f"Error saving AI exercise: {str(e)}", exc_info=True)
+            logger.error(f"Error saving AI exercise: {str(e)}", exc_info=True)
             return Response({"error": f"Erreur lors de la sauvegarde de l'exercice : {str(e)}"}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

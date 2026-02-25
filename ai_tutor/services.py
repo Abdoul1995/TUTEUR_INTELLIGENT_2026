@@ -1,28 +1,29 @@
 import os
 import json
+import logging
 from openai import OpenAI
 from django.conf import settings
 
+logger = logging.getLogger(__name__)
+
 class AIService:
     def __init__(self):
-        import logging
-        self.logger = logging.getLogger(__name__)
         self.api_key = os.getenv('GROQ_API_KEY')
         self.client = None
         if self.api_key:
             # Masked logging for security
             masked_key = f"{self.api_key[:6]}...{self.api_key[-4:]}" if len(self.api_key) > 10 else "***"
-            self.logger.info(f"GROQ_API_KEY found: {masked_key}")
+            logger.info(f"GROQ_API_KEY found: {masked_key}")
             try:
                 self.client = OpenAI(
                     base_url="https://api.groq.com/openai/v1",
                     api_key=self.api_key
                 )
-                self.logger.info("AIService initialized with Groq client.")
+                logger.info("AIService initialized with Groq client.")
             except Exception as e:
-                self.logger.error(f"Failed to initialize OpenAI client: {str(e)}")
+                logger.error(f"Failed to initialize OpenAI client: {str(e)}")
         else:
-            self.logger.warning("GROQ_API_KEY not found in environment variables.")
+            logger.warning("GROQ_API_KEY not found in environment variables.")
 
     def get_chat_response(self, messages):
         """
