@@ -14,13 +14,21 @@ class ChatView(APIView):
         if not messages:
             return Response({"error": "No messages provided"}, status=status.HTTP_400_BAD_REQUEST)
 
-        ai_service = AIService()
-        response = ai_service.get_chat_response(messages)
+        import logging
+        logger = logging.getLogger(__name__)
         
-        if "error" in response:
-            return Response(response, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+        try:
+            ai_service = AIService()
+            response = ai_service.get_chat_response(messages)
             
-        return Response(response)
+            if "error" in response:
+                logger.error(f"AI Chat Error: {response['error']}")
+                return Response(response, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+                
+            return Response(response)
+        except Exception as e:
+            logger.exception("Unexpected error in AI Chat")
+            return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 class GenerateExerciseView(APIView):
     permission_classes = [IsAuthenticated]
@@ -65,10 +73,14 @@ class GenerateExerciseView(APIView):
             logging.warning(f"Subject '{subject_name}' not found in DB. Available subjects: {list(Subject.objects.values_list('name', flat=True))}")
             return Response({"error": f"Matière '{subject_name}' non trouvée. Vérifiez que la matière est créée dans l'administration."}, status=status.HTTP_404_NOT_FOUND)
 
+        import logging
+        logger = logging.getLogger(__name__)
+
         ai_service = AIService()
         exercise_data = ai_service.generate_exercise(subject.name, level_raw, topic, difficulty, exercise_type, language)
 
         if "error" in exercise_data:
+            logger.error(f"AI Exercise Generation Error: {exercise_data['error']}")
             return Response(exercise_data, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
         try:
