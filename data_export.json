@@ -1,0 +1,6248 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2026-02-10T01:53:58.272Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "4",
+    "object_repr": "subject and verbs (Moyen)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2026-02-10T01:57:34.017Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "4",
+    "object_repr": "subject and verbs (Moyen)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Indices\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2026-02-10T02:04:21Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "4",
+    "object_repr": "subject and verbs (Moyen)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Contenu (JSON)\", \"R\\u00e9ponses correctes\", \"Indices\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2026-02-10T02:05:38.428Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "4",
+    "object_repr": "subject and verbs (Moyen)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"R\\u00e9ponses correctes\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2026-02-13T00:43:22.598Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "5",
+    "object_repr": "Analyse de l'eau : détermination du pH (Moyen)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"R\\u00e9ponses correctes\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2026-02-13T00:52:43.273Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "6",
+    "object_repr": "Conjugaison des verbes au présent (Moyen)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"R\\u00e9ponses correctes\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2026-02-13T00:58:02.766Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "6",
+    "object_repr": "Science Physique",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2026-02-13T01:06:56.899Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "9",
+    "object_repr": "Addition de nombres à deux chiffres (Moyen)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"R\\u00e9ponses correctes\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2026-02-13T01:08:42.283Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "9",
+    "object_repr": "Addition de nombres à deux chiffres (Moyen)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2026-02-15T11:39:27.787Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "12",
+    "object_repr": "Présent progressif en anglais (Moyen)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"R\\u00e9ponses correctes\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2026-02-15T15:19:09.270Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "1",
+    "object_repr": "Addition de nombres entiers (Moyen)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Type d'exercice\", \"Difficult\\u00e9\", \"Niveau\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2026-02-15T19:36:05.848Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "3",
+    "object_repr": "Le pluriel des noms (Facile)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Type d'exercice\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2026-02-15T19:47:33.078Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "13",
+    "object_repr": "Problème de billes (Test Classique) (Facile)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2026-02-15T20:09:38.599Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "13",
+    "object_repr": "Problème de billes (Test Classique) (Facile)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Type d'exercice\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2026-02-15T20:10:03.392Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "13",
+    "object_repr": "Problème de billes (Test Classique) (Facile)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Type d'exercice\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2026-02-15T20:10:24.578Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "13",
+    "object_repr": "Problème de billes (Test Classique) (Facile)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Type d'exercice\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2026-02-15T20:10:53.012Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "13",
+    "object_repr": "Problème de billes (Test Classique) (Facile)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Type d'exercice\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2026-02-15T20:11:15.705Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "13",
+    "object_repr": "Problème de billes (Test Classique) (Facile)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Type d'exercice\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2026-02-15T20:11:41.003Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "13",
+    "object_repr": "Problème de billes (Test Classique) (Facile)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Type d'exercice\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2026-02-15T20:33:03.580Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "5",
+    "object_repr": "Analyse de l'eau : détermination du pH (Moyen)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"R\\u00e9ponses correctes\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2026-02-15T21:03:13.725Z",
+    "user": 1,
+    "content_type": 17,
+    "object_id": "1",
+    "object_repr": "Addition de nombres entiers",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Exercices\", \"Niveau\", \"Limite de temps totale (minutes)\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2026-02-15T23:15:45.607Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "19",
+    "object_repr": "Électrolyse de l'eau (Moyen)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Type d'exercice\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2026-02-15T23:25:24.069Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "21",
+    "object_repr": "Exercice sur les verbes défectifs (Moyen)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Type d'exercice\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2026-02-15T23:41:27.045Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "22",
+    "object_repr": "Defective Verbs Exercise (Moyen)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Type d'exercice\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2026-02-17T23:37:17.143Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "20",
+    "object_repr": "Électrolyse de l'eau (Moyen)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"R\\u00e9ponses correctes\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2026-02-17T23:41:03.902Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "7",
+    "object_repr": "Philosophie",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2026-02-18T09:55:34.405Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "9",
+    "object_repr": "moussa Akambi (sana)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2026-02-18T09:57:54.607Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "ambroise SANOU (TOLO)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2026-02-18T09:58:12.963Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "8",
+    "object_repr": "abdou Sana (salgo)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2026-02-22T18:17:23.232Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "57",
+    "object_repr": "Modal Verbs Practice (Moyen)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"R\\u00e9ponses correctes\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2026-02-22T19:42:38.931Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "45",
+    "object_repr": "Exercice d'addition pour 6ème (Moyen)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"R\\u00e9ponses correctes\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2026-02-22T20:15:31.519Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "5",
+    "object_repr": "les figures geometriques",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2026-02-22T20:17:46.044Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "5",
+    "object_repr": "les figures geometriques",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"URL Vid\\u00e9o\", \"Auteur\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2026-02-22T22:47:11.026Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "5",
+    "object_repr": "les figures geometriques",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Contenu PDF\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2026-02-22T23:12:22.798Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "62",
+    "object_repr": "Exercice de 3e (Moyen)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"Ressource d'exercice\", \"object\": \"Exercice de 3e - exercice de niveau 3e\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2026-02-22T23:15:10.213Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "62",
+    "object_repr": "Exercice de 3e (Moyen)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Cr\\u00e9ateur\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2026-02-22T23:15:48.971Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "62",
+    "object_repr": "Exercice de 3e (Moyen)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Cr\\u00e9ateur\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2026-02-22T23:16:51.502Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "62",
+    "object_repr": "Exercice de 3e (Moyen)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Cr\\u00e9ateur\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2026-02-22T23:17:32.264Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "62",
+    "object_repr": "Exercice de 3e (Moyen)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Cr\\u00e9ateur\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2026-02-22T23:27:17.999Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "62",
+    "object_repr": "Exercice de MATHE 3e (PDF) (Moyen)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Titre\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2026-02-22T23:35:15.724Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "63",
+    "object_repr": "ENGLISH TEST (Difficile)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"Ressource d'exercice\", \"object\": \"ENGLISH TEST - ENGLISH TEST 1\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2026-02-22T23:35:57.383Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "63",
+    "object_repr": "ENGLISH TEST (Difficile)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Type d'exercice\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2026-02-22T23:36:43.261Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "63",
+    "object_repr": "ENGLISH TEST (PDF) (Difficile)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Titre\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2026-02-22T23:41:36.593Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "31",
+    "object_repr": "SUJET MATH TLE D (PDF) (Moyen)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Titre\", \"Description\", \"Niveau\", \"Contenu (JSON)\", \"R\\u00e9ponses correctes\", \"Cr\\u00e9ateur\"]}}, {\"added\": {\"name\": \"Ressource d'exercice\", \"object\": \"SUJET MATH TLE D (PDF) - SUJET 1 TLE D\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2026-02-22T23:50:25.584Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "6",
+    "object_repr": "SVT 3e",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2026-02-22T23:55:42.804Z",
+    "user": 1,
+    "content_type": 14,
+    "object_id": "8",
+    "object_repr": "Maths",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2026-02-22T23:57:53.293Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "62",
+    "object_repr": "Exercice de MATH 3e (PDF) (Moyen)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Titre\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2026-02-22T23:59:51.886Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "64",
+    "object_repr": "EXERCICES MATH TLE D (Moyen)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"Ressource d'exercice\", \"object\": \"EXERCICES MATH TLE D - EXERCICES MATH TLE D\"}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2026-02-23T00:00:46.867Z",
+    "user": 1,
+    "content_type": 15,
+    "object_id": "64",
+    "object_repr": "EXERCICES MATH TLE D (PDF) (Moyen)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Titre\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2026-02-23T00:07:33.205Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "5",
+    "object_repr": "Français - Grammaire",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2026-02-23T00:08:50.957Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "6",
+    "object_repr": "Français - Conjugaison",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2026-02-23T00:08:50.962Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "7",
+    "object_repr": "Français - Orthographe",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2026-02-23T00:08:50.966Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "8",
+    "object_repr": "Français - Vocabulaire",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2026-02-23T00:10:48.056Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "9",
+    "object_repr": "Sciences - Le corps humain",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Titre\", \"Slug\", \"Description\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2026-02-23T00:12:30.849Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Mathématiques - Nombres et calculs",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2026-02-23T00:12:30.860Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "11",
+    "object_repr": "Sciences - L'Univers",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2026-02-23T00:12:43.586Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "12",
+    "object_repr": "Sciences - L'énergie",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2026-02-23T00:12:43.597Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "4",
+    "object_repr": "Mathématiques - Proportionnalité",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2026-02-23T00:13:04.993Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "10",
+    "object_repr": "Sciences - Les vivants",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2026-02-23T00:14:22.100Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "2",
+    "object_repr": "Mathématiques - Géométrie",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2026-02-23T00:16:25.185Z",
+    "user": 1,
+    "content_type": 11,
+    "object_id": "5",
+    "object_repr": "les figures geometriques 3e",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Titre\"]}}]"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "019xddl6q7632wzwu0macxnizw3uz4tl",
+  "fields": {
+    "session_data": ".eJxVjDEOwyAQBP9CHSEODMYp0_sN6OCO4CTCkrGrKH-PLblImi12ZvctAm5rCVvjJUwkrgLE5beLmJ5cD0APrPdZprmuyxTlociTNjnOxK_b6f4dFGxlXyvvFGRNhOCQrHUmGlKac-cdRuizisqYBMwDGO4xDh3tyaA9os0gPl_jrDhA:1vsTv7:Rageng96EeVlkV6P-SRiDkeVkfC-EH6gsAEpwsi3kC4",
+    "expire_date": "2026-03-03T22:51:53.400Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "0z5pdy4u2k7cxb2nvd9f12pmwlfvbpa6",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSFQ3i7d-w1kYAapGkhKuzL-uzbpQrf3nHNfLMK21rgNWuKM7MykYaffMUF-UNsJ3qHdOs-9rcuc-K7wgw5-7UjPy-H-HVQY9Vt7NzlSQWL2gawGLbKVWogiQ0KTJ3IlYFKeVCo6WHAAskgS2ZuCgYC9PwONOKU:1vtOgr:flaqP--8HQhTlDLbhiVnIjJhw9aX7CDgepXh7LQpzAM",
+    "expire_date": "2026-03-06T11:28:57.120Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "193m4icxy9lwupe2dz5bcskvod7jmaq9",
+  "fields": {
+    "session_data": ".eJxVi8sKwkAMRf9l1lJimnm50x8ZMknKiODCsVAQ_90WuqjLc8-5H1d4frcyd3uVu7qLQ3c6bpXlYc9N8GJ92LEP15Vuu_s7NO5trdMEo2ESDT5HyiMEjuQxAVOt3uQMxCKEnnUSFlUBQeWgEi1iru77Aw60MpE:1vuDH7:sUSOeebtc5NNNnZRsCyDDAhsIF9Lg5e8xtMgr_1jydA",
+    "expire_date": "2026-03-08T17:29:45.079Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "3e4cswzrxo4agxjnuwnkbfpetdp4bgsm",
+  "fields": {
+    "session_data": ".eJxVjDEOAiEQRe9CbQjDgIilvWcgMDORVQPJslsZ766bbKHtf-_9l0p5XWpah8xpYnVWoA6_W8n0kLYBvud265p6W-ap6E3ROx362lmel939O6h51G8dwFAQAbYxivdoEZgKkLUGSz4xsUVnXQRPGKL3xhzRQeZCaBBI1PsDylo3GQ:1vuA6f:G6S29G5pFQtr9vC1KcsbVZH2Zdc7vK7cEteL72pFMGc",
+    "expire_date": "2026-03-08T14:06:45.910Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "4sgdmhl82o3ftvx2yvl9k148wryjuzgt",
+  "fields": {
+    "session_data": ".eJxVjEsOwjAMBe-SNYpqN00dluw5Q-XEDi2gROpnhbg7VOoCtm9m3ssMvK3jsC06D5OYswnm9LtFTg8tO5A7l1u1qZZ1nqLdFXvQxV6r6PNyuH8HIy_jt-5aj6FrMiCxIxKPwtpSVgKJ0LMCOsTsm1apSRAc9pi8BHLZRQho3h_FcTbv:1vsUb6:CdMs3IrGPRj0wBvNEsZbsOwR7eKWCPdBI68PYZ_Afdg",
+    "expire_date": "2026-03-03T23:35:16.055Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "4vkwgk526at2svnujt9c3k95p10uuucn",
+  "fields": {
+    "session_data": ".eJxVjDEOAiEQRe9CbQjDgIilvWcgMDORVQPJslsZ766bbKHtf-_9l0p5XWpah8xpYnVWoA6_W8n0kLYBvud265p6W-ap6E3ROx362lmel939O6h51G8dwFAQAbYxivdoEZgKkLUGSz4xsUVnXQRPGKL3xhzRQeZCaBBI1PsDylo3GQ:1vt6Yb:iKvNSoRH9VkC94i_kEoyGPi_tNsxjyuSJDrjJQbWuHo",
+    "expire_date": "2026-03-05T16:07:13.575Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "4wr4gxrgnaqxtu73m7isw4bgtr1kj8at",
+  "fields": {
+    "session_data": ".eJxVjDsOwyAQRO9CHSHzNZsyvc-AWBaCkwhLxq6i3D1YcpFMOe_NvJkP-1b83tLqZ2JXJtnlt8MQn6kegB6h3hcel7qtM_JD4SdtfFoovW6n-3dQQit9PfaoJLVyyuBglEZ0oKOQZAchMqDN0BMhAQZL4LSNNhthpCE5OmKfL7O5NuE:1vrdph:8QbT44Bu9Q1usOvEPnt4SAymw9xRAmSVbpJ-F8BhZXY",
+    "expire_date": "2026-03-01T15:14:49.064Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "6h26ir8g1x6f2peavv143j5y5q8ar2u5",
+  "fields": {
+    "session_data": ".eJxVjEEOgjAQRe_StWlaOsxMXbr3DGToFEFNSSisjHdXEha6_e-9_zKdbOvYbTUv3aTmbMicfrde0iOXHehdym22aS7rMvV2V-xBq73Omp-Xw_07GKWO31qYGQEJh8ax00xDaDF44CQusg8BQNsWkZrke2RRjRAZvHdACuTM-wOq0zYP:1vsUZP:ReugCLQ78jWLtkNuNCbk_0QtKadreTzcD9C-F4KUpns",
+    "expire_date": "2026-03-03T23:33:31.093Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "6j838yvssw2pnlqffrhsoc0gsaww5o1f",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyGyVAoevfcbyMLu2qqBpLQn47_bJj3oZQ7z3sxbRVyXMa6N5ziRuiqjTr9dwvzksgN6YLlXnWtZ5inpXdEHbXqoxK_b4f4djNjGbW3F22S2DHBxHAR6y9IRswiioxQgn53pSQQ68NxRIoeQrZA1GXxQny8AkDjU:1vqgoQ:V8Ja_egXQHXQ_vqUOM8R_il6TgUiIShkGIkX2j3OM58",
+    "expire_date": "2026-02-27T00:13:34.007Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "6o7mnbd1nlnqhph3t1myy5jnokkpcdu5",
+  "fields": {
+    "session_data": ".eJxVjDsOwyAQRO9CHSHzNZsyvc-AWBaCkwhLxq6i3D1YcpFMOe_NvJkP-1b83tLqZ2JXJtnlt8MQn6kegB6h3hcel7qtM_JD4SdtfFoovW6n-3dQQit9PfaoJLVyyuBglEZ0oKOQZAchMqDN0BMhAQZL4LSNNhthpCE5OmKfL7O5NuE:1vrm8u:nhWjVUAqZIF2-qm6FO_amV_aUYFXFKrbMFdeKQX5HkE",
+    "expire_date": "2026-03-02T00:07:12.830Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "6vnyt78xa391mtx65duu9h7pq2cepjr0",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyGyVAoevfcbyMLu2qqBpLQn47_bJj3oZQ7z3sxbRVyXMa6N5ziRuiqjTr9dwvzksgN6YLlXnWtZ5inpXdEHbXqoxK_b4f4djNjGbW3F22S2DHBxHAR6y9IRswiioxQgn53pSQQ68NxRIoeQrZA1GXxQny8AkDjU:1vqh5H:Na0bk6zrhXW2XF4NY8H-qNmE2L0Umat1n0HkmgUZiDQ",
+    "expire_date": "2026-02-27T00:30:59.142Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "8mfzgrghm8b4hx704cx17uv3u9gd59jn",
+  "fields": {
+    "session_data": ".eJxVjDEOAiEQRe9CbQjDgIilvWcgMDORVQPJslsZ766bbKHtf-_9l0p5XWpah8xpYnVWoA6_W8n0kLYBvud265p6W-ap6E3ROx362lmel939O6h51G8dwFAQAbYxivdoEZgKkLUGSz4xsUVnXQRPGKL3xhzRQeZCaBBI1PsDylo3GQ:1vsgGr:qWaSlefO9rgJqd1pUzPsjrmz4dQIeGPxmYAGr7eMQFc",
+    "expire_date": "2026-03-04T12:03:09.639Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "8njc85vgad4agsgh9j1d2obhftq4w5ro",
+  "fields": {
+    "session_data": ".eJxVjDEOwyAQBP9CHSEODMYp0_sN6OCO4CTCkrGrKH-PLblImi12ZvctAm5rCVvjJUwkrgLE5beLmJ5cD0APrPdZprmuyxTlociTNjnOxK_b6f4dFGxlXyvvFGRNhOCQrHUmGlKac-cdRuizisqYBMwDGO4xDh3tyaA9os0gPl_jrDhA:1vrc1Q:jJlgfNUFpDGYiqnDCzBQ0BsaUFJEe7Vp1FI2wU-prmM",
+    "expire_date": "2026-03-01T13:18:48.558Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "8u96slcghaboo0uac5zf2lq9ldcdhqrk",
+  "fields": {
+    "session_data": ".eJxVjDEOAiEQRe9CbQjDgIilvWcgMDORVQPJslsZ766bbKHtf-_9l0p5XWpah8xpYnVWoA6_W8n0kLYBvud265p6W-ap6E3ROx362lmel939O6h51G8dwFAQAbYxivdoEZgKkLUGSz4xsUVnXQRPGKL3xhzRQeZCaBBI1PsDylo3GQ:1vtEMM:wVKbZIp5BCmSuNvQTAwdOD9RRQ_B5Qavwigo8TAEwYg",
+    "expire_date": "2026-03-06T00:27:06.315Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "9no750zrfwe7xh6upqbzdtaemtr8v6o1",
+  "fields": {
+    "session_data": ".eJxVjDEOAiEQRe9CbQjDgIilvWcgMDORVQPJslsZ766bbKHtf-_9l0p5XWpah8xpYnVWoA6_W8n0kLYBvud265p6W-ap6E3ROx362lmel939O6h51G8dwFAQAbYxivdoEZgKkLUGSz4xsUVnXQRPGKL3xhzRQeZCaBBI1PsDylo3GQ:1vt217:W4Sk61Bp6i18sMBcbX3v1jo0NUqNYfgKMqoKiDAvxnI",
+    "expire_date": "2026-03-05T11:16:21.748Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "9wl9s1yan8bstsxufyjbtfm7jesqof10",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSFQ3i7d-w1kYAapGkhKuzL-uzbpQrf3nHNfLMK21rgNWuKM7MykYaffMUF-UNsJ3qHdOs-9rcuc-K7wgw5-7UjPy-H-HVQY9Vt7NzlSQWL2gawGLbKVWogiQ0KTJ3IlYFKeVCo6WHAAskgS2ZuCgYC9PwONOKU:1vt8h6:b49wpXqAfSRSVd6QBS97LftEnEn3qPDwZgNzRNFDjCU",
+    "expire_date": "2026-03-05T18:24:08.052Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "axewfrz1sbqdulsw5v7jlz5pzm8d2yit",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2pAy0AAu3XsGMsOMUjWQlHZlvLtt0oVu_3vvv1XCdSlp7TKnidVZGXX63QjzU-oO-IH13nRudZkn0ruiD9r1tbG8Lof7d1Cwl60GlwMPViyigJHoY2Cm4DCwoPUkwWMODiKNvJEIBNkaIh4HuAFY9fkCAPk4jg:1vpcYH:5bawKZ_pQvogYUnh403m8H_nk7OQXCHFLwR1vHq7ag8",
+    "expire_date": "2026-02-24T01:28:29.151Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ci2uk0mpl9pjz7e3o3a9d4gpncq8gbih",
+  "fields": {
+    "session_data": ".eJxVjDEOAiEQRe9CbQjDgIilvWcgMDORVQPJslsZ766bbKHtf-_9l0p5XWpah8xpYnVWoA6_W8n0kLYBvud265p6W-ap6E3ROx362lmel939O6h51G8dwFAQAbYxivdoEZgKkLUGSz4xsUVnXQRPGKL3xhzRQeZCaBBI1PsDylo3GQ:1vt8RE:rq_B60YJd2l6lrNbXzSzVG2SuSj1w61fUgkK6Y7bZJM",
+    "expire_date": "2026-03-05T18:07:44.450Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "cmdh5nncqdb29fkguhqtaorpkn61l5l0",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyGyVAoevfcbyMLu2qqBpLQn47_bJj3oZQ7z3sxbRVyXMa6N5ziRuiqjTr9dwvzksgN6YLlXnWtZ5inpXdEHbXqoxK_b4f4djNjGbW3F22S2DHBxHAR6y9IRswiioxQgn53pSQQ68NxRIoeQrZA1GXxQny8AkDjU:1vqgki:OSflGsiDBHr1NOeiZm_sVEQT944D6T6CTIt5XGBTsKc",
+    "expire_date": "2026-02-27T00:09:44.028Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "cyvrnwyqnm0e1qp1j69xu0bnk89hr4gt",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlnxdwklfc5grb1rHEC2FCcV4u4QKQW0b2beSwTc1hK2zkuYSVyEEaffLWJ6cN0B3bHemkytrssc5a7Ig3Y5NeLn9XD_Dgr28q0ZR7DZKwAGQ9Y5RQ7AuJiU92B1Aq_xPFKOA-mksgOkgUxi8BQdsXh_ANLPOBU:1vrazT:pzcsiAUVniHCc-QVdb3eLLU8tLC9MAhMnuPhsgyKJvo",
+    "expire_date": "2026-03-01T12:12:43.206Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "d3qhb22uxth95c9jsjiqt3mwu0zgvym5",
+  "fields": {
+    "session_data": ".eJxVjDsOwyAQRO9CHSHzNZsyvc-AWBaCkwhLxq6i3D1YcpFMOe_NvJkP-1b83tLqZ2JXJtnlt8MQn6kegB6h3hcel7qtM_JD4SdtfFoovW6n-3dQQit9PfaoJLVyyuBglEZ0oKOQZAchMqDN0BMhAQZL4LSNNhthpCE5OmKfL7O5NuE:1vrjAq:b6fDFWjiXX4JRG4eIcVQT2Q7APmcebkXe_xJ8Ah6et0",
+    "expire_date": "2026-03-01T20:57:00.094Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "d4stjewu2s069gfl4snquucgx9bsnb5b",
+  "fields": {
+    "session_data": ".eJxVjDEOAiEQRe9CbQjDgIilvWcgMDORVQPJslsZ766bbKHtf-_9l0p5XWpah8xpYnVWoA6_W8n0kLYBvud265p6W-ap6E3ROx362lmel939O6h51G8dwFAQAbYxivdoEZgKkLUGSz4xsUVnXQRPGKL3xhzRQeZCaBBI1PsDylo3GQ:1vtEQv:bWEgmN7aQ7uiiZDmKoSrYCBxfPIkAYG1Ud5MPg8jMag",
+    "expire_date": "2026-03-06T00:31:49.446Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "d8mijrcvdcx5ie04e9fi3wk15u1fucd3",
+  "fields": {
+    "session_data": ".eJxVjDsOwyAQRO9CHSHzNZsyvc-AWBaCkwhLxq6i3D1YcpFMOe_NvJkP-1b83tLqZ2JXJtnlt8MQn6kegB6h3hcel7qtM_JD4SdtfFoovW6n-3dQQit9PfaoJLVyyuBglEZ0oKOQZAchMqDN0BMhAQZL4LSNNhthpCE5OmKfL7O5NuE:1vrtEF:eNJNnM1P6vKNSidWng7edj7YGKalbv-c2xII52dyij8",
+    "expire_date": "2026-03-02T07:41:11.978Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "d9n7q9zdlk62zaj9tqwycq0bsmfl7ibl",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSFQ3i7d-w1kYAapGkhKuzL-uzbpQrf3nHNfLMK21rgNWuKM7MykYaffMUF-UNsJ3qHdOs-9rcuc-K7wgw5-7UjPy-H-HVQY9Vt7NzlSQWL2gawGLbKVWogiQ0KTJ3IlYFKeVCo6WHAAskgS2ZuCgYC9PwONOKU:1vtpwv:yn-DeU62ewP72cjOkTmBkPAdXfGqsXug_j027F2VTFo",
+    "expire_date": "2026-03-07T16:35:21.057Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ddrjev75bskwp08cnzi6gjxpgt3ru7f6",
+  "fields": {
+    "session_data": ".eJxVjDEOAiEQRe9CbQjDgIilvWcgMDORVQPJslsZ766bbKHtf-_9l0p5XWpah8xpYnVWoA6_W8n0kLYBvud265p6W-ap6E3ROx362lmel939O6h51G8dwFAQAbYxivdoEZgKkLUGSz4xsUVnXQRPGKL3xhzRQeZCaBBI1PsDylo3GQ:1vt7n2:7EOQE-jykKxATv_uFweUu1l7uyjYfCLHwIajxXpKfL4",
+    "expire_date": "2026-03-05T17:26:12.251Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "dlpnhfrstfu0dkhb40v66wkw2luo433k",
+  "fields": {
+    "session_data": ".eJxVjDEOAiEQRe9CbQjDgIilvWcgMDORVQPJslsZ766bbKHtf-_9l0p5XWpah8xpYnVWoA6_W8n0kLYBvud265p6W-ap6E3ROx362lmel939O6h51G8dwFAQAbYxivdoEZgKkLUGSz4xsUVnXQRPGKL3xhzRQeZCaBBI1PsDylo3GQ:1vt21b:w7gI4ClqIIjH7Yx1inWzP4fsB9TWjBYWsR6VqryMxww",
+    "expire_date": "2026-03-05T11:16:51.890Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "e4k19m0uhvcrlghg6amtlzh35m75w932",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSFQ3i7d-w1kYAapGkhKuzL-uzbpQrf3nHNfLMK21rgNWuKM7MykYaffMUF-UNsJ3qHdOs-9rcuc-K7wgw5-7UjPy-H-HVQY9Vt7NzlSQWL2gawGLbKVWogiQ0KTJ3IlYFKeVCo6WHAAskgS2ZuCgYC9PwONOKU:1vt8Li:SBLnVXPCeAsQLRwgWUNDkqoI_wikqoTYKaMt9IS7LRg",
+    "expire_date": "2026-03-05T18:02:02.239Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "gpxq2my2zripi1qggevzko4rh9wcs4x9",
+  "fields": {
+    "session_data": ".eJxVjDEOAiEQRe9CbQjDgIilvWcgMDORVQPJslsZ766bbKHtf-_9l0p5XWpah8xpYnVWoA6_W8n0kLYBvud265p6W-ap6E3ROx362lmel939O6h51G8dwFAQAbYxivdoEZgKkLUGSz4xsUVnXQRPGKL3xhzRQeZCaBBI1PsDylo3GQ:1vt1NV:QJo8z27mYjfidY0zHInIHLIuiY8To_gx0QocrnvXWbo",
+    "expire_date": "2026-03-05T10:35:25.745Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "h9611x6v8wbkp5dqif5qfjqeo98w5g84",
+  "fields": {
+    "session_data": ".eJxVjDEOAiEQRe9CbQjDgIilvWcgMDORVQPJslsZ766bbKHtf-_9l0p5XWpah8xpYnVWoA6_W8n0kLYBvud265p6W-ap6E3ROx362lmel939O6h51G8dwFAQAbYxivdoEZgKkLUGSz4xsUVnXQRPGKL3xhzRQeZCaBBI1PsDylo3GQ:1vt85o:T8aWbf5I5oQzQCZiW8ryDMK6tpF2syqLBeLCGIHZP6E",
+    "expire_date": "2026-03-05T17:45:36.508Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "hguuajhorxq5lqnds56yo7htcrkaob2z",
+  "fields": {
+    "session_data": ".eJxVjDsOwyAQRO9CHSHzNZsyvc-AWBaCkwhLxq6i3D1YcpFMOe_NvJkP-1b83tLqZ2JXJtnlt8MQn6kegB6h3hcel7qtM_JD4SdtfFoovW6n-3dQQit9PfaoJLVyyuBglEZ0oKOQZAchMqDN0BMhAQZL4LSNNhthpCE5OmKfL7O5NuE:1vrbFM:nMhmtkpaVdQyetD1gvCBavXCMlI_rRGtFgmYbd0vIeU",
+    "expire_date": "2026-03-01T12:29:08.616Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "hpf4gsa4oyolpwn0h208r0886ukkb1mh",
+  "fields": {
+    "session_data": ".eJxVjDEOAiEQRe9CbQjDgIilvWcgMDORVQPJslsZ766bbKHtf-_9l0p5XWpah8xpYnVWoA6_W8n0kLYBvud265p6W-ap6E3ROx362lmel939O6h51G8dwFAQAbYxivdoEZgKkLUGSz4xsUVnXQRPGKL3xhzRQeZCaBBI1PsDylo3GQ:1vsgGV:5AkqCrrGcO9j_s5QO4FUTLjscUBsp_6UOqHIbggDO_U",
+    "expire_date": "2026-03-04T12:02:47.257Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ialj36421sxxcdiz6axw9ja04xrf8xn3",
+  "fields": {
+    "session_data": ".eJxVjDEOAiEQRe9CbQjDgIilvWcgMDORVQPJslsZ766bbKHtf-_9l0p5XWpah8xpYnVWoA6_W8n0kLYBvud265p6W-ap6E3ROx362lmel939O6h51G8dwFAQAbYxivdoEZgKkLUGSz4xsUVnXQRPGKL3xhzRQeZCaBBI1PsDylo3GQ:1vt6F0:Dc515Q7gf572IhMO6Ac83YfKAt538Pn_D3WV8SHss4E",
+    "expire_date": "2026-03-05T15:46:58.216Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "iqyk25fc7sd19ewwnrduum8lz8lc8uy2",
+  "fields": {
+    "session_data": ".eJxVjEsOwjAMBe-SNYpqN00dluw5Q-XEDi2gROpnhbg7VOoCtm9m3ssMvK3jsC06D5OYswnm9LtFTg8tO5A7l1u1qZZ1nqLdFXvQxV6r6PNyuH8HIy_jt-5aj6FrMiCxIxKPwtpSVgKJ0LMCOsTsm1apSRAc9pi8BHLZRQho3h_FcTbv:1vsUPq:QGzqEPf50ug5U-DcA4Md5MHXYqn_11FPHBW7TlFni9A",
+    "expire_date": "2026-03-03T23:23:38.665Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "j7dofsrclts3fnoz3bysp559yiajvxq9",
+  "fields": {
+    "session_data": ".eJxVjDEOAiEQRe9CbQjDgIilvWcgMDORVQPJslsZ766bbKHtf-_9l0p5XWpah8xpYnVWoA6_W8n0kLYBvud265p6W-ap6E3ROx362lmel939O6h51G8dwFAQAbYxivdoEZgKkLUGSz4xsUVnXQRPGKL3xhzRQeZCaBBI1PsDylo3GQ:1vt6go:p5fHxkJ6PD_EL7jItx2Loutnc_zpnRctOEmXbKkV3p4",
+    "expire_date": "2026-03-05T16:15:42.163Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "j7vdsf2ir38uerc7j4p917ra9cswaqfo",
+  "fields": {
+    "session_data": ".eJxVjDEOAiEQRe9CbQjDgIilvWcgMDORVQPJslsZ766bbKHtf-_9l0p5XWpah8xpYnVWoA6_W8n0kLYBvud265p6W-ap6E3ROx362lmel939O6h51G8dwFAQAbYxivdoEZgKkLUGSz4xsUVnXQRPGKL3xhzRQeZCaBBI1PsDylo3GQ:1vt1pS:9ZUh9BkR5PIjkUYR_VbmP2yyux7J4EyBL_Dm2Qyw-CY",
+    "expire_date": "2026-03-05T11:04:18.377Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "jg40q1ua4y4hg6bo5okiu7fv6ihluj0q",
+  "fields": {
+    "session_data": ".eJxVjDEOAiEQRe9CbQjDgIilvWcgMDORVQPJslsZ766bbKHtf-_9l0p5XWpah8xpYnVWoA6_W8n0kLYBvud265p6W-ap6E3ROx362lmel939O6h51G8dwFAQAbYxivdoEZgKkLUGSz4xsUVnXQRPGKL3xhzRQeZCaBBI1PsDylo3GQ:1vt1Qr:j1I7lwHJ4PDOv1_AC7No8mKde1FUT37wAhMLctLCG9w",
+    "expire_date": "2026-03-05T10:38:53.420Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "jivuci3y9e8xwb638abgn6f1773vj7xn",
+  "fields": {
+    "session_data": ".eJxVjDsOwyAQRO9CHSHzNZsyvc-AWBaCkwhLxq6i3D1YcpFMOe_NvJkP-1b83tLqZ2JXJtnlt8MQn6kegB6h3hcel7qtM_JD4SdtfFoovW6n-3dQQit9PfaoJLVyyuBglEZ0oKOQZAchMqDN0BMhAQZL4LSNNhthpCE5OmKfL7O5NuE:1vraIS:wcH5YWjj1cPbXeyU2qAAvzh-pLGH__n-Z-7J6Kgvyys",
+    "expire_date": "2026-03-01T11:28:16.248Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "jonydjxpxn9au2ucvw9a9jobkdcfyvhg",
+  "fields": {
+    "session_data": ".eJxVjDEOAiEQRe9CbQjDgIilvWcgMDORVQPJslsZ766bbKHtf-_9l0p5XWpah8xpYnVWoA6_W8n0kLYBvud265p6W-ap6E3ROx362lmel939O6h51G8dwFAQAbYxivdoEZgKkLUGSz4xsUVnXQRPGKL3xhzRQeZCaBBI1PsDylo3GQ:1vtNrN:0k0wRxWNeGdwWI0gYZ5QeD-VAhmstILfInO_5_tL18I",
+    "expire_date": "2026-03-06T10:35:45.717Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "kfsbq7w0m89flgbvtbrgnuw3p7ngbfgu",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSFQ3i7d-w1kYAapGkhKuzL-uzbpQrf3nHNfLMK21rgNWuKM7MykYaffMUF-UNsJ3qHdOs-9rcuc-K7wgw5-7UjPy-H-HVQY9Vt7NzlSQWL2gawGLbKVWogiQ0KTJ3IlYFKeVCo6WHAAskgS2ZuCgYC9PwONOKU:1vtOIx:s-Lt6UCDWDVvOxH31phm8ba6IDNDjS_Rsps8XEbvlmg",
+    "expire_date": "2026-03-06T11:04:15.953Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "kkbxyqfuy1kn9d91w1058uw74hnct21c",
+  "fields": {
+    "session_data": ".eJxVjMEOwiAQRP-FsyGyVAoevfcbyMLu2qqBpLQn47_bJj3oZQ7z3sxbRVyXMa6N5ziRuiqjTr9dwvzksgN6YLlXnWtZ5inpXdEHbXqoxK_b4f4djNjGbW3F22S2DHBxHAR6y9IRswiioxQgn53pSQQ68NxRIoeQrZA1GXxQny8AkDjU:1vqglq:6huRatvCRMMq2ao10mETvktznXO6iDh4DnVBgD6LtoY",
+    "expire_date": "2026-02-27T00:10:54.976Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "klpxfv1vghswtypr08uie9xh6dkpbhdb",
+  "fields": {
+    "session_data": ".eJxVjDEOwyAQBP9CHSEODMYp0_sN6OCO4CTCkrGrKH-PLblImi12ZvctAm5rCVvjJUwkrgLE5beLmJ5cD0APrPdZprmuyxTlociTNjnOxK_b6f4dFGxlXyvvFGRNhOCQrHUmGlKac-cdRuizisqYBMwDGO4xDh3tyaA9os0gPl_jrDhA:1vqsAb:bhgl0JjqvovIdo35bCCBRks8GueR-PXvpb7voEai_14",
+    "expire_date": "2026-02-27T12:21:13.956Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "lpav2e9cs49rbu0jhflorzkto8v8ihay",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlnxdwklfc5grb1rHEC2FCcV4u4QKQW0b2beSwTc1hK2zkuYSVyEEaffLWJ6cN0B3bHemkytrssc5a7Ig3Y5NeLn9XD_Dgr28q0ZR7DZKwAGQ9Y5RQ7AuJiU92B1Aq_xPFKOA-mksgOkgUxi8BQdsXh_ANLPOBU:1vraMx:EQe4KZPmTloIxaSDz4YgdemS7swZDVz3MB96LVE3fRE",
+    "expire_date": "2026-03-01T11:32:55.535Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "m5wxefndqqz17zjd93cgrwmu0ormwpxo",
+  "fields": {
+    "session_data": ".eJxVjDEOwyAQBP9CHSEODMYp0_sN6OCO4CTCkrGrKH-PLblImi12ZvctAm5rCVvjJUwkrgLE5beLmJ5cD0APrPdZprmuyxTlociTNjnOxK_b6f4dFGxlXyvvFGRNhOCQrHUmGlKac-cdRuizisqYBMwDGO4xDh3tyaA9os0gPl_jrDhA:1vrdD4:ASdyW7CbF0nzc7EPl-YF4fyCjMkmWESKYpBlCrGy52A",
+    "expire_date": "2026-03-01T14:34:54.792Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "nkypbjf22aj65lbvcc7madsajsbwm1zb",
+  "fields": {
+    "session_data": ".eJxVjDEOAiEQRe9CbQjDgIilvWcgMDORVQPJslsZ766bbKHtf-_9l0p5XWpah8xpYnVWoA6_W8n0kLYBvud265p6W-ap6E3ROx362lmel939O6h51G8dwFAQAbYxivdoEZgKkLUGSz4xsUVnXQRPGKL3xhzRQeZCaBBI1PsDylo3GQ:1vtEF8:FTpIaQvdQyFHhECp8gC-w623lafVql6Di1OCDBLktAE",
+    "expire_date": "2026-03-06T00:19:38.736Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "nlu5pogjqj0ls7xmzyk9jbnlxybjj9in",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlnxdwklfc5grb1rHEC2FCcV4u4QKQW0b2beSwTc1hK2zkuYSVyEEaffLWJ6cN0B3bHemkytrssc5a7Ig3Y5NeLn9XD_Dgr28q0ZR7DZKwAGQ9Y5RQ7AuJiU92B1Aq_xPFKOA-mksgOkgUxi8BQdsXh_ANLPOBU:1vqvsu:raIWZvMJ-JV-bon6W-ImhaGh7jTCIlTJMqZLQgdYgX0",
+    "expire_date": "2026-02-27T16:19:12.700Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "oo9c9l5nog6hwy6g4xgv1rtlp34wyvdi",
+  "fields": {
+    "session_data": ".eJxVjDsOwyAQRO9CHSHzNZsyvc-AWBaCkwhLxq6i3D1YcpFMOe_NvJkP-1b83tLqZ2JXJtnlt8MQn6kegB6h3hcel7qtM_JD4SdtfFoovW6n-3dQQit9PfaoJLVyyuBglEZ0oKOQZAchMqDN0BMhAQZL4LSNNhthpCE5OmKfL7O5NuE:1vrmCE:XwiKMrRqKLByIFffWwGltcSv30Dya0Dj2jNmArsZxDM",
+    "expire_date": "2026-03-02T00:10:38.891Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ovkbdiuq2pwl7vcezzlk64t39aizwyxq",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hCgyKBL956BzAyjVA0kpV0Z726bdKHb_977b5VwmUtaukxpzOqsnDr8boT8lLqB_MB6b5pbnaeR9KbonXZ9bVlel939OyjYy1pbG27REHvLgTn6LHR0PgIZTxDY5OjQ2WidEwinMIBfZYQBB8kQxajPF9RfN2U:1vsgcI:SpSXT9rem4J8WQyEg5xBDdYq_ypOdDzLNre0vHnIu7w",
+    "expire_date": "2026-03-04T12:25:18.058Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "q2a3sq4s1lmc872qnumt3dilscr5vba6",
+  "fields": {
+    "session_data": ".eJxVjDEOAiEQRe9CbQjDgIilvWcgMDORVQPJslsZ766bbKHtf-_9l0p5XWpah8xpYnVWoA6_W8n0kLYBvud265p6W-ap6E3ROx362lmel939O6h51G8dwFAQAbYxivdoEZgKkLUGSz4xsUVnXQRPGKL3xhzRQeZCaBBI1PsDylo3GQ:1vt8Rt:YGvUOIpb4AGQOjaLE9o77lthqm9LiO1dlUcm__IhPNs",
+    "expire_date": "2026-03-05T18:08:25.139Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "qbl6bum2cg8dd4ls2g794u3jbwbkpth4",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2pAy0AAu3XsGMsOMUjWQlHZlvLtt0oVu_3vvv1XCdSlp7TKnidVZGXX63QjzU-oO-IH13nRudZkn0ruiD9r1tbG8Lof7d1Cwl60GlwMPViyigJHoY2Cm4DCwoPUkwWMODiKNvJEIBNkaIh4HuAFY9fkCAPk4jg:1vpcaA:dHj-tyuBq0hKf62OViQcP2_nW9rillAPXZARSZqIni4",
+    "expire_date": "2026-02-24T01:30:26.734Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "rhw2zcd05x6svbp6noosmvdw40437q0o",
+  "fields": {
+    "session_data": ".eJxVi8sKwkAMRf9l1lJimnm50x8ZMknKiODCsVAQ_90WuqjLc8-5H1d4frcyd3uVu7qLQ3c6bpXlYc9N8GJ92LEP15Vuu_s7NO5trdMEo2ESDT5HyiMEjuQxAVOt3uQMxCKEnnUSFlUBQeWgEi1iru77Aw60MpE:1vuDK1:v1Fkq2vCjh6e2rfpME_pYTJ00NgQql1CJEw-YR5xWYI",
+    "expire_date": "2026-03-08T17:32:45.401Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "rkvg9vnbolijn8jtdwwjleii1t7l3lk9",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlnxdwklfc5grb1rHEC2FCcV4u4QKQW0b2beSwTc1hK2zkuYSVyEEaffLWJ6cN0B3bHemkytrssc5a7Ig3Y5NeLn9XD_Dgr28q0ZR7DZKwAGQ9Y5RQ7AuJiU92B1Aq_xPFKOA-mksgOkgUxi8BQdsXh_ANLPOBU:1vsUSS:f6miCuYI8s25dcQjus4QbTRz9EIjBcKy8F_WgvEy53k",
+    "expire_date": "2026-03-03T23:26:20.757Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "rtlo25jnves0yw5cfs8xrmj99dm0g4ij",
+  "fields": {
+    "session_data": ".eJxVjDEOAiEQRe9CbQjDgIilvWcgMDORVQPJslsZ766bbKHtf-_9l0p5XWpah8xpYnVWoA6_W8n0kLYBvud265p6W-ap6E3ROx362lmel939O6h51G8dwFAQAbYxivdoEZgKkLUGSz4xsUVnXQRPGKL3xhzRQeZCaBBI1PsDylo3GQ:1vt6X4:U4TzWvydDucmzGlZ7lByMBM7xr7VLO7i3VsnMI5GAgY",
+    "expire_date": "2026-03-05T16:05:38.006Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "rtvi2eoqf7nhut49v1l0ez5e4fq2agu6",
+  "fields": {
+    "session_data": ".eJxVjDsOwyAQRO9CHSHzNZsyvc-AWBaCkwhLxq6i3D1YcpFMOe_NvJkP-1b83tLqZ2JXJtnlt8MQn6kegB6h3hcel7qtM_JD4SdtfFoovW6n-3dQQit9PfaoJLVyyuBglEZ0oKOQZAchMqDN0BMhAQZL4LSNNhthpCE5OmKfL7O5NuE:1vqvn4:jbKsaS7EfN7ExFaW81U0d5zCjlxZsBiHVpOU7yZ6sk4",
+    "expire_date": "2026-02-27T16:13:10.418Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "rwbnguo1gcfg73jardtzzwzyftqlnu7g",
+  "fields": {
+    "session_data": ".eJxVjDEOAiEQRe9CbQjDgIilvWcgMDORVQPJslsZ766bbKHtf-_9l0p5XWpah8xpYnVWoA6_W8n0kLYBvud265p6W-ap6E3ROx362lmel939O6h51G8dwFAQAbYxivdoEZgKkLUGSz4xsUVnXQRPGKL3xhzRQeZCaBBI1PsDylo3GQ:1vt6iA:qxGrSqH5_ESaqsYq5OFkltNjSUJVdyW4gRFbDgx2_EA",
+    "expire_date": "2026-03-05T16:17:06.583Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "sthv88q4di1uyhxw76w93b5cf030i4vf",
+  "fields": {
+    "session_data": ".eJxVjDEOAiEQRe9CbQjDgIilvWcgMDORVQPJslsZ766bbKHtf-_9l0p5XWpah8xpYnVWoA6_W8n0kLYBvud265p6W-ap6E3ROx362lmel939O6h51G8dwFAQAbYxivdoEZgKkLUGSz4xsUVnXQRPGKL3xhzRQeZCaBBI1PsDylo3GQ:1vtNj5:S-r81wwahcxWwkXdQW4ZIs1a_WWo3mEa02rUu-3Mmyo",
+    "expire_date": "2026-03-06T10:27:11.647Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "sthx5m9acnqb1bidjjjm8cmu26c3diqx",
+  "fields": {
+    "session_data": ".eJxVjEEOgjAQRe_StWlaOsxMXbr3DGToFEFNSSisjHdXEha6_e-9_zKdbOvYbTUv3aTmbMicfrde0iOXHehdym22aS7rMvV2V-xBq73Omp-Xw_07GKWO31qYGQEJh8ax00xDaDF44CQusg8BQNsWkZrke2RRjRAZvHdACuTM-wOq0zYP:1vsUaH:C5gM9vUVzKTm5kdIcmEU590D3IybkExkaTchSzwafag",
+    "expire_date": "2026-03-03T23:34:25.845Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "twsmrdqincez9pw57w1djap7zph47aqs",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hCgyKBL956BzAyjVA0kpV0Z726bdKHb_977b5VwmUtaukxpzOqsnDr8boT8lLqB_MB6b5pbnaeR9KbonXZ9bVlel939OyjYy1pbG27REHvLgTn6LHR0PgIZTxDY5OjQ2WidEwinMIBfZYQBB8kQxajPF9RfN2U:1vsgIn:qU1lz455zoMN2-fHXoy4RZhwMXkL2s3cyq-snZD6w8w",
+    "expire_date": "2026-03-04T12:05:09.405Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "ujf4c74bnqkyn9s27s681am5vlusthvg",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2pAy0AAu3XsGMsOMUjWQlHZlvLtt0oVu_3vvv1XCdSlp7TKnidVZGXX63QjzU-oO-IH13nRudZkn0ruiD9r1tbG8Lof7d1Cwl60GlwMPViyigJHoY2Cm4DCwoPUkwWMODiKNvJEIBNkaIh4HuAFY9fkCAPk4jg:1vpd14:nAV_B5PQPM27owH6vrNRvHM-o6llkJM64p6ml9_hajo",
+    "expire_date": "2026-02-24T01:58:14.798Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "uk3qyhoqwrzrengvz8v0jp93n9ghswyx",
+  "fields": {
+    "session_data": ".eJxVjDEOwyAQBP9CHSEODMYp0_sN6OCO4CTCkrGrKH-PLblImi12ZvctAm5rCVvjJUwkrgLE5beLmJ5cD0APrPdZprmuyxTlociTNjnOxK_b6f4dFGxlXyvvFGRNhOCQrHUmGlKac-cdRuizisqYBMwDGO4xDh3tyaA9os0gPl_jrDhA:1vraJy:A32pmRIYCwxudGMCjazavkWFZIIav4MoWQm7WbZSe04",
+    "expire_date": "2026-03-01T11:29:50.305Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "uwnjqmi7jzeg2qc62yz16a77av5dop12",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlnG8ZeSPmew1rsbHEC2FCcV4u4QKQW0b2beSyTY1pK2zkuaSVyEFqffLQM-uO6A7lBvTWKr6zJnuSvyoF2Ojfh5Pdy_gwK9fOswqYF1QHI2ehMH5cAbq4MCk7NlPCsDiEZboAkBiVChJnCEnr2OWbw_4XI4sg:1vuE1g:DnM7YpRGd5YiCSLiltnwTrVgIZOM4d2mhhbtuyDRRSU",
+    "expire_date": "2026-03-08T18:17:52.147Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "vl3lkhymwsh654obtd4h95ztukr0j9kh",
+  "fields": {
+    "session_data": ".eJxVjDEOAiEQRe9CbQjDgIilvWcgMDORVQPJslsZ766bbKHtf-_9l0p5XWpah8xpYnVWoA6_W8n0kLYBvud265p6W-ap6E3ROx362lmel939O6h51G8dwFAQAbYxivdoEZgKkLUGSz4xsUVnXQRPGKL3xhzRQeZCaBBI1PsDylo3GQ:1vtPYw:TzkgfOB7578fUE4RuN0YcdZwbjdYfsfrpSWyYy351JM",
+    "expire_date": "2026-03-06T12:24:50.569Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "waghc96pqv2phh14zw45nx49fzh1o0fq",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlnxdwklfc5grb1rHEC2FCcV4u4QKQW0b2beSwTc1hK2zkuYSVyEEaffLWJ6cN0B3bHemkytrssc5a7Ig3Y5NeLn9XD_Dgr28q0ZR7DZKwAGQ9Y5RQ7AuJiU92B1Aq_xPFKOA-mksgOkgUxi8BQdsXh_ANLPOBU:1vrii3:H3T6cC07qHQRj4xgDO52C82-e8XeAzZoFnsti-IdY5w",
+    "expire_date": "2026-03-01T20:27:15.309Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "wjh1s1bvco8r2x8rhiov69csfize60gm",
+  "fields": {
+    "session_data": ".eJxVjEEOwiAQRe_C2hAoDAWX7nsGMgOMrRpISrsy3t006UK3_7333yLivs1x72WNSxZXoa24_I6E6VnqQfID673J1Oq2LiQPRZ60y6nl8rqd7t_BjH0-asMwQqCRwYWxgDI-OWW1ZkPk1KC8w0wue7RAgROH4JEGBsSBnbXi8wX7LTgY:1vt7sF:398J-naJwT6QPCzuYq8r2Mmy4WHgvS-awXAAXcsZje4",
+    "expire_date": "2026-03-05T17:31:35.694Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "wjjtxfaghj7kkjhgyt6d48f226ra35pa",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlnG8ZeSPmew1rsbHEC2FCcV4u4QKQW0b2beSyTY1pK2zkuaSVyEFqffLQM-uO6A7lBvTWKr6zJnuSvyoF2Ojfh5Pdy_gwK9fOswqYF1QHI2ehMH5cAbq4MCk7NlPCsDiEZboAkBiVChJnCEnr2OWbw_4XI4sg:1vuD80:3-8qgCagwDOBxBlB1yXHsRYcjMpnA7vpc0Jm-Vu3SUc",
+    "expire_date": "2026-03-08T17:20:20.032Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "yoydmt8m5948rcm77agwv9g1ka3qrbjx",
+  "fields": {
+    "session_data": ".eJxVjE0OwiAYBe_C2hAg0FKX7j0D-f6QqqFJaVeNdzckXej2zcw7VIJ9K2lvsqaZ1VWN6vK7IdBLagf8hPpYNC11W2fUXdEnbfq-sLxvp_t3UKCVXrOdTEQSRAuSTbDGji5PSAFg8uJ5GH0WcDYYcpbJ5-ij4JCRmBypzxcO6DlB:1vsUWm:6rRA83tWBIDfoRWG71doHCQZneykv3ZQ7yazVLEH18A",
+    "expire_date": "2026-03-03T23:30:48.876Z"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "a6ce8c15ff31fe71ead46d0c88858e586ea8d77c",
+  "fields": {
+    "user": 5,
+    "created": "2026-02-15T11:47:00.729Z"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "b13923d8480ae080e09dadc5b03160de39970a52",
+  "fields": {
+    "user": 4,
+    "created": "2026-02-15T11:46:19.831Z"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "b218b5f4d711cc5e919d9ea495c9e53c70c27bd8",
+  "fields": {
+    "user": 16,
+    "created": "2026-02-22T19:56:56.230Z"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "d38392e65a8e9b904f6253a8b7840f9c58c90fad",
+  "fields": {
+    "user": 14,
+    "created": "2026-02-19T17:31:09.654Z"
+  }
+},
+{
+  "model": "authtoken.token",
+  "pk": "d72604d1e7bbcc2b5e1cdbff7c9b1dadcbe35dba",
+  "fields": {
+    "user": 6,
+    "created": "2026-02-15T11:47:55.784Z"
+  }
+},
+{
+  "model": "users.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$eY0uNRpAfIWRLjUL9wVhPa$DZvSEqW6DK8V/Y9YIfbASqWNAZzjpDGMPPOJOXOyJvs=",
+    "last_login": "2026-02-22T14:06:45.898Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "Admin",
+    "last_name": "System",
+    "email": "admin@tuteur.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-01-28T23:09:44.887Z",
+    "user_type": "admin",
+    "level": null,
+    "date_of_birth": null,
+    "phone": "",
+    "avatar": "",
+    "subject": "",
+    "bio": "",
+    "is_active_student": true,
+    "created_at": "2026-01-28T23:09:45.708Z",
+    "updated_at": "2026-02-18T10:37:39.773Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$CawUmGiwZUzOdzEiL3vy5q$RuHJS/g4lSiSCr3u1xfNzIfIEIHw9Z2yP1WZVg+BuHg=",
+    "last_login": "2026-02-22T18:17:52.142Z",
+    "is_superuser": false,
+    "username": "salgo397",
+    "first_name": "Abdoul Aziz",
+    "last_name": "Salgo",
+    "email": "salgo397@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-02-13T12:32:34.970Z",
+    "user_type": "student",
+    "level": "terminale",
+    "date_of_birth": null,
+    "phone": "",
+    "avatar": "",
+    "subject": "",
+    "bio": "",
+    "is_active_student": true,
+    "created_at": "2026-02-13T12:32:35.111Z",
+    "updated_at": "2026-02-22T17:20:03.281Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$bfg4UhWhV928G5Zb5Gh3ic$6asebVrrXIvBh79B9kvd3QG5zrn5Yt8cR0NqkNoLZyE=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "debug_user",
+    "first_name": "Debug",
+    "last_name": "User",
+    "email": "debug@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-02-15T11:46:19.658Z",
+    "user_type": "student",
+    "level": "cm2",
+    "date_of_birth": null,
+    "phone": "",
+    "avatar": "",
+    "subject": "",
+    "bio": "",
+    "is_active_student": true,
+    "created_at": "2026-02-15T11:46:19.811Z",
+    "updated_at": "2026-02-15T11:46:19.811Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$5GBgMOi20CMc5Di2Od1v9A$4Sw03WFLp7VU3Q2umHR0jENr6zPV+MxDnB8NjMys1aI=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "debug_user_2",
+    "first_name": "Debug",
+    "last_name": "User",
+    "email": "debug2@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-02-15T11:47:00.570Z",
+    "user_type": "student",
+    "level": "",
+    "date_of_birth": null,
+    "phone": "",
+    "avatar": "",
+    "subject": "",
+    "bio": "",
+    "is_active_student": true,
+    "created_at": "2026-02-15T11:47:00.713Z",
+    "updated_at": "2026-02-15T11:47:00.713Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$MjMRmI5m0VIU1b7ltbJyMu$64U0ato1DP42Bwp+L3jtz1xNHxdN3Fb6PlssQEJ9Pf8=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "new_user",
+    "first_name": "Debug",
+    "last_name": "User",
+    "email": "debug@example.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-02-15T11:47:55.617Z",
+    "user_type": "student",
+    "level": "cm2",
+    "date_of_birth": null,
+    "phone": "",
+    "avatar": "",
+    "subject": "",
+    "bio": "",
+    "is_active_student": true,
+    "created_at": "2026-02-15T11:47:55.765Z",
+    "updated_at": "2026-02-15T11:47:55.765Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$eD5gZ5h2Zd6ZtKaE6t7Jwj$SwpX/Ct4SYq11ykR7nav2nJuYgeEfMRI8O8d6cfjeWQ=",
+    "last_login": "2026-02-17T23:34:25.839Z",
+    "is_superuser": false,
+    "username": "N01287420231",
+    "first_name": "abdoul",
+    "last_name": "sama",
+    "email": "salgo@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-02-15T11:51:03.379Z",
+    "user_type": "student",
+    "level": "cm2",
+    "date_of_birth": null,
+    "phone": "",
+    "avatar": "",
+    "subject": "",
+    "bio": "",
+    "is_active_student": true,
+    "created_at": "2026-02-15T11:51:03.530Z",
+    "updated_at": "2026-02-17T23:33:03.800Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 10,
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "test_admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2026-02-18T12:14:44.392Z",
+    "user_type": "admin",
+    "level": null,
+    "date_of_birth": null,
+    "phone": "",
+    "avatar": "",
+    "subject": "",
+    "bio": "",
+    "is_active_student": true,
+    "created_at": "2026-02-18T12:14:44.392Z",
+    "updated_at": "2026-02-18T12:14:44.392Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 11,
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "user1",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-02-18T12:14:44.403Z",
+    "user_type": "student",
+    "level": null,
+    "date_of_birth": null,
+    "phone": "",
+    "avatar": "",
+    "subject": "",
+    "bio": "",
+    "is_active_student": true,
+    "created_at": "2026-02-18T12:14:44.403Z",
+    "updated_at": "2026-02-18T12:14:44.403Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 12,
+  "fields": {
+    "password": "",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "user2",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-02-18T12:14:44.408Z",
+    "user_type": "student",
+    "level": null,
+    "date_of_birth": null,
+    "phone": "",
+    "avatar": "",
+    "subject": "",
+    "bio": "",
+    "is_active_student": true,
+    "created_at": "2026-02-18T12:14:44.408Z",
+    "updated_at": "2026-02-18T12:14:44.408Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 13,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$m0xhGVUpf3yOyu96blegOh$JUwieDNYp/iEgzXrqK8llqJt2SdF4ShAqYWLY8ksCWA=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "abdoul1995",
+    "first_name": "Aziz",
+    "last_name": "Ouedraogo",
+    "email": "salgoabdoulaziz2@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-02-18T12:17:59.528Z",
+    "user_type": "student",
+    "level": "troisieme",
+    "date_of_birth": null,
+    "phone": "",
+    "avatar": "",
+    "subject": "",
+    "bio": "",
+    "is_active_student": true,
+    "created_at": "2026-02-18T12:17:59.601Z",
+    "updated_at": "2026-02-18T12:17:59.601Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 14,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$ZeOheY2vL9MDGldRPFwl3u$lQgjki76VDyWWC/ZKn6sHIDs9z4UNG2Dq1cJXFR3NuI=",
+    "last_login": "2026-02-19T17:31:35.685Z",
+    "is_superuser": false,
+    "username": "salgo398",
+    "first_name": "",
+    "last_name": "",
+    "email": "salgo397@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-02-19T17:31:09.410Z",
+    "user_type": "student",
+    "level": null,
+    "date_of_birth": null,
+    "phone": "",
+    "avatar": "",
+    "subject": "",
+    "bio": "",
+    "is_active_student": true,
+    "created_at": "2026-02-19T17:31:09.616Z",
+    "updated_at": "2026-02-19T17:31:09.616Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 15,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$orNsL9N8fjDgKqb7Bojxqk$hMbCgthwUuvpeeIscf9vH8zy6+P+GX5ba3GHjeynf+Q=",
+    "last_login": "2026-02-21T16:35:21.023Z",
+    "is_superuser": false,
+    "username": "zouma",
+    "first_name": "madou",
+    "last_name": "zouma",
+    "email": "salgoabdoulaziz2@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-02-19T18:01:39.029Z",
+    "user_type": "student",
+    "level": "terminale",
+    "date_of_birth": null,
+    "phone": "",
+    "avatar": "",
+    "subject": "",
+    "bio": "",
+    "is_active_student": true,
+    "created_at": "2026-02-19T18:01:39.263Z",
+    "updated_at": "2026-02-19T18:01:39.263Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 16,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$GMVOst6mMHjd82RV60ayrZ$Lc3fDEbue9KEEDfZLOsaZkdSlMwxEhXqXz2bG/g9SSQ=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "madou",
+    "first_name": "RAZO",
+    "last_name": "MORO",
+    "email": "salgoabdoulaziz2@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2026-02-22T19:56:56.064Z",
+    "user_type": "teacher",
+    "level": "",
+    "date_of_birth": null,
+    "phone": "",
+    "avatar": "",
+    "subject": "",
+    "bio": "",
+    "is_active_student": true,
+    "created_at": "2026-02-22T19:56:56.210Z",
+    "updated_at": "2026-02-22T19:56:56.210Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "lessons.subject",
+  "pk": 1,
+  "fields": {
+    "name": "Mathématiques",
+    "slug": "mathematiques",
+    "description": "Apprenez les mathématiques de manière interactive",
+    "icon": "calculator",
+    "color": "#3B82F6",
+    "order": 0,
+    "is_active": true
+  }
+},
+{
+  "model": "lessons.subject",
+  "pk": 2,
+  "fields": {
+    "name": "Français",
+    "slug": "francais",
+    "description": "Maîtrisez la langue française",
+    "icon": "book",
+    "color": "#EF4444",
+    "order": 0,
+    "is_active": true
+  }
+},
+{
+  "model": "lessons.subject",
+  "pk": 3,
+  "fields": {
+    "name": "Sciences",
+    "slug": "sciences",
+    "description": "Découvrez les sciences naturelles",
+    "icon": "flask",
+    "color": "#10B981",
+    "order": 0,
+    "is_active": true
+  }
+},
+{
+  "model": "lessons.subject",
+  "pk": 4,
+  "fields": {
+    "name": "Histoire-Géographie",
+    "slug": "histoire-geographie",
+    "description": "Explorez le monde et son histoire",
+    "icon": "globe",
+    "color": "#F59E0B",
+    "order": 0,
+    "is_active": true
+  }
+},
+{
+  "model": "lessons.subject",
+  "pk": 5,
+  "fields": {
+    "name": "Anglais",
+    "slug": "anglais",
+    "description": "Apprenez l'anglais facilement",
+    "icon": "message-circle",
+    "color": "#8B5CF6",
+    "order": 0,
+    "is_active": true
+  }
+},
+{
+  "model": "lessons.subject",
+  "pk": 6,
+  "fields": {
+    "name": "Science Physique",
+    "slug": "science-physique",
+    "description": "la science physique encore appelee physique chimie ou meme PC",
+    "icon": "",
+    "color": "#3B82F6",
+    "order": 0,
+    "is_active": true
+  }
+},
+{
+  "model": "lessons.subject",
+  "pk": 7,
+  "fields": {
+    "name": "Philosophie",
+    "slug": "philosophie",
+    "description": "cette matiere philosophie concerne toutes classes a partir de la 2e",
+    "icon": "",
+    "color": "#3B82F6",
+    "order": 0,
+    "is_active": true
+  }
+},
+{
+  "model": "lessons.chapter",
+  "pk": 3,
+  "fields": {
+    "subject": 1,
+    "title": "Mesures",
+    "slug": "mesures",
+    "description": "",
+    "order": 2,
+    "is_active": true,
+    "created_at": "2026-01-28T23:26:31.419Z",
+    "updated_at": "2026-01-28T23:26:31.419Z"
+  }
+},
+{
+  "model": "lessons.chapter",
+  "pk": 9,
+  "fields": {
+    "subject": 3,
+    "title": "Le corps humain",
+    "slug": "lecorpshumain",
+    "description": "chapitre parlant du corps humain",
+    "order": 0,
+    "is_active": true,
+    "created_at": "2026-01-28T23:26:31.600Z",
+    "updated_at": "2026-02-23T00:10:48.055Z"
+  }
+},
+{
+  "model": "lessons.lesson",
+  "pk": 5,
+  "fields": {
+    "chapter": 3,
+    "title": "les figures geometriques 3e",
+    "slug": "les-figures-geometriques",
+    "content": "introductions aux figures geometriques en 3eme",
+    "summary": "",
+    "level": "troisieme",
+    "duration_minutes": 30,
+    "order": 0,
+    "is_official": true,
+    "is_active": true,
+    "image": "",
+    "pdf_content": "lessons/pdfs/8_SUPPORT_DE_COURS_MATHS_3ième_Leçon_14_PYRAMIDES_ET_CÔNES.pdf",
+    "video_url": "https://youtu.be/eJ9_2ijYPME?si=c0a6h0gXqX_MuWWj",
+    "author": 2,
+    "created_at": "2026-02-22T20:15:31.517Z",
+    "updated_at": "2026-02-23T00:16:25.185Z"
+  }
+},
+{
+  "model": "lessons.lesson",
+  "pk": 6,
+  "fields": {
+    "chapter": 9,
+    "title": "SVT 3e",
+    "slug": "svt-3e",
+    "content": "COURS DE SVT 3E",
+    "summary": "CE PDF REGROUPE TOUT SUR SVT 3e",
+    "level": "troisieme",
+    "duration_minutes": 30,
+    "order": 0,
+    "is_official": true,
+    "is_active": true,
+    "image": "",
+    "pdf_content": "lessons/pdfs/Cours_svt_3e.pdf",
+    "video_url": "",
+    "author": 1,
+    "created_at": "2026-02-22T23:50:25.582Z",
+    "updated_at": "2026-02-22T23:50:25.582Z"
+  }
+},
+{
+  "model": "lessons.lessonview",
+  "pk": 3,
+  "fields": {
+    "lesson": 5,
+    "student": 16,
+    "viewed_at": "2026-02-22T20:16:02.803Z",
+    "completed": true,
+    "completion_percentage": 100
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 1,
+  "fields": {
+    "lesson": null,
+    "subject": 1,
+    "title": "Addition de nombres entiers",
+    "description": "Calculez les additions suivantes",
+    "exercise_type": "text",
+    "difficulty": "medium",
+    "level": "cm2",
+    "content": {
+      "question": "Combien font 15 + 27 ?",
+      "options": [
+        "42",
+        "32",
+        "52",
+        "40"
+      ]
+    },
+    "correct_answers": 0,
+    "explanation": "15 + 27 = 42. On additionne les unités (5+7=12) et les dizaines (1+2+1=4).",
+    "hints": [],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": null,
+    "is_ai_generated": false,
+    "created_at": "2026-01-28T23:26:31.855Z",
+    "updated_at": "2026-02-15T15:19:09.268Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 2,
+  "fields": {
+    "lesson": null,
+    "subject": 1,
+    "title": "Multiplication",
+    "description": "Calculez les multiplications",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "cm1",
+    "content": {
+      "question": "Combien font 12 × 8 ?",
+      "options": [
+        "96",
+        "86",
+        "106",
+        "76"
+      ]
+    },
+    "correct_answers": 0,
+    "explanation": "12 × 8 = 96. On peut calculer (10 × 8) + (2 × 8) = 80 + 16 = 96.",
+    "hints": [],
+    "points": 15,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": null,
+    "is_ai_generated": false,
+    "created_at": "2026-01-28T23:26:31.885Z",
+    "updated_at": "2026-01-28T23:26:31.885Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 3,
+  "fields": {
+    "lesson": null,
+    "subject": 2,
+    "title": "Le pluriel des noms",
+    "description": "Mettez ces noms au pluriel",
+    "exercise_type": "classic",
+    "difficulty": "easy",
+    "level": "ce1",
+    "content": {
+      "question": "Mettez \"cheval\" au pluriel"
+    },
+    "correct_answers": "chevaux",
+    "explanation": "Les noms en -al forment leur pluriel en -aux.",
+    "hints": [],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": null,
+    "is_ai_generated": false,
+    "created_at": "2026-01-28T23:26:31.918Z",
+    "updated_at": "2026-02-15T19:36:05.846Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 5,
+  "fields": {
+    "lesson": null,
+    "subject": 3,
+    "title": "Analyse de l'eau : détermination du pH",
+    "description": "Un échantillon d'eau a été prélevé dans un lac pour déterminer son pH. Le pH est une mesure de l'acidité ou de la basicité de l'eau.",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "quatrieme",
+    "content": {
+      "question": "Quel est l'effet d'un pH élevé sur la vie aquatique ?",
+      "options": [
+        "A : Il favorise la croissance des poissons",
+        "B : Il réduit la quantité d'oxygène dissous",
+        "C : Il modifie la solubilité des minéraux",
+        "D : Il tue les poissons et les plantes"
+      ]
+    },
+    "correct_answers": "C",
+    "explanation": "Un pH élevé signifie que l'eau est basique. Cela peut modifier la solubilité de certains minéraux essentiels pour la vie aquatique, ce qui peut avoir des impacts sur les écosystèmes",
+    "hints": [
+      "Le pH influence la disponibilité des nutriments pour les organismes aquatiques",
+      "Les poissons et les plantes ont des besoins spécifiques en termes de pH pour survivre"
+    ],
+    "points": 15,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": null,
+    "is_ai_generated": false,
+    "created_at": "2026-02-13T00:40:45.136Z",
+    "updated_at": "2026-02-15T20:33:03.578Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 6,
+  "fields": {
+    "lesson": null,
+    "subject": 2,
+    "title": "Conjugaison des verbes au présent",
+    "description": "Conjuguer correctement les verbes au présent de l'indicatif",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "quatrieme",
+    "content": {
+      "question": "Quelle est la conjugaison correcte du verbe 'finir' à la troisième personne du singulier au présent de l'indicatif ?",
+      "options": [
+        "il finis",
+        "il finit",
+        "il finira",
+        "il finirait"
+      ]
+    },
+    "correct_answers": 2,
+    "explanation": "La conjugaison correcte du verbe 'finir' à la troisième personne du singulier au présent de l'indicatif est 'il finit', car les verbes en -ir prennent la terminaison -it à cette personne.",
+    "hints": [
+      "Rappel des règles de conjugaison des verbes en -ir",
+      "Vérifier les terminaisons des verbes à la troisième personne du singulier"
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": null,
+    "is_ai_generated": false,
+    "created_at": "2026-02-13T00:44:21.269Z",
+    "updated_at": "2026-02-13T00:52:43.263Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 7,
+  "fields": {
+    "lesson": null,
+    "subject": 3,
+    "title": "La synthèse de l'eau",
+    "description": "Compléter les données manquantes dans l'équation chimique de la synthèse de l'eau",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "troisieme",
+    "content": {
+      "question": "Quels sont les réactifs qui produisent de l'eau lors de la réaction suivante : 2H2 + O2 → ...",
+      "options": [
+        "A) H2O et O2",
+        "B) 2H2O",
+        "C) H2O et H2",
+        "D) O2 et H2"
+      ]
+    },
+    "correct_answers": "B",
+    "explanation": "La synthèse de l'eau est une réaction chimique qui se produit entre l'hydrogène (H2) et l'oxygène (O2) pour former de l'eau (H2O). L'équation chimique équilibrée de cette réaction est : 2H2 + O2 → 2H2O.",
+    "hints": [
+      "Réfléchir aux éléments chimiques présents dans l'eau",
+      "Identifier les réactifs dans une équation chimique",
+      "Comprendre le concept de synthèse chimique"
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": null,
+    "is_ai_generated": false,
+    "created_at": "2026-02-13T00:53:44.637Z",
+    "updated_at": "2026-02-13T00:53:44.637Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 8,
+  "fields": {
+    "lesson": null,
+    "subject": 1,
+    "title": "Nombres complexes",
+    "description": "Déterminer la forme polaire d'un nombre complexe",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "terminale",
+    "content": {
+      "question": "Quelle est la forme polaire du nombre complexe $z = 3 + 4i$ ?",
+      "options": [
+        "A) $5(\\cos(\\frac{\\pi}{4}) + i\\sin(\\frac{\\pi}{4}))$",
+        "B) $5(\\cos(\\frac{\\pi}{3}) + i\\sin(\\frac{\\pi}{3}))$",
+        "C) $5(\\cos(\\frac{\\pi}{6}) + i\\sin(\\frac{\\pi}{6}))$",
+        "D) $5(\\cos(\\frac{2\\pi}{3}) + i\\sin(\\frac{2\\pi}{3}))$"
+      ]
+    },
+    "correct_answers": "A",
+    "explanation": "La forme polaire d'un nombre complexe $z = a + bi$ est donnée par $z = r(\\cos(\\theta) + i\\sin(\\theta))$, où $r = \\sqrt{a^2 + b^2}$ et $\\theta = \\arctan(\\frac{b}{a})$. Pour $z = 3 + 4i$, nous avons $r = \\sqrt{3^2 + 4^2} = 5$ et $\\theta = \\arctan(\\frac{4}{3}) = \\frac{\\pi}{4}$, donc la forme polaire est $5(\\cos(\\frac{\\pi}{4}) + i\\sin(\\frac{\\pi}{4}))$.",
+    "hints": [
+      "Calculer le module du nombre complexe",
+      "Calculer l'argument du nombre complexe",
+      "Utiliser la formule de la forme polaire"
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": null,
+    "is_ai_generated": false,
+    "created_at": "2026-02-13T01:00:09.228Z",
+    "updated_at": "2026-02-13T01:00:09.228Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 9,
+  "fields": {
+    "lesson": null,
+    "subject": 1,
+    "title": "Addition de nombres à deux chiffres",
+    "description": "Calculez la somme de deux nombres à deux chiffres",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "ce2",
+    "content": {
+      "question": "Quel est le résultat de 45 + 27 ?",
+      "options": [
+        "62",
+        "67",
+        "72",
+        "75"
+      ]
+    },
+    "correct_answers": 2,
+    "explanation": "Pour additionner 45 et 27, on peut utiliser la méthode de calcul suivante : 40 + 20 = 60, 5 + 7 = 12, puis on additionne 60 et 12 pour obtenir 72.",
+    "hints": [
+      "Utilisez la méthode de calcul par regroupement",
+      "Vérifiez vos calculs étape par étape"
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": null,
+    "is_ai_generated": false,
+    "created_at": "2026-02-13T01:03:41.523Z",
+    "updated_at": "2026-02-13T01:08:42.281Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 10,
+  "fields": {
+    "lesson": null,
+    "subject": 4,
+    "title": "La Guerre Froide : Les Origines et les Enjeux",
+    "description": "Analyser les principaux facteurs ayant mené à la Guerre Froide et évaluer leur impact sur la géopolitique mondiale",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "terminale",
+    "content": {
+      "question": "Quel était l'événement clé qui a marqué le début de la Guerre Froide, symbolisant la division de l'Europe en deux blocs idéologiques et politiques ?",
+      "options": [
+        "A) La Conférence de Yalta",
+        "B) La Déclaration de Truman",
+        "C) Le Discours de Churchill à Fulton",
+        "D) Le Coup de Prague"
+      ]
+    },
+    "correct_answers": "C",
+    "explanation": "Le Discours de Churchill à Fulton en 1946 est souvent considéré comme un point de repère important dans l'émergence de la Guerre Froide. Dans ce discours, Churchill a utilisé le terme « Rideau de Fer » pour décrire la division de l'Europe par l'Union Soviétique, marquant ainsi une prise de conscience publique de la fracture Est-Ouest.",
+    "hints": [
+      "Pensez aux événements post-Seconde Guerre Mondiale",
+      "Étudiez les discours historiques qui ont marqué des tournants dans les relations internationales",
+      "Considérez le rôle des leaders mondiaux dans la formation des blocs de la Guerre Froide"
+    ],
+    "points": 15,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": null,
+    "is_ai_generated": false,
+    "created_at": "2026-02-13T16:20:01.643Z",
+    "updated_at": "2026-02-13T16:20:01.643Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 11,
+  "fields": {
+    "lesson": null,
+    "subject": 5,
+    "title": "Présent progressif",
+    "description": "Choisis la forme correcte du présent progressif pour compléter la phrase suivante : 'At 8 o'clock, they ________ (watch) TV.'",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "premiere",
+    "content": {
+      "question": "At 8 o'clock, they ________ (watch) TV.",
+      "options": [
+        "watch",
+        "are watching",
+        "is watching",
+        "watches"
+      ]
+    },
+    "correct_answers": "B",
+    "explanation": "La forme correcte du présent progressif est 'are watching' car le sujet 'they' est un pluriel et l'action de regarder la télévision est en cours.",
+    "hints": [
+      "Le présent progressif est utilisé pour décrire une action en cours.",
+      "La forme 'are watching' est utilisée avec un sujet pluriel."
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": null,
+    "is_ai_generated": false,
+    "created_at": "2026-02-15T11:36:38.334Z",
+    "updated_at": "2026-02-15T11:36:38.334Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 12,
+  "fields": {
+    "lesson": null,
+    "subject": 5,
+    "title": "Présent progressif en anglais",
+    "description": "Complétez les phrases avec le présent progressif des verbes donnés",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "cinquieme",
+    "content": {
+      "question": "Si je _________ (faire) mes devoirs en ce moment, je ne peux pas jouer dehors avec mes amis.",
+      "options": [
+        "am doing",
+        "do",
+        "does",
+        "did"
+      ]
+    },
+    "correct_answers": "B",
+    "explanation": "Le présent progressif est utilisé pour décrire une action qui se déroule à l'instant présent. Ici, la phrase « je fais » est remplacée par « je suis en train de faire » pour indiquer que l'action de faire les devoirs est en cours.",
+    "hints": [
+      "Utilisez le présent progressif pour parler d'une action en cours",
+      "Le verbe « faire » doit être conjugué au présent progressif",
+      "Le sujet de la phrase est « je »"
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": null,
+    "is_ai_generated": false,
+    "created_at": "2026-02-15T11:37:59.364Z",
+    "updated_at": "2026-02-15T11:39:27.785Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 14,
+  "fields": {
+    "lesson": null,
+    "subject": 1,
+    "title": "Quel est le nombre de côtés d'un hexagone ?",
+    "description": "Un polygone est un motif géométrique formé de segments de droite qui se rencontrent aux sommets. Un hexagone est un type de polygone qui a six côtés.",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "quatrieme",
+    "content": {
+      "question": "Quel est le nombre de côtés d'un hexagone ?",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    "correct_answers": "C",
+    "explanation": "Un hexagone a par définition six côtés, d'où son nom qui vient du grec 'hex' signifiant six.",
+    "hints": [
+      "Penser à la définition d'un hexagone",
+      "Compter les côtés d'un hexagone régulier"
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": null,
+    "is_ai_generated": false,
+    "created_at": "2026-02-15T19:19:07.259Z",
+    "updated_at": "2026-02-15T19:19:07.259Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 15,
+  "fields": {
+    "lesson": null,
+    "subject": 1,
+    "title": "Reconnaître les polygones",
+    "description": "Identifiez le type de polygone décrit",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "quatrieme",
+    "content": {
+      "question": "Un polygone à 5 côtés est appelé un",
+      "options": [
+        "A) Triangle",
+        "B) Carré",
+        "C) Pentagon",
+        "D) Hexagone"
+      ]
+    },
+    "correct_answers": "C",
+    "explanation": "Un polygone est une figure géométrique à côtés et à angles. Le nombre de côtés détermine le nom du polygone. Un polygone à 3 côtés est un triangle, à 4 côtés un carré ou un rectangle, à 5 côtés un pentagon, et ainsi de suite.",
+    "hints": [
+      "Un triangle a 3 côtés",
+      "Un carré est un polygone à 4 côtés",
+      "Un polygone à 6 côtés est un hexagone"
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": null,
+    "is_ai_generated": false,
+    "created_at": "2026-02-15T19:26:34.161Z",
+    "updated_at": "2026-02-15T19:26:34.161Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 16,
+  "fields": {
+    "lesson": null,
+    "subject": 3,
+    "title": "Compréhension du microscope",
+    "description": "Un élève utilise un microscope pour observer des cellules. Il souhaite observer les détails fins de la structure cellulaire.",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "cinquieme",
+    "content": {
+      "question": "Quelle est la partie du microscope que l'élève doit utiliser pour observer les détails fins de la structure cellulaire ?",
+      "options": [
+        "A) Objectif 4x",
+        "B) Objectif 10x",
+        "C) Objectif 40x",
+        "D) Objectif 100x"
+      ]
+    },
+    "correct_answers": "D",
+    "explanation": "L'objectif 100x permet d'observer les détails fins de la structure cellulaire en raison de sa grande puissance de grossissement. Il est généralement utilisé pour observer des structures cellulaires très petites.",
+    "hints": [
+      "La puissance de grossissement est importante pour observer les détails fins.",
+      "Chaque objectif a une puissance de grossissement différente."
+    ],
+    "points": 15,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": null,
+    "is_ai_generated": false,
+    "created_at": "2026-02-15T20:51:04.771Z",
+    "updated_at": "2026-02-15T20:51:04.771Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 17,
+  "fields": {
+    "lesson": null,
+    "subject": 3,
+    "title": "La reproduction des plantes à fleurs",
+    "description": "Comprenez le processus de reproduction des plantes à fleurs",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "cinquieme",
+    "content": {
+      "question": "Quel est le rôle principal du pollen dans la reproduction d'une plante à fleur ?",
+      "options": [
+        "A) Il protège la plante des insectes",
+        "B) Il attire les pollinisateurs pour la reproduction",
+        "C) Il permet la germination des graines",
+        "D) Il favorise la photosynthèse"
+      ]
+    },
+    "correct_answers": "B",
+    "explanation": "Le pollen est essentiel pour la reproduction des plantes à fleurs car il contient les gamètes mâles. Lorsqu'il est transféré du stigmate à l'ovaire d'une autre plante, il permet la fécondation et la production de graines.",
+    "hints": [
+      "Pensez au rôle des abeilles et des papillons dans les jardins",
+      "Considérez l'importance de la pollinisation pour les cultures"
+    ],
+    "points": 15,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": null,
+    "is_ai_generated": false,
+    "created_at": "2026-02-15T20:52:35.777Z",
+    "updated_at": "2026-02-15T20:52:35.777Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 18,
+  "fields": {
+    "lesson": null,
+    "subject": 6,
+    "title": "Couple acido-basique",
+    "description": "Déterminez le type de réaction qui se produit lorsque l'acide chlorhydrique (HCl) réagit avec l'hydroxyde de sodium (NaOH) dans l'eau.",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "terminale",
+    "content": {
+      "question": "Quel est le type de réaction qui se produit lorsque HCl réagit avec NaOH dans l'eau ?",
+      "options": [
+        "A) Réaction acido-basique avec formation d'un sel et d'eau",
+        "B) Réaction de neutralisation avec formation d'un acide fort et d'une base faible",
+        "C) Réaction d'oxydo-réduction avec formation d'un composé oxygéné",
+        "D) Réaction de synthèse avec formation d'un nouvel acide"
+      ]
+    },
+    "correct_answers": "A",
+    "explanation": "La réaction entre HCl (un acide fort) et NaOH (une base forte) produit du chlorure de sodium (NaCl, un sel) et de l'eau (H2O), ce qui est typique d'une réaction acido-basique de neutralisation.",
+    "hints": [
+      "Rappel de la définition d'une réaction acido-basique.",
+      "Compréhension des propriétés des acides et des bases fortes.",
+      "Identification des produits de réaction"
+    ],
+    "points": 15,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": null,
+    "is_ai_generated": false,
+    "created_at": "2026-02-15T20:55:34.079Z",
+    "updated_at": "2026-02-15T20:55:34.079Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 19,
+  "fields": {
+    "lesson": null,
+    "subject": 6,
+    "title": "Électrolyse de l'eau",
+    "description": "Un exercice de science physique sur l'électrolyse de l'eau",
+    "exercise_type": "classic",
+    "difficulty": "medium",
+    "level": "troisieme",
+    "content": {
+      "text": "L'électrolyse de l'eau est un processus qui permet de décomposer l'eau en oxygène et en hydrogène grâce à l'électricité. Un appareil d'électrolyse est rempli d'eau et de sel, puis une tension électrique est appliquée entre deux électrodes. L'hydrogène se forme à la cathode (électrode négative) et l'oxygène se forme à l'anode (électrode positive).",
+      "questions": [
+        "Quel est le produit formé à la cathode lors de l'électrolyse de l'eau ?",
+        "Quelle est la réaction chimique globale de l'électrolyse de l'eau ?",
+        "Quel est l'avantage principal de l'utilisation de l'électrolyse de l'eau pour produire de l'hydrogène ?"
+      ]
+    },
+    "correct_answers": [
+      "L'hydrogène",
+      "2H2O → 2H2 + O2",
+      "L'hydrogène produit est propre et peut être utilisé comme source d'énergie alternative"
+    ],
+    "explanation": "L'électrolyse de l'eau est un processus important qui permet de produire de l'hydrogène et de l'oxygène à partir de l'eau. La réaction chimique globale de l'électrolyse de l'eau est 2H2O → 2H2 + O2. L'hydrogène formé à la cathode peut être utilisé comme source d'énergie alternative, propre et renouvelable.",
+    "hints": [
+      "Électrolyse de l'eau",
+      "Réaction chimique",
+      "Énergie alternative"
+    ],
+    "points": 15,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": null,
+    "is_ai_generated": false,
+    "created_at": "2026-02-15T23:12:03.486Z",
+    "updated_at": "2026-02-15T23:15:45.605Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 20,
+  "fields": {
+    "lesson": null,
+    "subject": 6,
+    "title": "Électrolyse de l'eau",
+    "description": "L'électrolyse de l'eau est un processus chimique qui consiste à décomposer l'eau en hydrogène et en oxygène grâce à l'électricité. Quel est le produit principal obtenu à l'anode (électrode positive) lors de l'électrolyse de l'eau ?",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "troisieme",
+    "content": {
+      "question": "Quel est le produit principal obtenu à l'anode lors de l'électrolyse de l'eau ?",
+      "options": [
+        "Oxygène (O2)",
+        "Hydrogène (H2)",
+        "Eau (H2O)",
+        "Oxyde d'hydrogène"
+      ]
+    },
+    "correct_answers": "A",
+    "explanation": "Lors de l'électrolyse de l'eau, l'oxygène est libéré à l'anode (électrode positive) et l'hydrogène est libéré à la cathode (électrode négative). L'oxygène est donc le produit principal obtenu à l'anode.",
+    "hints": [
+      "Réfléchissez au processus chimique de l'électrolyse",
+      "Identifiez les produits formés à l'anode et à la cathode"
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": null,
+    "is_ai_generated": false,
+    "created_at": "2026-02-15T23:13:00.838Z",
+    "updated_at": "2026-02-17T23:37:17.133Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 21,
+  "fields": {
+    "lesson": null,
+    "subject": 5,
+    "title": "Exercice sur les verbes défectifs",
+    "description": "Complétez les phrases avec les formes correctes des verbes défectifs",
+    "exercise_type": "classic",
+    "difficulty": "medium",
+    "level": "sixieme",
+    "content": {
+      "text": "Les verbes défectifs sont des verbes qui ne sont utilisés qu'à certaines personnes et temps. Par exemple, le verbe 'can' est un verbe défectif qui est utilisé pour exprimer la capacité ou la possibilité.",
+      "questions": [
+        "Je ______ (can) parler anglais",
+        "Tu ______ (can) jouer au football",
+        "Il/Elle ______ (can) cuisiner très bien",
+        "Nous ______ (can) aller au cinéma ce soir",
+        "Vous ______ (can) finir votre projet pour demain"
+      ]
+    },
+    "correct_answers": [
+      "peux",
+      "peux",
+      "peut",
+      "pouvons",
+      "pouvez"
+    ],
+    "explanation": "Les verbes défectifs sont utilisés de manière spécifique en fonction de la personne et du temps. Dans cet exercice, les réponses correctes sont les formes conjuguées du verbe 'can' qui correspondent à chaque personne.",
+    "hints": [
+      "Utilisez les formes conjuguées du verbe 'can' (pouvoir) pour compléter les phrases",
+      "Faites attention à la personne et au nombre (singulier ou pluriel) pour choisir la bonne forme du verbe"
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": null,
+    "is_ai_generated": false,
+    "created_at": "2026-02-15T23:22:01.843Z",
+    "updated_at": "2026-02-15T23:25:24.066Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 22,
+  "fields": {
+    "lesson": null,
+    "subject": 5,
+    "title": "Defective Verbs Exercise",
+    "description": "Complete the sentences with the correct form of the defective verb in parentheses.",
+    "exercise_type": "classic",
+    "difficulty": "medium",
+    "level": "troisieme",
+    "content": {
+      "text": "Defective verbs are verbs that have only a few forms, unlike regular verbs. For example, the verb 'beware' is a defective verb because it does not have a past tense or past participle form.",
+      "questions": [
+        "I _______ (beware) of the dog when I was a child.",
+        "The teacher _______ (need) to explain the lesson again.",
+        "They _______ (dare) not to go to the party last night.",
+        "She _______ (used to) play tennis when she was younger, but now she _______ (ought to) practice more."
+      ]
+    },
+    "correct_answers": [
+      "was warned",
+      "did not need",
+      "did not dare",
+      "used to play, ought to practice"
+    ],
+    "explanation": "Defective verbs are used in specific contexts and have limited forms. 'Beware' is often used in the present tense, 'need' can be used as a main verb or an auxiliary verb, 'dare' can be used as a main verb or an auxiliary verb, and 'used to' and 'ought to' are often used to express habits or obligations.",
+    "hints": [
+      "Pay attention to the verb tenses and forms in each sentence.",
+      "Consider the context and meaning of each sentence to choose the correct verb form.",
+      "Review the rules for defective verbs and their usage."
+    ],
+    "points": 15,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": null,
+    "is_ai_generated": false,
+    "created_at": "2026-02-15T23:35:01.351Z",
+    "updated_at": "2026-02-15T23:41:27.041Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 23,
+  "fields": {
+    "lesson": null,
+    "subject": 4,
+    "title": "La crise économique de 1929",
+    "description": "Analyser les causes et les conséquences de la crise économique de 1929",
+    "exercise_type": "classic",
+    "difficulty": "hard",
+    "level": "troisieme",
+    "content": {
+      "text": "La crise économique de 1929, également connue sous le nom de Grande Dépression, a été une période de récession économique mondiale qui a duré de 1929 à la fin des années 1930. Elle a été déclenchée par le krach boursier de 1929 et a eu des conséquences dévastatrices sur l'économie et la société.",
+      "questions": [
+        "Quels ont été les principaux facteurs qui ont contribué à la crise économique de 1929 ?",
+        "Quelles ont été les conséquences sociales de la crise économique de 1929 ?",
+        "Comment les gouvernements ont-ils répondu à la crise économique de 1929 ?"
+      ]
+    },
+    "correct_answers": [
+      "Les principaux facteurs qui ont contribué à la crise économique de 1929 incluent la surproduction, la sous-consommation, la spéculation boursière et la crise bancaire.",
+      "Les conséquences sociales de la crise économique de 1929 ont inclus le chômage massif, la pauvreté, la famine et la détresse sociale.",
+      "Les gouvernements ont répondu à la crise économique de 1929 en mettant en place des politiques de relance économique, telles que les travaux publics, les subventions aux entreprises et les programmes de secours aux personnes touchées."
+    ],
+    "explanation": "La crise économique de 1929 a été une période complexe et multifacette de l'histoire économique. Les facteurs qui ont contribué à la crise incluent la surproduction, la sous-consommation, la spéculation boursière et la crise bancaire. Les conséquences sociales ont été dévastatrices, avec un chômage massif, la pauvreté, la famine et la détresse sociale. Les gouvernements ont répondu à la crise en mettant en place des politiques de relance économique, telles que les travaux publics, les subventions aux entreprises et les programmes de secours aux personnes touchées.",
+    "hints": [
+      "Recherchez les causes de la crise économique de 1929",
+      "Étudiez les conséquences sociales de la crise économique de 1929",
+      "Analysez les réponses des gouvernements à la crise économique de 1929"
+    ],
+    "points": 20,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": null,
+    "is_ai_generated": false,
+    "created_at": "2026-02-15T23:47:58.992Z",
+    "updated_at": "2026-02-15T23:47:58.992Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 24,
+  "fields": {
+    "lesson": null,
+    "subject": 3,
+    "title": "Le volcan : un phénomène géologique complexe",
+    "description": "Complétez les questions suivantes sur le thème du volcan",
+    "exercise_type": "classic",
+    "difficulty": "hard",
+    "level": "quatrieme",
+    "content": {
+      "text": "Les volcans sont des ouvertures dans la surface de la Terre par lesquelles des matériaux volcaniques, tels que la lave, les cendres et les gaz, sont expulsés. Les volcans peuvent être classés en fonction de leur forme, de leur taille et de leur activité.",
+      "questions": [
+        "Quels sont les trois types principaux de volcans ?",
+        "Qu'est-ce que la lave ?",
+        "Quel est le nom du processus par lequel les gaz et les particules solides sont expulsés de la surface de la Terre ?",
+        "Quel est l'impact des éruptions volcaniques sur l'environnement ?"
+      ]
+    },
+    "correct_answers": [
+      "Les volcans de pointe, les volcans de bouclier et les volcans de stratification",
+      "La lave est un flux de roche en fusion qui s'échappe d'un volcan",
+      "Le processus s'appelle une éruption volcanique",
+      "Les éruptions volcaniques peuvent avoir des impacts importants sur l'environnement, notamment la destruction de végétation, la pollution de l'air et de l'eau, et les changements climatiques"
+    ],
+    "explanation": "Les volcans sont des phénomènes géologiques complexes qui peuvent avoir des impacts importants sur l'environnement. Les trois types principaux de volcans sont les volcans de pointe, les volcans de bouclier et les volcans de stratification. La lave est un flux de roche en fusion qui s'échappe d'un volcan. Les éruptions volcaniques peuvent avoir des impacts importants sur l'environnement, notamment la destruction de végétation, la pollution de l'air et de l'eau, et les changements climatiques",
+    "hints": [
+      "Pensez aux différentes formes de volcans",
+      "La lave est un flux de roche en fusion",
+      "Les éruptions volcaniques peuvent avoir des impacts importants sur l'environnement",
+      "Recherchez les informations sur les types de volcans et leurs caractéristiques"
+    ],
+    "points": 20,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": null,
+    "is_ai_generated": false,
+    "created_at": "2026-02-16T00:02:49.635Z",
+    "updated_at": "2026-02-16T00:02:49.636Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 25,
+  "fields": {
+    "lesson": null,
+    "subject": 2,
+    "title": "Le pluriel des noms",
+    "description": "Complétez les phrases suivantes avec le pluriel correct des noms entre parenthèses.",
+    "exercise_type": "classic",
+    "difficulty": "easy",
+    "level": "ce1",
+    "content": {
+      "text": "Le pluriel des noms est une règle importante en français. Les noms peuvent être au singulier ou au pluriel. Voici quelques exemples :",
+      "questions": [
+        "Un (chien) -> Plusieurs _______",
+        "Un (fleur) -> Plusieurs _______",
+        "Un (livre) -> Plusieurs _______"
+      ]
+    },
+    "correct_answers": [
+      "chiens",
+      "fleurs",
+      "livres"
+    ],
+    "explanation": "Pour former le pluriel des noms, on ajoute généralement un 's' à la fin du mot. Cependant, si le mot se termine par un 'al', on remplace 'al' par 'aux'. Si le mot se termine par un 'eau', on ajoute un 'x' à la fin.",
+    "hints": [
+      "Regardez la fin du mot pour savoir comment former le pluriel",
+      "Pensez aux exceptions comme 'al' et 'eau'"
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": null,
+    "is_ai_generated": false,
+    "created_at": "2026-02-16T00:05:30.054Z",
+    "updated_at": "2026-02-16T00:05:30.054Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 26,
+  "fields": {
+    "lesson": null,
+    "subject": 3,
+    "title": "Le rôle du pancréas dans la régulation du métabolisme glucidique",
+    "description": "Comprendre les fonctions du pancréas dans la régulation du métabolisme glucidique",
+    "exercise_type": "classic",
+    "difficulty": "hard",
+    "level": "terminale",
+    "content": {
+      "text": "Le pancréas joue un rôle crucial dans la régulation du métabolisme glucidique grâce à la production d'insuline et de glucagon. L'insuline est produite par les cellules bêta des îlots de Langerhans et favorise l'entrée du glucose dans les cellules, tandis que le glucagon, produit par les cellules alpha, stimule la libération de glucose stocké dans le foie sous forme de glycogène.",
+      "questions": [
+        "Quel est le rôle principal de l'insuline dans l'organisme ?",
+        "Comment le glucagon contribue-t-il à la régulation du métabolisme glucidique ?",
+        "Quelles sont les conséquences d'une production insuffisante d'insuline ou de glucagon sur le métabolisme glucidique ?"
+      ]
+    },
+    "correct_answers": [
+      "L'insuline favorise l'entrée du glucose dans les cellules, réduisant ainsi le taux de glucose sanguin.",
+      "Le glucagon stimule la libération de glucose stocké dans le foie sous forme de glycogène, augmentant ainsi le taux de glucose sanguin.",
+      "Une production insuffisante d'insuline peut conduire au diabète de type 1, tandis qu'une production insuffisante de glucagon peut entraîner des troubles du métabolisme glucidique, notamment une hypoglycémie."
+    ],
+    "explanation": "Le pancréas joue un rôle essentiel dans la régulation du métabolisme glucidique en produisant l'insuline et le glucagon. L'insuline favorise l'absorption du glucose par les cellules, réduisant ainsi le taux de glucose sanguin, tandis que le glucagon stimule la libération de glucose stocké, augmentant le taux de glucose sanguin. Une production insuffisante de ces hormones peut entraîner des troubles du métabolisme glucidique, tels que le diabète ou l'hypoglycémie.",
+    "hints": [
+      "Recherchez les informations sur les fonctions de l'insuline et du glucagon.",
+      "Étudiez les conséquences d'une production insuffisante de ces hormones sur le métabolisme glucidique.",
+      "Comprenez le rôle du pancréas dans la régulation du métabolisme glucidique."
+    ],
+    "points": 15,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": null,
+    "is_ai_generated": false,
+    "created_at": "2026-02-16T07:47:44.773Z",
+    "updated_at": "2026-02-16T07:47:44.773Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 27,
+  "fields": {
+    "lesson": null,
+    "subject": 3,
+    "title": "Rôle du Pancréas dans la Régulation du Métabolisme Glucidique",
+    "description": "Comprendre le rôle du pancréas dans la régulation du métabolisme glucidique",
+    "exercise_type": "classic",
+    "difficulty": "hard",
+    "level": "terminale",
+    "content": {
+      "text": "Le pancréas joue un rôle crucial dans la régulation du métabolisme glucidique en sécrétant plusieurs hormones, notamment l'insuline et le glucagon. L'insuline favorise l'entrée du glucose dans les cellules, tandis que le glucagon stimule la libération de glucose stocké dans le foie. Analysez les mécanismes de régulation de ces hormones et leur impact sur le taux de glucose sanguin.",
+      "questions": [
+        "Quel est le rôle de l'insuline dans la régulation du métabolisme glucidique ?",
+        "Comment le glucagon affecte-t-il le taux de glucose sanguin ?",
+        "Quels sont les principaux facteurs qui influencent la sécrétion d'insuline et de glucagon par le pancréas ?"
+      ]
+    },
+    "correct_answers": [
+      "L'insuline favorise l'entrée du glucose dans les cellules, réduisant ainsi le taux de glucose sanguin.",
+      "Le glucagon stimule la libération de glucose stocké dans le foie, augmentant le taux de glucose sanguin.",
+      "Les principaux facteurs incluent le taux de glucose sanguin, les hormones gastro-intestinales et le système nerveux autonome."
+    ],
+    "explanation": "Le métabolisme glucidique est un processus complexe régulé par plusieurs hormones, dont l'insuline et le glucagon, sécrétées par le pancréas. L'insuline et le glucagon ont des effets opposés sur le taux de glucose sanguin. La compréhension de leurs mécanismes d'action et des facteurs qui influencent leur sécrétion est cruciale pour comprendre la régulation du métabolisme glucidique.",
+    "hints": [
+      "Considérez les effets de l'insuline et du glucagon sur le foie et les muscles.",
+      "Réfléchissez aux conséquences d'une dysrégulation de la sécrétion d'insuline et de glucagon sur le métabolisme glucidique."
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": null,
+    "is_ai_generated": false,
+    "created_at": "2026-02-16T07:48:40.849Z",
+    "updated_at": "2026-02-16T07:48:40.849Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 28,
+  "fields": {
+    "lesson": null,
+    "subject": 3,
+    "title": "Rôle du Pancréas dans la Régulation du Métabolisme Glucidique",
+    "description": "Compréhension du rôle du pancréas dans la régulation du métabolisme glucidique",
+    "exercise_type": "classic",
+    "difficulty": "hard",
+    "level": "terminale",
+    "content": {
+      "text": "Le pancréas joue un rôle crucial dans la régulation du métabolisme glucidique en produisant des hormones telles que l'insuline et le glucagon. L'insuline favorise l'absorption des glucides par les cellules, tandis que le glucagon stimule la libération de glucose stocké dans le foie. Analysez les interactions entre ces hormones et leur impact sur le métabolisme glucidique.",
+      "questions": [
+        "Quelle est la fonction principale de l'insuline dans le métabolisme glucidique ?",
+        "Comment le glucagon affecte-t-il les niveaux de glucose sanguin ?",
+        "Quel est l'effet de l'absence de régulation du métabolisme glucidique par le pancréas sur la santé ?"
+      ]
+    },
+    "correct_answers": [
+      "L'insuline favorise l'absorption des glucides par les cellules, réduisant ainsi les niveaux de glucose sanguin.",
+      "Le glucagon stimule la libération de glucose stocké dans le foie, augmentant les niveaux de glucose sanguin.",
+      "L'absence de régulation du métabolisme glucidique par le pancréas peut conduire à des troubles tels que le diabète, caractérisé par des niveaux de glucose sanguin anormalement élevés."
+    ],
+    "explanation": "La régulation du métabolisme glucidique par le pancréas implique un équilibre délicat entre l'insuline et le glucagon. L'insuline aide à réduire les niveaux de glucose sanguin en facilitant son absorption par les cellules, tandis que le glucagon les augmente en stimulant la libération de glucose stocké. Une perturbation de ce processus peut avoir des conséquences graves sur la santé, notamment en favorisant le développement du diabète.",
+    "hints": [
+      "Considérez les effets de l'insuline et du glucagon sur les niveaux de glucose sanguin.",
+      "Pensez aux conséquences d'une régulation défectueuse du métabolisme glucidique sur la santé.",
+      "Analysez les interactions entre les hormones pancréatiques et leur impact sur le métabolisme glucidique."
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": null,
+    "is_ai_generated": false,
+    "created_at": "2026-02-16T07:48:56.757Z",
+    "updated_at": "2026-02-16T07:48:56.757Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 29,
+  "fields": {
+    "lesson": null,
+    "subject": 3,
+    "title": "Rôle du Pancréas dans la Régulation du Métabolisme Glucidique",
+    "description": "Comprendre le rôle du pancréas dans la régulation du métabolisme glucidique",
+    "exercise_type": "classic",
+    "difficulty": "hard",
+    "level": "terminale",
+    "content": {
+      "text": "Le pancréas joue un rôle crucial dans la régulation du métabolisme glucidique. Il produit plusieurs hormones, notamment l'insuline et le glucagon, qui agissent sur les niveaux de glucose sanguin. L'insuline favorise l'absorption du glucose par les cellules, tandis que le glucagon stimule la libération de glucose stocké dans le foie.",
+      "questions": [
+        "Quelle est la principale fonction de l'insuline dans le corps ?",
+        "Comment le glucagon affecte-t-il les niveaux de glucose sanguin ?",
+        "Quels sont les deux principaux types de cellules présentes dans les îlots de Langerhans du pancréas et quelle est leur fonction ?"
+      ]
+    },
+    "correct_answers": [
+      "L'insuline favorise l'absorption du glucose par les cellules, notamment les cellules musculaires et les cellules adipeuses, en augmentant la perméabilité de la membrane cellulaire aux molécules de glucose.",
+      "Le glucagon stimule la libération de glucose stocké dans le foie sous forme de glycogène, en augmentant la glycogénolyse et la gluconéogenèse, ce qui augmente les niveaux de glucose sanguin.",
+      "Les deux principaux types de cellules présentes dans les îlots de Langerhans sont les cellules bêta (ou cellules b) qui produisent de l'insuline et les cellules alpha (ou cellules a) qui produisent du glucagon."
+    ],
+    "explanation": "Le pancréas est un organe clé dans la régulation du métabolisme glucidique, produisant des hormones comme l'insuline et le glucagon pour maintenir l'équilibre des niveaux de glucose sanguin. L'insuline et le glucagon ont des effets opposés mais complémentaires sur les niveaux de glucose, l'insuline favorisant l'absorption de glucose par les cellules et le glucagon stimulant la libération de glucose stocké. Les cellules bêta et alpha des îlots de Langerhans sont responsables de la production de ces hormones.",
+    "hints": [
+      "Réfléchissez au rôle de l'insuline et du glucagon dans la régulation du glucose sanguin.",
+      "Considérez les effets de l'insuline et du glucagon sur les cellules du corps.",
+      "Examinez la structure et la fonction des îlots de Langerhans du pancréas."
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": null,
+    "is_ai_generated": false,
+    "created_at": "2026-02-16T07:49:21.038Z",
+    "updated_at": "2026-02-16T07:49:21.038Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 30,
+  "fields": {
+    "lesson": null,
+    "subject": 3,
+    "title": "Rôle du Pancréas dans la Régulation du Métabolisme Glucidique",
+    "description": "Comprendre le rôle du pancréas dans la régulation du métabolisme glucidique",
+    "exercise_type": "classic",
+    "difficulty": "hard",
+    "level": "terminale",
+    "content": {
+      "text": "Le pancréas joue un rôle crucial dans la régulation du métabolisme glucidique. Les cellules bêta du pancréas produisent de l'insuline, une hormone qui favorise l'absorption du glucose par les cellules. Les cellules alpha produisent du glucagon, une hormone qui stimule la libération de glucose stocké dans le foie. Analysez les interactions entre ces hormones et leurs effets sur le métabolisme glucidique.",
+      "questions": [
+        "Quel est le rôle de l'insuline dans le métabolisme glucidique ?",
+        "Comment le glucagon interagit-il avec l'insuline pour réguler les niveaux de glucose sanguin ?",
+        "Quelles sont les conséquences d'un dysfonctionnement des cellules bêta du pancréas sur le métabolisme glucidique ?"
+      ]
+    },
+    "correct_answers": [
+      "L'insuline favorise l'absorption du glucose par les cellules, réduisant ainsi les niveaux de glucose sanguin.",
+      "Le glucagon stimule la libération de glucose stocké dans le foie, augmentant les niveaux de glucose sanguin, tandis que l'insuline favorise l'absorption du glucose, réduisant ces niveaux. L'équilibre entre ces deux hormones est crucial pour maintenir des niveaux de glucose sanguin stables.",
+      "Un dysfonctionnement des cellules bêta du pancréas peut entraîner une production insuffisante d'insuline, conduisant à une augmentation des niveaux de glucose sanguin et potentiellement au diabète de type 1 ou de type 2."
+    ],
+    "explanation": "La compréhension du rôle du pancréas dans la régulation du métabolisme glucidique est essentielle pour appréhender les mécanismes qui régulent les niveaux de glucose sanguin. L'interaction entre l'insuline et le glucagon est cruciale pour maintenir l'homéostasie glucidique. Un dysfonctionnement de ce système peut avoir des conséquences graves sur la santé, notamment le développement du diabète.",
+    "hints": [
+      "Recherchez les mécanismes d'action de l'insuline et du glucagon.",
+      "Étudiez les conséquences d'une production insuffisante d'insuline ou d'une résistance à l'insuline.",
+      "Analysez les interactions entre le pancréas, le foie et les tissus périphériques dans la régulation du métabolisme glucidique."
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": null,
+    "is_ai_generated": false,
+    "created_at": "2026-02-16T07:49:39.114Z",
+    "updated_at": "2026-02-16T07:49:39.115Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 34,
+  "fields": {
+    "lesson": null,
+    "subject": 1,
+    "title": "Exercice de Mathématiques sur les vecteurs",
+    "description": "Calculer les coordonnées d'un point après une translation vectorielle",
+    "exercise_type": "classic",
+    "difficulty": "hard",
+    "level": "troisieme",
+    "content": {
+      "text": "Soit un point A de coordonnées (2, 3) et un vecteur v = (4, -2). On effectue une translation de point A de vecteur v. Quelles sont les nouvelles coordonnées du point A ?",
+      "questions": [
+        "Quelles sont les nouvelles coordonnées en x du point A après translation ?",
+        "Quelles sont les nouvelles coordonnées en y du point A après translation ?"
+      ]
+    },
+    "correct_answers": [
+      "6",
+      "1"
+    ],
+    "explanation": "La translation vectorielle consiste à ajouter les composantes du vecteur v aux coordonnées du point A. Ainsi, la nouvelle coordonnée en x est 2 + 4 = 6 et la nouvelle coordonnée en y est 3 + (-2) = 1.",
+    "hints": [
+      "Ajouter les composantes du vecteur v aux coordonnées du point A",
+      "Faire attention au signe des composantes du vecteur v"
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": 13,
+    "is_ai_generated": false,
+    "created_at": "2026-02-18T12:22:31.144Z",
+    "updated_at": "2026-02-18T12:22:31.144Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 35,
+  "fields": {
+    "lesson": null,
+    "subject": 1,
+    "title": "Exercice de Mathématiques sur les vecteurs",
+    "description": "Calculer les composantes et les grandeurs de vecteurs",
+    "exercise_type": "classic",
+    "difficulty": "hard",
+    "level": "troisieme",
+    "content": {
+      "text": "Soit les vecteurs (mathbf{A} = (2, 3)) et (mathbf{B} = (4, 1)). Calculer le vecteur résultant (mathbf{C} = mathbf{A} + mathbf{B}), puis trouver la grandeur (norme) du vecteur (mathbf{C}).",
+      "questions": [
+        "Quelles sont les composantes du vecteur (mathbf{C}) ?",
+        "Quelle est la grandeur (norme) du vecteur (mathbf{C}) ?"
+      ]
+    },
+    "correct_answers": [
+      "(6, 4)",
+      "(sqrt{6^2 + 4^2} = sqrt{36 + 16} = sqrt{52} = 2sqrt{13})"
+    ],
+    "explanation": "Pour trouver le vecteur (mathbf{C}), on additionne les composantes respectives des vecteurs (mathbf{A}) et (mathbf{B}). La grandeur (ou norme) d'un vecteur (mathbf{V} = (x, y)) est donnée par (|mathbf{V}| = sqrt{x^2 + y^2}).",
+    "hints": [
+      "Additionnez les composantes x et y des vecteurs (mathbf{A}) et (mathbf{B}) pour trouver (mathbf{C}).",
+      "Utilisez la formule de la norme d'un vecteur pour trouver la grandeur de (mathbf{C})."
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": 13,
+    "is_ai_generated": false,
+    "created_at": "2026-02-18T12:24:42.341Z",
+    "updated_at": "2026-02-18T12:24:42.341Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 36,
+  "fields": {
+    "lesson": null,
+    "subject": 3,
+    "title": "Caractéristiques du basalte",
+    "description": "Compléter les informations sur le basalte",
+    "exercise_type": "classic",
+    "difficulty": "medium",
+    "level": "4ème",
+    "content": {
+      "text": "Le basalte est une roche volcanique très commune sur Terre. Il provient de la solidification du magma en surface ou près de la surface. Le basalte peut avoir différentes couleurs mais il est souvent noir ou brun. Il est riche en minéraux tels que le feldspath et les pyroxènes.",
+      "questions": [
+        "D’où provient le basalte ?",
+        "Quelles sont les couleurs les plus courantes du basalte ?",
+        "Quels sont les minéraux principaux que l’on trouve dans le basalte ?"
+      ]
+    },
+    "correct_answers": [
+      "de la solidification du magma en surface ou près de la surface",
+      "noir ou brun",
+      "le feldspath et les pyroxènes"
+    ],
+    "explanation": "Le basalte se forme par refroidissement rapide du magma en surface, ce qui donne une texture fine. Il est très abondant autour des volcans et dans les régions où il y a eu une activité volcanique intense. Les minéraux présents dans le basalte, comme le feldspath et les pyroxènes, sont caractéristiques des roches volcaniques.",
+    "hints": [
+      "Pensez à la définition de roche volcanique",
+      "Rappelez-vous les minéraux couramment associés aux roches volcaniques"
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": 15,
+    "is_ai_generated": true,
+    "created_at": "2026-02-19T23:52:10.367Z",
+    "updated_at": "2026-02-19T23:52:10.367Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 37,
+  "fields": {
+    "lesson": null,
+    "subject": 3,
+    "title": "Oses et osides",
+    "description": "Choisissez la bonne réponse pour chaque question",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "Première",
+    "content": {
+      "questions": [
+        {
+          "question": "Qu'est-ce qu'un oside ?",
+          "options": [
+            "Un composé chimique qui contient de l'oxygène",
+            "Un composé chimique qui contient de l'hydrogène",
+            "Un composé chimique qui contient du carbone",
+            "Un composé chimique qui contient de l'azote"
+          ],
+          "correct_option": 0
+        },
+        {
+          "question": "Quel est l'exemple d'un oside ?",
+          "options": [
+            "Eau (H2O)",
+            "Glace (H2O)",
+            "Méthane (CH4)",
+            "Ammoniac (NH3)"
+          ],
+          "correct_option": 0
+        },
+        {
+          "question": "Qu'est-ce qu'un oxyde ?",
+          "options": [
+            "Un composé chimique qui contient de l'oxygène et un métal",
+            "Un composé chimique qui contient de l'hydrogène et un métal",
+            "Un composé chimique qui contient du carbone et un métal",
+            "Un composé chimique qui contient de l'azote et un métal"
+          ],
+          "correct_option": 0
+        }
+      ]
+    },
+    "correct_answers": [
+      0,
+      0,
+      0
+    ],
+    "explanation": "Un oside est un composé chimique qui contient de l'oxygène. Les osides peuvent être des oxydes, des acides ou des bases. Les oxydes sont des composés chimiques qui contiennent de l'oxygène et un métal.",
+    "hints": [
+      "Pensez aux propriétés chimiques de l'oxygène",
+      "Pensez aux exemples de composés chimiques qui contiennent de l'oxygène"
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": 15,
+    "is_ai_generated": true,
+    "created_at": "2026-02-20T00:07:46.821Z",
+    "updated_at": "2026-02-20T00:07:46.821Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 38,
+  "fields": {
+    "lesson": null,
+    "subject": 1,
+    "title": "Compréhension des fractions",
+    "description": "Choisissez la bonne réponse pour chaque question",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "6ème",
+    "content": {
+      "questions": [
+        {
+          "question": "Quelle est la valeur de 1/2 + 1/4 ?",
+          "options": [
+            "1/4",
+            "1/2",
+            "3/4",
+            "1"
+          ],
+          "correct_option": 2
+        },
+        {
+          "question": "Quelle fraction représente 3/4 de 16 ?",
+          "options": [
+            "8",
+            "10",
+            "12",
+            "14"
+          ],
+          "correct_option": 2
+        },
+        {
+          "question": "Quelle est la valeur de 2/3 - 1/3 ?",
+          "options": [
+            "1/6",
+            "1/3",
+            "1/2",
+            "2/3"
+          ],
+          "correct_option": 1
+        }
+      ]
+    },
+    "correct_answers": [
+      2,
+      2,
+      1
+    ],
+    "explanation": "Pour additionner ou soustraire des fractions, il faut avoir le même dénominateur. Pour multiplier une fraction par un nombre, on multiplie le numérateur par ce nombre.",
+    "hints": [
+      "Regardez le dénominateur pour additionner ou soustraire des fractions",
+      "Multipliez le numérateur par le nombre pour trouver une fraction d'un nombre"
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": 1,
+    "is_ai_generated": true,
+    "created_at": "2026-02-20T00:29:22.137Z",
+    "updated_at": "2026-02-20T00:29:22.137Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 39,
+  "fields": {
+    "lesson": null,
+    "subject": 4,
+    "title": "L'année 1926 en France et dans le monde",
+    "description": "Choisissez la bonne réponse pour chaque question",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "3ème",
+    "content": {
+      "questions": [
+        {
+          "question": "Qui était le président du Conseil en France en 1926 ?",
+          "options": [
+            "Aristide Briand",
+            "Édouard Herriot",
+            "Raymond Poincaré",
+            "Léon Blum"
+          ],
+          "correct_option": 2
+        },
+        {
+          "question": "Quel événement marquant a eu lieu en 1926 dans le domaine de l'aviation ?",
+          "options": [
+            "Le premier vol transatlantique en ballon",
+            "Le premier vol en solo de Charles Lindbergh",
+            "La création de la compagnie aérienne Air France",
+            "Le record du monde de vitesse aérienne"
+          ],
+          "correct_option": 1
+        },
+        {
+          "question": "Quel fut l'un des principaux accords internationaux signés en 1926 ?",
+          "options": [
+            "Traité de Versailles",
+            "Traité de Berlin",
+            "Pacte Briand-Kellogg",
+            "Accord de Locarno"
+          ],
+          "correct_option": 3
+        }
+      ]
+    },
+    "correct_answers": [
+      2,
+      1,
+      3
+    ],
+    "explanation": "En 1926, Raymond Poincaré était le président du Conseil en France. Charles Lindbergh a réalisé le premier vol en solo sans escale à travers l'Atlantique Nord en 1927, mais en 1926, d'autres événements aériens ont eu lieu, et Lindbergh s'est préparé pour son exploit. L'Accord de Locarno, signé en octobre 1925 mais ratifié en 1926, a garanti les frontières de l'Allemagne avec ses voisins occidentaux.",
+    "hints": [
+      "Recherchez les principaux dirigeants politiques de l'époque",
+      "Étudiez les progrès de l'aviation dans les années 1920"
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": 1,
+    "is_ai_generated": true,
+    "created_at": "2026-02-20T00:32:32.061Z",
+    "updated_at": "2026-02-20T00:32:32.062Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 40,
+  "fields": {
+    "lesson": null,
+    "subject": 1,
+    "title": "Valeurs absolues",
+    "description": "Choisissez la bonne réponse pour chaque question",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "6ème",
+    "content": {
+      "questions": [
+        {
+          "question": "Quelle est la valeur absolue de -5 ?",
+          "options": [
+            "-5",
+            "5",
+            "0",
+            "1"
+          ],
+          "correct_option": 1
+        },
+        {
+          "question": "Quelle est la valeur absolue de 3 ?",
+          "options": [
+            "-3",
+            "3",
+            "0",
+            "2"
+          ],
+          "correct_option": 1
+        },
+        {
+          "question": "Quelle est la valeur absolue de 0 ?",
+          "options": [
+            "-1",
+            "1",
+            "0",
+            "2"
+          ],
+          "correct_option": 2
+        }
+      ]
+    },
+    "correct_answers": [
+      1,
+      1,
+      2
+    ],
+    "explanation": "La valeur absolue d'un nombre est sa distance par rapport à zéro sur la droite numérique. Elle est toujours positive ou nulle.",
+    "hints": [
+      "Pense à la définition de la valeur absolue",
+      "Utilise la formule |x| = x si x >= 0 et |x| = -x si x < 0"
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": 1,
+    "is_ai_generated": true,
+    "created_at": "2026-02-20T00:38:40.092Z",
+    "updated_at": "2026-02-20T00:38:40.092Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 41,
+  "fields": {
+    "lesson": null,
+    "subject": 5,
+    "title": "Preterit Tense Exercise",
+    "description": "Choose the correct preterit form of the verb in parentheses.",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "6ème",
+    "content": {
+      "questions": [
+        {
+          "question": "Yesterday, I ______ (go) to the park.",
+          "options": [
+            "go",
+            "went",
+            "going",
+            "gone"
+          ],
+          "correct_option": 1
+        },
+        {
+          "question": "She ______ (eat) breakfast at 7 o'clock.",
+          "options": [
+            "eat",
+            "eats",
+            "ate",
+            "eating"
+          ],
+          "correct_option": 2
+        },
+        {
+          "question": "They ______ (play) football last weekend.",
+          "options": [
+            "play",
+            "plays",
+            "played",
+            "playing"
+          ],
+          "correct_option": 2
+        }
+      ]
+    },
+    "correct_answers": [
+      1,
+      2,
+      2
+    ],
+    "explanation": "The preterit tense is used to describe completed actions in the past. The correct form of the verb must be chosen based on the subject and the context of the sentence.",
+    "hints": [
+      "Pay attention to the subject-verb agreement.",
+      "Use the correct form of the verb in the past tense."
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": 1,
+    "is_ai_generated": true,
+    "created_at": "2026-02-20T00:41:41.644Z",
+    "updated_at": "2026-02-20T00:41:41.644Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 42,
+  "fields": {
+    "lesson": null,
+    "subject": 4,
+    "title": "L'Égypte antique : pharaons et pyramides",
+    "description": "Choisissez la bonne réponse pour chaque question sur l'Égypte antique",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "Première",
+    "content": {
+      "questions": [
+        {
+          "question": "Qui est le pharaon qui a fait construire la Grande Pyramide de Gizeh ?",
+          "options": [
+            "Ramsès II",
+            "Khéops",
+            "Hatshepsout",
+            "Thoutmôsis III"
+          ],
+          "correct_option": 1
+        },
+        {
+          "question": "Quel est le nom de la déesse égyptienne de la fertilité et de la magie ?",
+          "options": [
+            "Bastet",
+            "Sekhmet",
+            "Isis",
+            "Nephthys"
+          ],
+          "correct_option": 2
+        },
+        {
+          "question": "Quel fleuve traverse l'Égypte antique ?",
+          "options": [
+            "Nil",
+            "Niger",
+            "Amour",
+            "Tigris"
+          ],
+          "correct_option": 0
+        }
+      ]
+    },
+    "correct_answers": [
+      1,
+      2,
+      0
+    ],
+    "explanation": "L'Égypte antique est connue pour ses pharaons, ses pyramides, ses dieux et déesses, ainsi que son fleuve, le Nil. Les réponses à ces questions nécessitent une connaissance de base de l'histoire et de la culture égyptiennes.",
+    "hints": [
+      "Pensez aux pharaons les plus célèbres",
+      "Regardez les dieux et déesses égyptiens",
+      "Réfléchissez aux caractéristiques géographiques de l'Égypte"
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": 15,
+    "is_ai_generated": true,
+    "created_at": "2026-02-20T11:07:39.268Z",
+    "updated_at": "2026-02-20T11:07:39.268Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 43,
+  "fields": {
+    "lesson": null,
+    "subject": 3,
+    "title": "Découverte du microscope",
+    "description": "Choisissez la bonne réponse pour chaque question sur le microscope",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "cinquieme",
+    "content": {
+      "questions": [
+        {
+          "question": "Qu'est-ce qu'un microscope?",
+          "options": [
+            "Un instrument pour voir les objets lointains",
+            "Un instrument pour voir les objets très petits",
+            "Un instrument pour mesurer la température",
+            "Un instrument pour écouter les sons"
+          ],
+          "correct_option": 1
+        },
+        {
+          "question": "Qu'est-ce que l'on utilise pour observer les objets au microscope?",
+          "options": [
+            "Les yeux",
+            "Les oreilles",
+            "Les lèvres",
+            "Les lentilles"
+          ],
+          "correct_option": 3
+        },
+        {
+          "question": "Pourquoi utilise-t-on un microscope?",
+          "options": [
+            "Pour voir les objets très grands",
+            "Pour voir les objets très petits",
+            "Pour voir les objets lointains",
+            "Pour voir les objets dans le noir"
+          ],
+          "correct_option": 1
+        }
+      ]
+    },
+    "correct_answers": [
+      1,
+      3,
+      1
+    ],
+    "explanation": "Le microscope est un instrument scientifique qui nous permet de voir les objets très petits, comme les cellules, les bactéries, etc. Il est très utile pour les scientifiques et les étudiants pour observer et étudier les objets microscopiques.",
+    "hints": [
+      "Pensez à la définition du microscope",
+      "Réfléchissez à l'utilisation du microscope"
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": 15,
+    "is_ai_generated": true,
+    "created_at": "2026-02-20T11:30:17.078Z",
+    "updated_at": "2026-02-20T11:30:17.078Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 44,
+  "fields": {
+    "lesson": null,
+    "subject": 1,
+    "title": "Théorème de Shasles",
+    "description": "Choisissez la bonne affirmation concernant le théorème de Shasles",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "troisieme",
+    "content": {
+      "questions": [
+        {
+          "question": "Quel est le but principal du théorème de Shasles dans la géométrie ?",
+          "options": [
+            "Déterminer la longueur d'un segment",
+            "Calculer l'aire d'un triangle",
+            "Déterminer si trois points sont alignés",
+            "Trouver le centre d'un cercle"
+          ],
+          "correct_option": 2
+        },
+        {
+          "question": "Qu'est-ce que le théorème de Shasles nous permet de faire ?",
+          "options": [
+            "De trouver la médiane d'un triangle",
+            "De calculer la longueur d'un segment en fonction de deux autres segments",
+            "De déterminer si un triangle est isocèle",
+            "De trouver le périmètre d'un polygone"
+          ],
+          "correct_option": 1
+        }
+      ]
+    },
+    "correct_answers": [
+      2,
+      1
+    ],
+    "explanation": "Le théorème de Shasles est utilisé pour déterminer si trois points sont alignés et pour calculer la longueur d'un segment en fonction de deux autres segments.",
+    "hints": [
+      "Pensez aux propriétés des droites et des segments",
+      "Relisez les définitions du théorème de Shasles"
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": 15,
+    "is_ai_generated": true,
+    "created_at": "2026-02-22T16:59:46.684Z",
+    "updated_at": "2026-02-22T16:59:46.684Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 45,
+  "fields": {
+    "lesson": null,
+    "subject": 5,
+    "title": "Exercice d'addition pour 6ème",
+    "description": "Choisissez la bonne réponse pour chaque addition",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "sixieme",
+    "content": {
+      "questions": [
+        {
+          "question": "45 + 27 = ",
+          "options": [
+            "62",
+            "72",
+            "67",
+            "75"
+          ],
+          "correct_option": 2
+        },
+        {
+          "question": "17 + 35 = ",
+          "options": [
+            "52",
+            "50",
+            "49",
+            "55"
+          ],
+          "correct_option": 0
+        },
+        {
+          "question": "98 + 19 = ",
+          "options": [
+            "116",
+            "117",
+            "115",
+            "114"
+          ],
+          "correct_option": 1
+        }
+      ]
+    },
+    "correct_answers": [
+      1,
+      0,
+      1
+    ],
+    "explanation": "Pour résoudre ces additions, il suffit d'appliquer les règles de base de l'addition en respectant les règles de regroupement et de report si nécessaire.",
+    "hints": [
+      "Faites les additions étape par étape",
+      "Vérifiez vos calculs en les refaisant"
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": 1,
+    "is_ai_generated": true,
+    "created_at": "2026-02-22T17:05:40.169Z",
+    "updated_at": "2026-02-22T19:42:38.922Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 46,
+  "fields": {
+    "lesson": null,
+    "subject": 1,
+    "title": "Théorème de Shasles",
+    "description": "Choisissez la bonne affirmation concernant le théorème de Shasles",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "troisieme",
+    "content": {
+      "questions": [
+        {
+          "question": "Quel est le but principal du théorème de Shasles en géométrie ?",
+          "options": [
+            "Déterminer la longueur d'un segment",
+            "Vérifier si deux droites sont parallèles",
+            "Déterminer la mesure d'un angle",
+            "Calculer l'aire d'un triangle"
+          ],
+          "correct_option": 1
+        },
+        {
+          "question": "Quelle est la condition pour que deux droites soient parallèles d'après le théorème de Shasles ?",
+          "options": [
+            "Elles ont la même pente",
+            "Elles ont des pentes opposées",
+            "Elles ont la même ordonnée à l'origine",
+            "Elles ont des pentes différentes"
+          ],
+          "correct_option": 0
+        }
+      ]
+    },
+    "correct_answers": [
+      1,
+      0
+    ],
+    "explanation": "Le théorème de Shasles permet de déterminer si deux droites sont parallèles en vérifiant si les angles formés par ces droites et une transversale sont égaux. Deux droites sont parallèles si et seulement si les angles intérieurs alternés formés par une transversale sont égaux.",
+    "hints": [
+      "Pensez aux propriétés des droites parallèles",
+      "Utilisez les angles intérieurs alternés pour déterminer la parallélisme"
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": 15,
+    "is_ai_generated": true,
+    "created_at": "2026-02-22T17:10:57.909Z",
+    "updated_at": "2026-02-22T17:10:57.909Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 47,
+  "fields": {
+    "lesson": null,
+    "subject": 1,
+    "title": "Exercice sur les chaînes",
+    "description": "Calculer la longueur d'une chaîne et résoudre des problèmes liés aux chaînes",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "troisieme",
+    "content": {
+      "questions": [
+        {
+          "question": "Une chaîne a une longueur de 5 mètres. Si on lui ajoute 2 mètres, quelle est la nouvelle longueur de la chaîne ?",
+          "options": [
+            "3 mètres",
+            "5 mètres",
+            "7 mètres",
+            "10 mètres"
+          ],
+          "correct_option": 2
+        },
+        {
+          "question": "Une chaîne a une longueur de 10 mètres. Si on enlève 3 mètres, quelle est la nouvelle longueur de la chaîne ?",
+          "options": [
+            "5 mètres",
+            "7 mètres",
+            "10 mètres",
+            "13 mètres"
+          ],
+          "correct_option": 1
+        }
+      ]
+    },
+    "correct_answers": [
+      2,
+      1
+    ],
+    "explanation": "Pour résoudre ces problèmes, il faut simplement ajouter ou soustraire la longueur donnée à la longueur initiale de la chaîne.",
+    "hints": [
+      "Vérifiez les unités de mesure",
+      "Assurez-vous de bien comprendre ce qui est demandé"
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": 15,
+    "is_ai_generated": true,
+    "created_at": "2026-02-22T17:13:33.597Z",
+    "updated_at": "2026-02-22T17:13:33.597Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 48,
+  "fields": {
+    "lesson": null,
+    "subject": 3,
+    "title": "Glycémie : Compréhension et Régulation",
+    "description": "Choisissez la bonne réponse pour chaque question",
+    "exercise_type": "qcm",
+    "difficulty": "hard",
+    "level": "terminale",
+    "content": {
+      "questions": [
+        {
+          "question": "Quel est le rôle principal de l'insuline dans le corps ?",
+          "options": [
+            "Augmenter la glycémie",
+            "Diminuer la glycémie",
+            "Réguler la pression artérielle",
+            "Stimuler la production de glucose"
+          ],
+          "correct_option": 1
+        },
+        {
+          "question": "Quel est l'effet d'une hyperglycémie chronique sur les vaisseaux sanguins ?",
+          "options": [
+            "Endommager les artères et les veines",
+            "Améliorer la circulation sanguine",
+            "Réduire le risque de maladies cardiovasculaires",
+            "Aucun effet"
+          ],
+          "correct_option": 0
+        },
+        {
+          "question": "Quel est le nom de la maladie caractérisée par une insuffisance de production d'insuline ou une résistance à l'insuline ?",
+          "options": [
+            "Diabète de type 1",
+            "Diabète de type 2",
+            "Maladie de Crohn",
+            "Syndrome de Cushing"
+          ],
+          "correct_option": 1
+        }
+      ]
+    },
+    "correct_answers": [
+      1,
+      0,
+      1
+    ],
+    "explanation": "La glycémie est le taux de glucose dans le sang. L'insuline, produite par le pancréas, régule la glycémie en facilitant l'entrée du glucose dans les cellules. Une hyperglycémie chronique peut endommager les vaisseaux sanguins et augmenter le risque de maladies cardiovasculaires. Le diabète de type 2 est caractérisé par une résistance à l'insuline ou une insuffisance de production d'insuline, entraînant une hyperglycémie.",
+    "hints": [
+      "Comprenez le rôle de l'insuline",
+      "Étudiez les effets de l'hyperglycémie"
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": 15,
+    "is_ai_generated": true,
+    "created_at": "2026-02-22T17:14:26.804Z",
+    "updated_at": "2026-02-22T17:14:26.804Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 49,
+  "fields": {
+    "lesson": null,
+    "subject": 6,
+    "title": "Calcul de force",
+    "description": "Déterminez la force exercée sur un objet en mouvement",
+    "exercise_type": "classic",
+    "difficulty": "medium",
+    "level": "troisieme",
+    "content": {
+      "text": "Un objet de masse 5 kg est accéléré à 2 m/s². Quelle est la force qui agit sur cet objet ?",
+      "questions": [
+        "Quelle est la formule pour calculer la force ?",
+        "Quelle est la valeur de la force exercée ?"
+      ]
+    },
+    "correct_answers": [
+      "F = m * a",
+      "F = 5 kg * 2 m/s² = 10 N"
+    ],
+    "explanation": "La force est calculée en multipliant la masse de l'objet par son accélération. Dans ce cas, la masse est de 5 kg et l'accélération est de 2 m/s², ce qui donne une force de 10 N.",
+    "hints": [
+      "Utilisez la deuxième loi de Newton",
+      "Vérifiez les unités de mesure"
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": 15,
+    "is_ai_generated": true,
+    "created_at": "2026-02-22T17:15:40.021Z",
+    "updated_at": "2026-02-22T17:15:40.021Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 50,
+  "fields": {
+    "lesson": null,
+    "subject": 1,
+    "title": "Exercice sur les fractions",
+    "description": "Calculer la somme de deux fractions",
+    "exercise_type": "classic",
+    "difficulty": "medium",
+    "level": "troisieme",
+    "content": {
+      "text": "Calculez la somme de 1/4 et 1/6",
+      "questions": []
+    },
+    "correct_answers": [
+      "7/12"
+    ],
+    "explanation": "Pour additionner des fractions, il faut avoir le même dénominateur. Le dénominateur commun de 4 et 6 est 12. On convertit donc les fractions : 1/4 = 3/12 et 1/6 = 2/12. Ensuite, on additionne les numérateurs : 3/12 + 2/12 = 5/12.",
+    "hints": [
+      "Trouvez le dénominateur commun",
+      "Convertissez les fractions"
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": 15,
+    "is_ai_generated": true,
+    "created_at": "2026-02-22T17:17:01.052Z",
+    "updated_at": "2026-02-22T17:17:01.052Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 51,
+  "fields": {
+    "lesson": null,
+    "subject": 3,
+    "title": "Le Squelette Humain",
+    "description": "Choisissez la bonne réponse pour chaque question",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "troisieme",
+    "content": {
+      "questions": [
+        {
+          "question": "Quel est le nombre d'os dans le squelette humain adulte ?",
+          "options": [
+            "206 os",
+            "208 os",
+            "210 os",
+            "212 os"
+          ],
+          "correct_option": 0
+        },
+        {
+          "question": "Quelle est la fonction principale du squelette ?",
+          "options": [
+            "Protéger les organes internes",
+            "Permettre la respiration",
+            "Permettre la digestion",
+            "Permettre la circulation sanguine"
+          ],
+          "correct_option": 0
+        },
+        {
+          "question": "Quel est le nom de l'os le plus long du corps humain ?",
+          "options": [
+            "Fémur",
+            "Tibia",
+            "Fibula",
+            "Ulna"
+          ],
+          "correct_option": 0
+        }
+      ]
+    },
+    "correct_answers": [
+      0,
+      0,
+      0
+    ],
+    "explanation": "Le squelette humain est composé de 206 os qui protègent les organes internes, permettent le mouvement et stockent les minéraux. Le fémur est l'os le plus long du corps humain.",
+    "hints": [
+      "Pensez à la structure du corps humain",
+      "Réfléchissez aux fonctions du squelette"
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": 2,
+    "is_ai_generated": true,
+    "created_at": "2026-02-22T17:21:46.549Z",
+    "updated_at": "2026-02-22T17:21:46.549Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 52,
+  "fields": {
+    "lesson": null,
+    "subject": 1,
+    "title": "Exercice sur les fractions",
+    "description": "Choisissez la bonne réponse pour chaque question sur les fractions",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "cinquieme",
+    "content": {
+      "questions": [
+        {
+          "question": "Quelle est la valeur de 1/2 + 1/4 ?",
+          "options": [
+            "1/4",
+            "1/2",
+            "3/4",
+            "1"
+          ],
+          "correct_option": 2
+        },
+        {
+          "question": "Quelle fraction représente 3/4 de 16 ?",
+          "options": [
+            "8",
+            "10",
+            "12",
+            "14"
+          ],
+          "correct_option": 0
+        },
+        {
+          "question": "Quelle est la valeur de 3/4 - 1/4 ?",
+          "options": [
+            "1/4",
+            "1/2",
+            "3/4",
+            "1"
+          ],
+          "correct_option": 1
+        }
+      ]
+    },
+    "correct_answers": [
+      2,
+      0,
+      1
+    ],
+    "explanation": "Pour résoudre ces questions, il faut connaître les règles de base des fractions, comme l'addition et la soustraction de fractions. Il faut également être capable de reconnaître les fractions équivalentes.",
+    "hints": [
+      "Assurez-vous de trouver un dénominateur commun pour les fractions avant de les additionner ou de les soustraire.",
+      "N'oubliez pas que la soustraction de fractions suit les mêmes règles que l'addition, mais avec des signes opposés."
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": 2,
+    "is_ai_generated": true,
+    "created_at": "2026-02-22T17:26:59.685Z",
+    "updated_at": "2026-02-22T17:26:59.685Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 53,
+  "fields": {
+    "lesson": null,
+    "subject": 6,
+    "title": "Compréhension de la mole",
+    "description": "Choisissez la bonne réponse pour chaque question",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "seconde",
+    "content": {
+      "questions": [
+        {
+          "question": "Qu'est-ce qu'une mole de particules ?",
+          "options": [
+            "Un million de particules",
+            "Un milliard de particules",
+            "6,022 x 10^23 particules",
+            "Un trillion de particules"
+          ],
+          "correct_option": 2
+        },
+        {
+          "question": "Quelle est la masse molaire de l'oxygène (O) en g/mol ?",
+          "options": [
+            "15 g/mol",
+            "16 g/mol",
+            "32 g/mol",
+            "40 g/mol"
+          ],
+          "correct_option": 2
+        }
+      ]
+    },
+    "correct_answers": [
+      2,
+      2
+    ],
+    "explanation": "La mole est une unité de mesure qui permet de compter un très grand nombre de particules. Elle est définie comme 6,022 x 10^23 particules. La masse molaire est la masse d'une mole de particules.",
+    "hints": [
+      "Rappel de la définition de la mole",
+      "Utilisation de la table périodique pour trouver la masse molaire"
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": 2,
+    "is_ai_generated": true,
+    "created_at": "2026-02-22T17:34:38.861Z",
+    "updated_at": "2026-02-22T17:34:38.861Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 54,
+  "fields": {
+    "lesson": null,
+    "subject": 1,
+    "title": "Chasles",
+    "description": "Résoudre un problème de géométrie utilisant le théorème de Chasles",
+    "exercise_type": "classic",
+    "difficulty": "medium",
+    "level": "troisieme",
+    "content": {
+      "text": "Dans un triangle ABC, on sait que AB = 5 cm, BC = 7 cm et AC = 9 cm. On considère le point M sur le segment [BC] tel que BM = 3 cm. En utilisant le théorème de Chasles, trouver la longueur de AM.",
+      "questions": [
+        "Décomposer le triangle ABC en triangles plus petits pour appliquer le théorème de Chasles.",
+        "Calculer la longueur de AM en utilisant les propriétés du théorème de Chasles."
+      ]
+    },
+    "correct_answers": [
+      "AM = 4 cm"
+    ],
+    "explanation": "Le théorème de Chasles stipule que dans un triangle, si on prend un point sur un côté et que l'on relie ce point aux deux autres sommets, alors la somme des carrés des longueurs de ces deux nouveaux segments est égale à la somme des carrés des longueurs des deux autres côtés du triangle initial. Ici, on utilise ce théorème pour trouver la longueur de AM en considérant les triangles ABM et ACM.",
+    "hints": [
+      "Utiliser le théorème de Pythagore dans les triangles plus petits pour trouver les longueurs nécessaires.",
+      "Vérifier que les triangles formés sont bien des triangles rectangles pour appliquer le théorème de Pythagore."
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": 2,
+    "is_ai_generated": true,
+    "created_at": "2026-02-22T17:35:35.896Z",
+    "updated_at": "2026-02-22T17:35:35.896Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 55,
+  "fields": {
+    "lesson": null,
+    "subject": 1,
+    "title": "Application de la règle de Chasles",
+    "description": "Calculer la longueur d'un segment en utilisant la règle de Chasles",
+    "exercise_type": "classic",
+    "difficulty": "medium",
+    "level": "troisieme",
+    "content": {
+      "text": "Soit un triangle ABC, avec AB = 5 cm, BC = 7 cm et AC = 10 cm. En utilisant la règle de Chasles, calculer la longueur du segment médian AD du triangle ABC, où D est le milieu du côté BC.",
+      "questions": [
+        "Calculer la longueur de BD",
+        "Calculer la longueur de DC",
+        "Calculer la longueur de AD en utilisant la règle de Chasles"
+      ]
+    },
+    "correct_answers": [
+      "BD = DC = 3,5 cm",
+      "AD = √(AB^2 - BD^2) = √(5^2 - 3,5^2) = √(25 - 12,25) = √12,75"
+    ],
+    "explanation": "La règle de Chasles permet de calculer la longueur d'un segment en fonction des longueurs des segments adjacents. Dans ce cas, on utilise la formule AD = √(AB^2 - BD^2) pour calculer la longueur de AD.",
+    "hints": [
+      "Utiliser la formule de la règle de Chasles",
+      "Calculer la longueur de BD et DC avant de calculer la longueur de AD"
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": 2,
+    "is_ai_generated": true,
+    "created_at": "2026-02-22T17:36:04.161Z",
+    "updated_at": "2026-02-22T17:36:04.161Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 56,
+  "fields": {
+    "lesson": null,
+    "subject": 1,
+    "title": "Application de la règle de Chasles",
+    "description": "Calculer la longueur d'un segment en utilisant la règle de Chasles",
+    "exercise_type": "classic",
+    "difficulty": "medium",
+    "level": "troisieme",
+    "content": {
+      "text": "Soit un triangle ABC, avec AB = 5 cm, BC = 7 cm et AC = 10 cm. En utilisant la règle de Chasles, calculer la longueur du segment médian AD du triangle ABC, où D est le milieu du côté BC.",
+      "questions": [
+        "Calculer la longueur de BD",
+        "Calculer la longueur de DC",
+        "Calculer la longueur de AD en utilisant la règle de Chasles"
+      ]
+    },
+    "correct_answers": [
+      "BD = DC = 3,5 cm",
+      "AD = √(AB^2 - BD^2) = √(5^2 - 3,5^2) = √(25 - 12,25) = √12,75"
+    ],
+    "explanation": "La règle de Chasles permet de calculer la longueur d'un segment en fonction des longueurs des segments adjacents. Dans ce cas, on utilise la formule AD = √(AB^2 - BD^2) pour calculer la longueur de AD.",
+    "hints": [
+      "Utiliser la formule de la règle de Chasles",
+      "Calculer la longueur de BD et DC avant de calculer la longueur de AD"
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": 2,
+    "is_ai_generated": true,
+    "created_at": "2026-02-22T17:36:04.228Z",
+    "updated_at": "2026-02-22T17:36:04.228Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 57,
+  "fields": {
+    "lesson": null,
+    "subject": 5,
+    "title": "Modal Verbs Practice",
+    "description": "Choisissez la bonne forme du verbe modal pour compléter les phrases",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "troisieme",
+    "content": {
+      "questions": [
+        {
+          "question": "By the time I _______ my homework, it was already midnight.",
+          "options": [
+            "will have finished",
+            "have finished",
+            "finish",
+            "was finishing"
+          ],
+          "correct_option": 1
+        },
+        {
+          "question": "If I _______ more time, I would travel around the world.",
+          "options": [
+            "have",
+            "had",
+            "will have",
+            "am having"
+          ],
+          "correct_option": 1
+        },
+        {
+          "question": "She _______ be able to speak English fluently by the end of the year.",
+          "options": [
+            "should",
+            "can",
+            "may",
+            "might"
+          ],
+          "correct_option": 0
+        }
+      ]
+    },
+    "correct_answers": [
+      "B",
+      "B",
+      "A"
+    ],
+    "explanation": "Les verbes modaux sont utilisés pour exprimer la possibilité, la nécessité ou l'obligation. Chaque question nécessite la bonne forme du verbe modal pour compléter la phrase de manière logique et grammaticalement correcte.",
+    "hints": [
+      "Utilisez 'have finished' pour une action achevée à un moment donné dans le passé",
+      "Utilisez 'had' pour une condition dans le passé",
+      "Utilisez 'should' pour exprimer une attente ou une recommandation"
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": 2,
+    "is_ai_generated": true,
+    "created_at": "2026-02-22T17:46:06.304Z",
+    "updated_at": "2026-02-22T18:17:23.231Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 58,
+  "fields": {
+    "lesson": null,
+    "subject": 3,
+    "title": "L'osmose",
+    "description": "Comprendre le phénomène d'osmose",
+    "exercise_type": "classic",
+    "difficulty": "medium",
+    "level": "seconde",
+    "content": {
+      "text": "L'osmose est un phénomène qui se produit lorsque deux solutions de concentrations différentes sont séparées par une membrane semi-perméable. Cette membrane laisse passer les molécules de solvant (généralement de l'eau) mais empêche le passage des solutés. Lorsque l'on place une solution saline dans un sac en caoutchouc semi-perméable et que l'on plonge ce sac dans un bain d'eau distillée, on observe que le sac gonfle. Cela est dû à l'entrée d'eau dans le sac pour égaliser les concentrations à l'intérieur et à l'extérieur du sac.",
+      "questions": [
+        "Quel est le rôle de la membrane semi-perméable dans le phénomène d'osmose ?",
+        "Qu'est-ce qui se passe lorsque l'on place une solution saline dans un sac en caoutchouc semi-perméable et que l'on plonge ce sac dans un bain d'eau distillée ?",
+        "Quel est le résultat final de l'osmose dans cette expérience ?"
+      ]
+    },
+    "correct_answers": [
+      "La membrane semi-perméable laisse passer les molécules de solvant mais empêche le passage des solutés, permettant ainsi l'égalisation des concentrations.",
+      "Le sac gonfle en raison de l'entrée d'eau dans le sac pour égaliser les concentrations à l'intérieur et à l'extérieur du sac.",
+      "Le résultat final est l'égalisation des concentrations de la solution saline à l'intérieur et à l'extérieur du sac, avec une quantité d'eau plus importante à l'intérieur du sac."
+    ],
+    "explanation": "L'osmose est un phénomène naturel qui permet d'égaliser les concentrations de solutés dans deux solutions séparées par une membrane semi-perméable. Cela joue un rôle important dans de nombreux processus biologiques, notamment dans la régulation de la pression osmotique dans les cellules vivantes.",
+    "hints": [
+      "Pensez à la définition de l'osmose et à son rôle dans les processus biologiques.",
+      "Considérez les propriétés de la membrane semi-perméable et son impact sur le mouvement des molécules."
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": 2,
+    "is_ai_generated": true,
+    "created_at": "2026-02-22T19:43:47.347Z",
+    "updated_at": "2026-02-22T19:43:47.347Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 59,
+  "fields": {
+    "lesson": null,
+    "subject": 1,
+    "title": "Exercice de trigonométrie",
+    "description": "Déterminez la valeur de $\\sin(\\frac{\\pi}{3})$ et $\\cos(\\frac{\\pi}{6})$",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "terminale",
+    "content": {
+      "questions": [
+        {
+          "question": "Quelle est la valeur de $\\sin(\\frac{\\pi}{3})$ ?",
+          "options": [
+            "$\\frac{1}{2}$",
+            "$\\frac{\\sqrt{3}}{2}$",
+            "$\\frac{1}{\\sqrt{3}}$",
+            "$\\frac{2}{\\sqrt{3}}$"
+          ],
+          "correct_option": 1
+        },
+        {
+          "question": "Quelle est la valeur de $\\cos(\\frac{\\pi}{6})$ ?",
+          "options": [
+            "$\\frac{1}{2}$",
+            "$\\frac{\\sqrt{3}}{2}$",
+            "$\\frac{1}{\\sqrt{3}}$",
+            "$\\frac{2}{\\sqrt{3}}$"
+          ],
+          "correct_option": 1
+        }
+      ]
+    },
+    "correct_answers": [
+      1,
+      1
+    ],
+    "explanation": "Les valeurs de $\\sin(\\frac{\\pi}{3})$ et $\\cos(\\frac{\\pi}{6})$ peuvent être déterminées en utilisant le cercle unité et les propriétés des fonctions trigonométriques. $\\sin(\\frac{\\pi}{3}) = \\frac{\\sqrt{3}}{2}$ et $\\cos(\\frac{\\pi}{6}) = \\frac{\\sqrt{3}}{2}$",
+    "hints": [
+      "Utilisez le cercle unité pour visualiser les angles",
+      "Rappelez-vous les valeurs des fonctions trigonométriques pour les angles courants"
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": 2,
+    "is_ai_generated": true,
+    "created_at": "2026-02-22T19:45:43.260Z",
+    "updated_at": "2026-02-22T19:45:43.260Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 60,
+  "fields": {
+    "lesson": null,
+    "subject": 1,
+    "title": "Exercice sur les vecteurs",
+    "description": "Calculer les valeurs de $x$ et $y$ pour deux vecteurs donnés",
+    "exercise_type": "classic",
+    "difficulty": "medium",
+    "level": "troisieme",
+    "content": {
+      "text": "Soit deux vecteurs $vec{A} = (2, 3)$ et $vec{B} = (x, y)$. On nous donne que $vec{A} + vec{B} = (5, 7)$ et que $vec{A} - vec{B} = (1, -1)$.",
+      "questions": [
+        "Quelle est la valeur de $x$ ?",
+        "Quelle est la valeur de $y$ ?"
+      ]
+    },
+    "correct_answers": [
+      "$x = 3$ car $(2 + x, 3 + y) = (5, 7)$, ce qui donne $2 + x = 5$ et donc $x = 3$",
+      "$y = 4$ car $(2 + x, 3 + y) = (5, 7)$, ce qui donne $3 + y = 7$ et donc $y = 4$"
+    ],
+    "explanation": "Pour résoudre ce problème, nous utilisons les propriétés des opérations vectorielles. En additionnant et en soustrayant les composantes des vecteurs, nous pouvons déterminer les valeurs de $x$ et $y$. L'addition de $vec{A}$ et $vec{B}$ nous donne la somme de leurs composantes respectives, tandis que la soustraction nous donne la différence de leurs composantes. En résolvant ces équations simultanément, nous pouvons trouver les valeurs de $x$ et $y$.",
+    "hints": [
+      "Utilisez les propriétés des opérations vectorielles pour additionner et soustraire les composantes des vecteurs",
+      "Résolvez les équations simultanément pour trouver les valeurs de $x$ et $y$"
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": 2,
+    "is_ai_generated": true,
+    "created_at": "2026-02-22T19:48:14.215Z",
+    "updated_at": "2026-02-22T19:48:14.215Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 61,
+  "fields": {
+    "lesson": null,
+    "subject": 1,
+    "title": "Intégrale de fonctions",
+    "description": "Calculer l'intégrale d'une fonction",
+    "exercise_type": "qcm",
+    "difficulty": "hard",
+    "level": "terminale",
+    "content": {
+      "questions": [
+        {
+          "question": "Quelle est la valeur de l'intégrale $\\int_{0}^{\\pi} \\sin(x) dx$ ?",
+          "options": [
+            "$-2$",
+            "$0$",
+            "$2$",
+            "$\\pi$"
+          ],
+          "correct_option": 2
+        },
+        {
+          "question": "Quelle est la valeur de l'intégrale $\\int_{-1}^{1} x^2 dx$ ?",
+          "options": [
+            "$\\frac{1}{3}$",
+            "$\\frac{2}{3}$",
+            "$\\frac{1}{2}$",
+            "$\\frac{1}{1}$"
+          ],
+          "correct_option": 0
+        },
+        {
+          "question": "Quelle est la valeur de l'intégrale $\\int_{0}^{1} \\frac{1}{x+1} dx$ ?",
+          "options": [
+            "$\\ln(2)$",
+            "$\\ln(1)$",
+            "$\\ln(0)$",
+            "$\\ln(-1)$"
+          ],
+          "correct_option": 0
+        }
+      ]
+    },
+    "correct_answers": [
+      2,
+      0,
+      0
+    ],
+    "explanation": "L'intégrale est calculée en utilisant les règles d'intégration. Pour la première question, on utilise l'intégrale de la fonction sinusoïdale, qui est $-\\cos(x)$. Pour la deuxième question, on utilise l'intégrale de la fonction $x^2$, qui est $\\frac{x^3}{3}$. Pour la troisième question, on utilise l'intégrale de la fonction $\\frac{1}{x+1}$, qui est $\\ln|x+1|$.",
+    "hints": [
+      "Utilisez les règles d'intégration",
+      "Vérifiez les limites d'intégration"
+    ],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": 2,
+    "is_ai_generated": true,
+    "created_at": "2026-02-22T19:53:13.499Z",
+    "updated_at": "2026-02-22T19:53:13.499Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 62,
+  "fields": {
+    "lesson": null,
+    "subject": 1,
+    "title": "Exercice de MATH 3e (PDF)",
+    "description": "c'est un exerice de perfectionnemt",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "troisieme",
+    "content": {
+      "": ""
+    },
+    "correct_answers": {
+      "": ""
+    },
+    "explanation": "",
+    "hints": [],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": 1,
+    "is_ai_generated": false,
+    "created_at": "2026-02-22T23:12:22.795Z",
+    "updated_at": "2026-02-22T23:57:53.288Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 63,
+  "fields": {
+    "lesson": null,
+    "subject": 5,
+    "title": "ENGLISH TEST (PDF)",
+    "description": "TEST DE NIVEAU DES ELEVES DE LA PREMIERE",
+    "exercise_type": "qcm",
+    "difficulty": "hard",
+    "level": "premiere",
+    "content": {
+      "": ""
+    },
+    "correct_answers": {
+      "": ""
+    },
+    "explanation": "",
+    "hints": [],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": 1,
+    "is_ai_generated": false,
+    "created_at": "2026-02-22T23:35:15.716Z",
+    "updated_at": "2026-02-22T23:36:43.260Z"
+  }
+},
+{
+  "model": "exercises.exercise",
+  "pk": 64,
+  "fields": {
+    "lesson": null,
+    "subject": 1,
+    "title": "EXERCICES MATH TLE D (PDF)",
+    "description": "EXERCICES MATH TLE D",
+    "exercise_type": "qcm",
+    "difficulty": "medium",
+    "level": "terminale",
+    "content": {
+      "": ""
+    },
+    "correct_answers": {
+      "": ""
+    },
+    "explanation": "",
+    "hints": [],
+    "points": 10,
+    "time_limit": null,
+    "order": 0,
+    "is_active": true,
+    "creator": 1,
+    "is_ai_generated": false,
+    "created_at": "2026-02-22T23:59:51.878Z",
+    "updated_at": "2026-02-23T00:00:46.866Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 1,
+  "fields": {
+    "exercise": 2,
+    "student": 1,
+    "answer": 0,
+    "is_correct": true,
+    "score": 15,
+    "time_spent": 15,
+    "hints_used": 0,
+    "attempt_number": 1,
+    "created_at": "2026-02-10T01:31:35.952Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 2,
+  "fields": {
+    "exercise": 2,
+    "student": 1,
+    "answer": 1,
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 2,
+    "hints_used": 0,
+    "attempt_number": 2,
+    "created_at": "2026-02-10T01:31:44.004Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 3,
+  "fields": {
+    "exercise": 3,
+    "student": 1,
+    "answer": "chevaux",
+    "is_correct": true,
+    "score": 10,
+    "time_spent": 14,
+    "hints_used": 0,
+    "attempt_number": 1,
+    "created_at": "2026-02-10T01:34:42.731Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 4,
+  "fields": {
+    "exercise": 3,
+    "student": 1,
+    "answer": "chevals",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 6,
+    "hints_used": 0,
+    "attempt_number": 2,
+    "created_at": "2026-02-10T01:34:58.677Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 5,
+  "fields": {
+    "exercise": 3,
+    "student": 1,
+    "answer": "cheveau",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 6,
+    "hints_used": 0,
+    "attempt_number": 3,
+    "created_at": "2026-02-10T01:35:10.883Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 11,
+  "fields": {
+    "exercise": 5,
+    "student": 1,
+    "answer": 1,
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 32,
+    "hints_used": 0,
+    "attempt_number": 1,
+    "created_at": "2026-02-13T00:41:17.735Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 12,
+  "fields": {
+    "exercise": 5,
+    "student": 1,
+    "answer": 2,
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 2,
+    "hints_used": 0,
+    "attempt_number": 2,
+    "created_at": "2026-02-13T00:41:44.189Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 13,
+  "fields": {
+    "exercise": 5,
+    "student": 1,
+    "answer": 3,
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 2,
+    "hints_used": 0,
+    "attempt_number": 3,
+    "created_at": "2026-02-13T00:42:08.699Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 14,
+  "fields": {
+    "exercise": 5,
+    "student": 1,
+    "answer": 1,
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 2,
+    "hints_used": 0,
+    "attempt_number": 4,
+    "created_at": "2026-02-13T00:42:13.695Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 15,
+  "fields": {
+    "exercise": 5,
+    "student": 1,
+    "answer": 0,
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 2,
+    "hints_used": 0,
+    "attempt_number": 5,
+    "created_at": "2026-02-13T00:42:19.602Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 16,
+  "fields": {
+    "exercise": 5,
+    "student": 1,
+    "answer": 2,
+    "is_correct": true,
+    "score": 15,
+    "time_spent": 2,
+    "hints_used": 0,
+    "attempt_number": 6,
+    "created_at": "2026-02-13T00:43:33.945Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 17,
+  "fields": {
+    "exercise": 6,
+    "student": 1,
+    "answer": 1,
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 48,
+    "hints_used": 1,
+    "attempt_number": 1,
+    "created_at": "2026-02-13T00:45:10.105Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 18,
+  "fields": {
+    "exercise": 7,
+    "student": 1,
+    "answer": "D",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 20,
+    "hints_used": 0,
+    "attempt_number": 1,
+    "created_at": "2026-02-13T00:54:05.094Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 19,
+  "fields": {
+    "exercise": 7,
+    "student": 1,
+    "answer": "B",
+    "is_correct": true,
+    "score": 10,
+    "time_spent": 5,
+    "hints_used": 0,
+    "attempt_number": 2,
+    "created_at": "2026-02-13T00:55:02.181Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 20,
+  "fields": {
+    "exercise": 7,
+    "student": 1,
+    "answer": "C",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 16,
+    "hints_used": 1,
+    "attempt_number": 3,
+    "created_at": "2026-02-13T00:58:45.266Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 21,
+  "fields": {
+    "exercise": 7,
+    "student": 1,
+    "answer": "B",
+    "is_correct": true,
+    "score": 10,
+    "time_spent": 2,
+    "hints_used": 0,
+    "attempt_number": 4,
+    "created_at": "2026-02-13T00:59:18.911Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 22,
+  "fields": {
+    "exercise": 8,
+    "student": 1,
+    "answer": "D",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 161,
+    "hints_used": 0,
+    "attempt_number": 1,
+    "created_at": "2026-02-13T01:02:51.194Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 23,
+  "fields": {
+    "exercise": 8,
+    "student": 1,
+    "answer": "A",
+    "is_correct": true,
+    "score": 10,
+    "time_spent": 2,
+    "hints_used": 0,
+    "attempt_number": 2,
+    "created_at": "2026-02-13T01:03:04.179Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 24,
+  "fields": {
+    "exercise": 9,
+    "student": 1,
+    "answer": "C",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 12,
+    "hints_used": 0,
+    "attempt_number": 1,
+    "created_at": "2026-02-13T01:03:54.015Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 25,
+  "fields": {
+    "exercise": 9,
+    "student": 1,
+    "answer": "A",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 4,
+    "hints_used": 0,
+    "attempt_number": 2,
+    "created_at": "2026-02-13T01:06:23.350Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 26,
+  "fields": {
+    "exercise": 9,
+    "student": 1,
+    "answer": "B",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 2,
+    "hints_used": 0,
+    "attempt_number": 3,
+    "created_at": "2026-02-13T01:06:30.920Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 27,
+  "fields": {
+    "exercise": 9,
+    "student": 1,
+    "answer": "D",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 2,
+    "hints_used": 0,
+    "attempt_number": 4,
+    "created_at": "2026-02-13T01:06:36.349Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 28,
+  "fields": {
+    "exercise": 9,
+    "student": 1,
+    "answer": "C",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 24,
+    "hints_used": 1,
+    "attempt_number": 5,
+    "created_at": "2026-02-13T01:07:04.186Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 29,
+  "fields": {
+    "exercise": 9,
+    "student": 1,
+    "answer": "C",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 2,
+    "hints_used": 0,
+    "attempt_number": 6,
+    "created_at": "2026-02-13T01:07:12.106Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 30,
+  "fields": {
+    "exercise": 9,
+    "student": 1,
+    "answer": "C",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 3,
+    "hints_used": 0,
+    "attempt_number": 7,
+    "created_at": "2026-02-13T01:07:19.203Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 31,
+  "fields": {
+    "exercise": 9,
+    "student": 1,
+    "answer": "C",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 2,
+    "hints_used": 0,
+    "attempt_number": 8,
+    "created_at": "2026-02-13T01:07:40.505Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 32,
+  "fields": {
+    "exercise": 9,
+    "student": 1,
+    "answer": "C",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 2,
+    "hints_used": 0,
+    "attempt_number": 9,
+    "created_at": "2026-02-13T01:08:53.500Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 33,
+  "fields": {
+    "exercise": 9,
+    "student": 1,
+    "answer": "C",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 66,
+    "hints_used": 0,
+    "attempt_number": 10,
+    "created_at": "2026-02-13T09:13:30.453Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 41,
+  "fields": {
+    "exercise": 2,
+    "student": 1,
+    "answer": "A",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 17,
+    "hints_used": 0,
+    "attempt_number": 3,
+    "created_at": "2026-02-15T13:19:49.799Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 42,
+  "fields": {
+    "exercise": 2,
+    "student": 1,
+    "answer": "C",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 1,
+    "hints_used": 0,
+    "attempt_number": 4,
+    "created_at": "2026-02-15T13:19:54.036Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 43,
+  "fields": {
+    "exercise": 2,
+    "student": 1,
+    "answer": "D",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 1,
+    "hints_used": 0,
+    "attempt_number": 5,
+    "created_at": "2026-02-15T13:20:01.126Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 44,
+  "fields": {
+    "exercise": 7,
+    "student": 2,
+    "answer": "C",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 7,
+    "hints_used": 0,
+    "attempt_number": 1,
+    "created_at": "2026-02-15T19:44:55.576Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 45,
+  "fields": {
+    "exercise": 7,
+    "student": 2,
+    "answer": "B",
+    "is_correct": true,
+    "score": 10,
+    "time_spent": 3,
+    "hints_used": 0,
+    "attempt_number": 2,
+    "created_at": "2026-02-15T19:45:02.955Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 46,
+  "fields": {
+    "exercise": 14,
+    "student": 2,
+    "answer": "C",
+    "is_correct": true,
+    "score": 10,
+    "time_spent": 3,
+    "hints_used": 0,
+    "attempt_number": 1,
+    "created_at": "2026-02-15T19:45:55.334Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 47,
+  "fields": {
+    "exercise": 14,
+    "student": 2,
+    "answer": "C",
+    "is_correct": true,
+    "score": 8,
+    "time_spent": 8,
+    "hints_used": 1,
+    "attempt_number": 2,
+    "created_at": "2026-02-15T19:46:08.735Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 48,
+  "fields": {
+    "exercise": 15,
+    "student": 2,
+    "answer": "C",
+    "is_correct": true,
+    "score": 10,
+    "time_spent": 8,
+    "hints_used": 0,
+    "attempt_number": 1,
+    "created_at": "2026-02-15T19:46:23.322Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 49,
+  "fields": {
+    "exercise": 15,
+    "student": 2,
+    "answer": "C",
+    "is_correct": true,
+    "score": 10,
+    "time_spent": 4,
+    "hints_used": 0,
+    "attempt_number": 2,
+    "created_at": "2026-02-15T20:20:42.779Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 50,
+  "fields": {
+    "exercise": 6,
+    "student": 2,
+    "answer": "B",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 11,
+    "hints_used": 0,
+    "attempt_number": 1,
+    "created_at": "2026-02-15T20:21:07.917Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 51,
+  "fields": {
+    "exercise": 6,
+    "student": 2,
+    "answer": "D",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 2,
+    "hints_used": 0,
+    "attempt_number": 2,
+    "created_at": "2026-02-15T20:21:24.352Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 52,
+  "fields": {
+    "exercise": 12,
+    "student": 2,
+    "answer": "B",
+    "is_correct": true,
+    "score": 10,
+    "time_spent": 10,
+    "hints_used": 0,
+    "attempt_number": 1,
+    "created_at": "2026-02-15T20:22:16.715Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 53,
+  "fields": {
+    "exercise": 5,
+    "student": 2,
+    "answer": "C",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 4,
+    "hints_used": 0,
+    "attempt_number": 1,
+    "created_at": "2026-02-15T20:22:28.567Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 60,
+  "fields": {
+    "exercise": 18,
+    "student": 2,
+    "answer": "A",
+    "is_correct": true,
+    "score": 13,
+    "time_spent": 67,
+    "hints_used": 1,
+    "attempt_number": 1,
+    "created_at": "2026-02-15T20:59:11.578Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 61,
+  "fields": {
+    "exercise": 18,
+    "student": 2,
+    "answer": "B",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 2,
+    "hints_used": 0,
+    "attempt_number": 2,
+    "created_at": "2026-02-15T20:59:59.662Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 62,
+  "fields": {
+    "exercise": 18,
+    "student": 2,
+    "answer": "C",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 2,
+    "hints_used": 0,
+    "attempt_number": 3,
+    "created_at": "2026-02-15T21:00:05.451Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 63,
+  "fields": {
+    "exercise": 18,
+    "student": 2,
+    "answer": "A",
+    "is_correct": true,
+    "score": 15,
+    "time_spent": 2,
+    "hints_used": 0,
+    "attempt_number": 4,
+    "created_at": "2026-02-15T21:00:09.309Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 64,
+  "fields": {
+    "exercise": 20,
+    "student": 2,
+    "answer": "A",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 25,
+    "hints_used": 0,
+    "attempt_number": 1,
+    "created_at": "2026-02-15T23:13:26.058Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 65,
+  "fields": {
+    "exercise": 5,
+    "student": 2,
+    "answer": "C",
+    "is_correct": true,
+    "score": 15,
+    "time_spent": 13,
+    "hints_used": 0,
+    "attempt_number": 2,
+    "created_at": "2026-02-16T07:45:11.526Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 66,
+  "fields": {
+    "exercise": 5,
+    "student": 2,
+    "answer": "D",
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 2,
+    "hints_used": 0,
+    "attempt_number": 3,
+    "created_at": "2026-02-16T07:45:21.181Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 69,
+  "fields": {
+    "exercise": 57,
+    "student": 2,
+    "answer": [
+      2,
+      1,
+      0
+    ],
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 81,
+    "hints_used": 0,
+    "attempt_number": 1,
+    "created_at": "2026-02-22T17:47:31.304Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 70,
+  "fields": {
+    "exercise": 57,
+    "student": 2,
+    "answer": [
+      0,
+      3,
+      3
+    ],
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 13,
+    "hints_used": 0,
+    "attempt_number": 2,
+    "created_at": "2026-02-22T17:48:06.101Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 71,
+  "fields": {
+    "exercise": 57,
+    "student": 2,
+    "answer": [
+      0,
+      1,
+      0
+    ],
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 31,
+    "hints_used": 1,
+    "attempt_number": 3,
+    "created_at": "2026-02-22T17:48:42.978Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 72,
+  "fields": {
+    "exercise": 57,
+    "student": 2,
+    "answer": [
+      1,
+      1,
+      0
+    ],
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 11,
+    "hints_used": 0,
+    "attempt_number": 4,
+    "created_at": "2026-02-22T18:18:52.447Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 73,
+  "fields": {
+    "exercise": 57,
+    "student": 2,
+    "answer": [
+      1,
+      1,
+      0
+    ],
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 97,
+    "hints_used": 0,
+    "attempt_number": 5,
+    "created_at": "2026-02-22T18:20:37.859Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 74,
+  "fields": {
+    "exercise": 57,
+    "student": 2,
+    "answer": [
+      0,
+      0,
+      1
+    ],
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 7,
+    "hints_used": 0,
+    "attempt_number": 6,
+    "created_at": "2026-02-22T18:58:21.119Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 75,
+  "fields": {
+    "exercise": 57,
+    "student": 2,
+    "answer": [
+      0,
+      1,
+      0
+    ],
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 8,
+    "hints_used": 0,
+    "attempt_number": 7,
+    "created_at": "2026-02-22T19:00:19.523Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 76,
+  "fields": {
+    "exercise": 57,
+    "student": 2,
+    "answer": [
+      0,
+      1,
+      0
+    ],
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 11,
+    "hints_used": 0,
+    "attempt_number": 8,
+    "created_at": "2026-02-22T19:04:06.326Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 77,
+  "fields": {
+    "exercise": 57,
+    "student": 2,
+    "answer": [
+      0,
+      0,
+      0
+    ],
+    "is_correct": false,
+    "score": 0,
+    "time_spent": 9,
+    "hints_used": 0,
+    "attempt_number": 9,
+    "created_at": "2026-02-22T19:08:54.040Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 78,
+  "fields": {
+    "exercise": 57,
+    "student": 2,
+    "answer": [
+      0,
+      0,
+      0
+    ],
+    "is_correct": false,
+    "score": 1,
+    "time_spent": 9,
+    "hints_used": 0,
+    "attempt_number": 10,
+    "created_at": "2026-02-22T19:16:30.076Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 79,
+  "fields": {
+    "exercise": 57,
+    "student": 2,
+    "answer": [
+      1,
+      1,
+      0
+    ],
+    "is_correct": true,
+    "score": 3,
+    "time_spent": 10,
+    "hints_used": 0,
+    "attempt_number": 11,
+    "created_at": "2026-02-22T19:16:58.637Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 80,
+  "fields": {
+    "exercise": 53,
+    "student": 2,
+    "answer": [
+      2,
+      1
+    ],
+    "is_correct": false,
+    "score": 1,
+    "time_spent": 47,
+    "hints_used": 0,
+    "attempt_number": 1,
+    "created_at": "2026-02-22T19:17:51.480Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 81,
+  "fields": {
+    "exercise": 51,
+    "student": 2,
+    "answer": [
+      1,
+      0,
+      0
+    ],
+    "is_correct": false,
+    "score": 2,
+    "time_spent": 34,
+    "hints_used": 0,
+    "attempt_number": 1,
+    "created_at": "2026-02-22T19:18:39.503Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 82,
+  "fields": {
+    "exercise": 45,
+    "student": 2,
+    "answer": [
+      1,
+      0,
+      1
+    ],
+    "is_correct": false,
+    "score": 2,
+    "time_spent": 35,
+    "hints_used": 0,
+    "attempt_number": 1,
+    "created_at": "2026-02-22T19:38:48.927Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 83,
+  "fields": {
+    "exercise": 45,
+    "student": 2,
+    "answer": [
+      1,
+      0,
+      1
+    ],
+    "is_correct": false,
+    "score": 2,
+    "time_spent": 18,
+    "hints_used": 0,
+    "attempt_number": 2,
+    "created_at": "2026-02-22T19:39:45.162Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 84,
+  "fields": {
+    "exercise": 45,
+    "student": 2,
+    "answer": [
+      2,
+      2,
+      3
+    ],
+    "is_correct": false,
+    "score": 1,
+    "time_spent": 9,
+    "hints_used": 0,
+    "attempt_number": 3,
+    "created_at": "2026-02-22T19:40:13.959Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 85,
+  "fields": {
+    "exercise": 45,
+    "student": 2,
+    "answer": [
+      1,
+      0,
+      1
+    ],
+    "is_correct": true,
+    "score": 3,
+    "time_spent": 7,
+    "hints_used": 0,
+    "attempt_number": 4,
+    "created_at": "2026-02-22T19:42:51.561Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 86,
+  "fields": {
+    "exercise": 59,
+    "student": 2,
+    "answer": [
+      1,
+      0
+    ],
+    "is_correct": false,
+    "score": 1,
+    "time_spent": 88,
+    "hints_used": 0,
+    "attempt_number": 1,
+    "created_at": "2026-02-22T19:47:18.241Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 87,
+  "fields": {
+    "exercise": 61,
+    "student": 2,
+    "answer": [
+      0,
+      1,
+      0
+    ],
+    "is_correct": false,
+    "score": 1,
+    "time_spent": 103,
+    "hints_used": 0,
+    "attempt_number": 1,
+    "created_at": "2026-02-22T19:55:04.752Z"
+  }
+},
+{
+  "model": "exercises.exerciseattempt",
+  "pk": 88,
+  "fields": {
+    "exercise": 40,
+    "student": 16,
+    "answer": [
+      1,
+      1,
+      2
+    ],
+    "is_correct": true,
+    "score": 3,
+    "time_spent": 15,
+    "hints_used": 0,
+    "attempt_number": 1,
+    "created_at": "2026-02-22T23:21:45.396Z"
+  }
+},
+{
+  "model": "exercises.exerciseresource",
+  "pk": 1,
+  "fields": {
+    "exercise": 62,
+    "title": "exercice de niveau 3e",
+    "resource_type": "pdf",
+    "file": "exercise_resources/DEVOIR_DE_maths_NIVEAU_3ième_LYCEE_DE_BOROMO_2022_BY_TEHUA.pdf",
+    "order": 0
+  }
+},
+{
+  "model": "exercises.exerciseresource",
+  "pk": 2,
+  "fields": {
+    "exercise": 63,
+    "title": "ENGLISH TEST 1",
+    "resource_type": "pdf",
+    "file": "exercise_resources/DEVOIR_DANGLAIS_NIVEAU_1ière_COLLEGE_PRIVE_GNIRAH_BY_TEHUA.pdf",
+    "order": 0
+  }
+},
+{
+  "model": "exercises.exerciseresource",
+  "pk": 4,
+  "fields": {
+    "exercise": 64,
+    "title": "EXERCICES MATH TLE D",
+    "resource_type": "pdf",
+    "file": "exercise_resources/DEVOIR_DE_maths_NIVEAU_Tle_D_LYCEE_DE_WONA_2022_BY_TEHUA_mH8nHVu.pdf",
+    "order": 0
+  }
+},
+{
+  "model": "exercises.quiz",
+  "pk": 1,
+  "fields": {
+    "title": "Addition de nombres entiers",
+    "description": "Calculez les additions suivantes",
+    "subject": 1,
+    "lesson": null,
+    "level": "terminale",
+    "time_limit": 1,
+    "passing_score": 50,
+    "is_active": true,
+    "created_at": "2026-02-15T15:10:04.660Z",
+    "exercises": [
+      18
+    ]
+  }
+},
+{
+  "model": "exercises.quiz",
+  "pk": 2,
+  "fields": {
+    "title": "Le pluriel des noms",
+    "description": "Mettez ces noms au pluriel",
+    "subject": 2,
+    "lesson": null,
+    "level": "ce1",
+    "time_limit": null,
+    "passing_score": 50,
+    "is_active": true,
+    "created_at": "2026-02-15T15:10:04.680Z",
+    "exercises": [
+      3
+    ]
+  }
+},
+{
+  "model": "exercises.quiz",
+  "pk": 3,
+  "fields": {
+    "title": "Addition de nombres à deux chiffres",
+    "description": "Calculez la somme de deux nombres à deux chiffres",
+    "subject": 1,
+    "lesson": null,
+    "level": "ce2",
+    "time_limit": null,
+    "passing_score": 50,
+    "is_active": true,
+    "created_at": "2026-02-15T15:10:04.700Z",
+    "exercises": [
+      9
+    ]
+  }
+},
+{
+  "model": "exercises.quiz",
+  "pk": 4,
+  "fields": {
+    "title": "Analyse de l'eau : détermination du pH",
+    "description": "Un échantillon d'eau a été prélevé dans un lac pour déterminer son pH. Le pH est une mesure de l'acidité ou de la basicité de l'eau.",
+    "subject": 3,
+    "lesson": null,
+    "level": "quatrieme",
+    "time_limit": null,
+    "passing_score": 50,
+    "is_active": true,
+    "created_at": "2026-02-15T15:10:04.712Z",
+    "exercises": [
+      5
+    ]
+  }
+},
+{
+  "model": "exercises.quiz",
+  "pk": 5,
+  "fields": {
+    "title": "Conjugaison des verbes au présent",
+    "description": "Conjuguer correctement les verbes au présent de l'indicatif",
+    "subject": 2,
+    "lesson": null,
+    "level": "quatrieme",
+    "time_limit": null,
+    "passing_score": 50,
+    "is_active": true,
+    "created_at": "2026-02-15T15:10:04.724Z",
+    "exercises": [
+      6
+    ]
+  }
+},
+{
+  "model": "exercises.quiz",
+  "pk": 6,
+  "fields": {
+    "title": "La Guerre Froide : Les Origines et les Enjeux",
+    "description": "Analyser les principaux facteurs ayant mené à la Guerre Froide et évaluer leur impact sur la géopolitique mondiale",
+    "subject": 4,
+    "lesson": null,
+    "level": "terminale",
+    "time_limit": null,
+    "passing_score": 50,
+    "is_active": true,
+    "created_at": "2026-02-15T15:10:04.736Z",
+    "exercises": [
+      10
+    ]
+  }
+},
+{
+  "model": "exercises.quiz",
+  "pk": 7,
+  "fields": {
+    "title": "La synthèse de l'eau",
+    "description": "Compléter les données manquantes dans l'équation chimique de la synthèse de l'eau",
+    "subject": 3,
+    "lesson": null,
+    "level": "troisieme",
+    "time_limit": null,
+    "passing_score": 50,
+    "is_active": true,
+    "created_at": "2026-02-15T15:10:04.749Z",
+    "exercises": [
+      7
+    ]
+  }
+},
+{
+  "model": "exercises.quiz",
+  "pk": 8,
+  "fields": {
+    "title": "Multiplication",
+    "description": "Calculez les multiplications",
+    "subject": 1,
+    "lesson": null,
+    "level": "cm1",
+    "time_limit": null,
+    "passing_score": 50,
+    "is_active": true,
+    "created_at": "2026-02-15T15:10:04.761Z",
+    "exercises": [
+      2
+    ]
+  }
+},
+{
+  "model": "exercises.quiz",
+  "pk": 9,
+  "fields": {
+    "title": "Nombres complexes",
+    "description": "Déterminer la forme polaire d'un nombre complexe",
+    "subject": 1,
+    "lesson": null,
+    "level": "terminale",
+    "time_limit": null,
+    "passing_score": 50,
+    "is_active": true,
+    "created_at": "2026-02-15T15:10:04.775Z",
+    "exercises": [
+      8
+    ]
+  }
+},
+{
+  "model": "exercises.quiz",
+  "pk": 10,
+  "fields": {
+    "title": "Présent progressif",
+    "description": "Choisis la forme correcte du présent progressif pour compléter la phrase suivante : 'At 8 o'clock, they ________ (watch) TV.'",
+    "subject": 5,
+    "lesson": null,
+    "level": "premiere",
+    "time_limit": null,
+    "passing_score": 50,
+    "is_active": true,
+    "created_at": "2026-02-15T15:10:04.787Z",
+    "exercises": [
+      11
+    ]
+  }
+},
+{
+  "model": "exercises.quiz",
+  "pk": 11,
+  "fields": {
+    "title": "Présent progressif en anglais",
+    "description": "Complétez les phrases avec le présent progressif des verbes donnés",
+    "subject": 5,
+    "lesson": null,
+    "level": "cinquieme",
+    "time_limit": null,
+    "passing_score": 50,
+    "is_active": true,
+    "created_at": "2026-02-15T15:10:04.799Z",
+    "exercises": [
+      12
+    ]
+  }
+},
+{
+  "model": "exercises.quizattempt",
+  "pk": 1,
+  "fields": {
+    "quiz": 11,
+    "student": 2,
+    "score": 0,
+    "total_score": 0,
+    "percentage": 0,
+    "is_passed": false,
+    "time_spent": 0,
+    "completed": false,
+    "started_at": "2026-02-15T15:19:45.901Z",
+    "completed_at": null
+  }
+},
+{
+  "model": "exercises.quizattempt",
+  "pk": 2,
+  "fields": {
+    "quiz": 11,
+    "student": 2,
+    "score": 0,
+    "total_score": 0,
+    "percentage": 0,
+    "is_passed": false,
+    "time_spent": 0,
+    "completed": false,
+    "started_at": "2026-02-15T15:19:52.948Z",
+    "completed_at": null
+  }
+},
+{
+  "model": "exercises.quizattempt",
+  "pk": 3,
+  "fields": {
+    "quiz": 1,
+    "student": 2,
+    "score": 0,
+    "total_score": 0,
+    "percentage": 0,
+    "is_passed": false,
+    "time_spent": 0,
+    "completed": false,
+    "started_at": "2026-02-15T15:20:11.650Z",
+    "completed_at": null
+  }
+},
+{
+  "model": "exercises.quizattempt",
+  "pk": 4,
+  "fields": {
+    "quiz": 1,
+    "student": 2,
+    "score": 0,
+    "total_score": 0,
+    "percentage": 0,
+    "is_passed": false,
+    "time_spent": 0,
+    "completed": false,
+    "started_at": "2026-02-15T19:18:02.022Z",
+    "completed_at": null
+  }
+},
+{
+  "model": "exercises.quizattempt",
+  "pk": 5,
+  "fields": {
+    "quiz": 11,
+    "student": 2,
+    "score": 0,
+    "total_score": 0,
+    "percentage": 0,
+    "is_passed": false,
+    "time_spent": 0,
+    "completed": false,
+    "started_at": "2026-02-15T19:21:05.542Z",
+    "completed_at": null
+  }
+},
+{
+  "model": "exercises.quizattempt",
+  "pk": 6,
+  "fields": {
+    "quiz": 1,
+    "student": 2,
+    "score": 0,
+    "total_score": 0,
+    "percentage": 0,
+    "is_passed": false,
+    "time_spent": 0,
+    "completed": false,
+    "started_at": "2026-02-15T19:24:58.909Z",
+    "completed_at": null
+  }
+},
+{
+  "model": "exercises.quizattempt",
+  "pk": 7,
+  "fields": {
+    "quiz": 2,
+    "student": 2,
+    "score": 0,
+    "total_score": 10,
+    "percentage": 0,
+    "is_passed": false,
+    "time_spent": 0,
+    "completed": true,
+    "started_at": "2026-02-15T19:27:04.652Z",
+    "completed_at": "2026-02-15T19:27:20.953Z"
+  }
+},
+{
+  "model": "exercises.quizattempt",
+  "pk": 8,
+  "fields": {
+    "quiz": 2,
+    "student": 2,
+    "score": 10,
+    "total_score": 10,
+    "percentage": 100,
+    "is_passed": true,
+    "time_spent": 0,
+    "completed": true,
+    "started_at": "2026-02-15T19:27:28.322Z",
+    "completed_at": "2026-02-15T19:27:34.283Z"
+  }
+},
+{
+  "model": "exercises.quizattempt",
+  "pk": 9,
+  "fields": {
+    "quiz": 2,
+    "student": 2,
+    "score": 10,
+    "total_score": 10,
+    "percentage": 100,
+    "is_passed": true,
+    "time_spent": 0,
+    "completed": true,
+    "started_at": "2026-02-15T19:27:42.304Z",
+    "completed_at": "2026-02-15T19:27:54.542Z"
+  }
+},
+{
+  "model": "exercises.quizattempt",
+  "pk": 10,
+  "fields": {
+    "quiz": 3,
+    "student": 2,
+    "score": 10,
+    "total_score": 10,
+    "percentage": 100,
+    "is_passed": true,
+    "time_spent": 0,
+    "completed": true,
+    "started_at": "2026-02-15T19:27:59.821Z",
+    "completed_at": "2026-02-15T19:28:26.169Z"
+  }
+},
+{
+  "model": "exercises.quizattempt",
+  "pk": 11,
+  "fields": {
+    "quiz": 2,
+    "student": 2,
+    "score": 0,
+    "total_score": 0,
+    "percentage": 0,
+    "is_passed": false,
+    "time_spent": 0,
+    "completed": false,
+    "started_at": "2026-02-15T19:45:08.835Z",
+    "completed_at": null
+  }
+},
+{
+  "model": "exercises.quizattempt",
+  "pk": 14,
+  "fields": {
+    "quiz": 11,
+    "student": 2,
+    "score": 0,
+    "total_score": 0,
+    "percentage": 0,
+    "is_passed": false,
+    "time_spent": 0,
+    "completed": false,
+    "started_at": "2026-02-15T21:00:36.775Z",
+    "completed_at": null
+  }
+},
+{
+  "model": "exercises.quizattempt",
+  "pk": 15,
+  "fields": {
+    "quiz": 1,
+    "student": 2,
+    "score": 0,
+    "total_score": 0,
+    "percentage": 0,
+    "is_passed": false,
+    "time_spent": 0,
+    "completed": false,
+    "started_at": "2026-02-15T21:00:49.956Z",
+    "completed_at": null
+  }
+},
+{
+  "model": "exercises.quizattempt",
+  "pk": 16,
+  "fields": {
+    "quiz": 1,
+    "student": 2,
+    "score": 0,
+    "total_score": 0,
+    "percentage": 0,
+    "is_passed": false,
+    "time_spent": 0,
+    "completed": false,
+    "started_at": "2026-02-15T21:01:16.258Z",
+    "completed_at": null
+  }
+},
+{
+  "model": "exercises.quizattempt",
+  "pk": 17,
+  "fields": {
+    "quiz": 1,
+    "student": 2,
+    "score": 0,
+    "total_score": 0,
+    "percentage": 0,
+    "is_passed": false,
+    "time_spent": 0,
+    "completed": false,
+    "started_at": "2026-02-15T21:03:26.989Z",
+    "completed_at": null
+  }
+},
+{
+  "model": "progress.studentprogress",
+  "pk": 1,
+  "fields": {
+    "student": 1,
+    "total_lessons_viewed": 1,
+    "total_exercises_completed": 9,
+    "total_quizzes_completed": 0,
+    "total_points": 0,
+    "current_streak": 0,
+    "longest_streak": 0,
+    "last_activity": null,
+    "weekly_goal": 5,
+    "created_at": "2026-02-10T01:28:29.273Z",
+    "updated_at": "2026-02-20T12:25:09.309Z"
+  }
+},
+{
+  "model": "progress.studentprogress",
+  "pk": 2,
+  "fields": {
+    "student": 2,
+    "total_lessons_viewed": 0,
+    "total_exercises_completed": 11,
+    "total_quizzes_completed": 4,
+    "total_points": 0,
+    "current_streak": 0,
+    "longest_streak": 0,
+    "last_activity": null,
+    "weekly_goal": 5,
+    "created_at": "2026-02-13T12:32:35.183Z",
+    "updated_at": "2026-02-22T19:42:58.784Z"
+  }
+},
+{
+  "model": "progress.studentprogress",
+  "pk": 4,
+  "fields": {
+    "student": 7,
+    "total_lessons_viewed": 0,
+    "total_exercises_completed": 0,
+    "total_quizzes_completed": 0,
+    "total_points": 0,
+    "current_streak": 0,
+    "longest_streak": 0,
+    "last_activity": null,
+    "weekly_goal": 5,
+    "created_at": "2026-02-15T11:51:03.604Z",
+    "updated_at": "2026-02-17T23:34:25.984Z"
+  }
+},
+{
+  "model": "progress.studentprogress",
+  "pk": 7,
+  "fields": {
+    "student": 13,
+    "total_lessons_viewed": 0,
+    "total_exercises_completed": 0,
+    "total_quizzes_completed": 0,
+    "total_points": 0,
+    "current_streak": 0,
+    "longest_streak": 0,
+    "last_activity": null,
+    "weekly_goal": 5,
+    "created_at": "2026-02-18T12:17:59.672Z",
+    "updated_at": "2026-02-18T12:20:30.674Z"
+  }
+},
+{
+  "model": "progress.studentprogress",
+  "pk": 8,
+  "fields": {
+    "student": 15,
+    "total_lessons_viewed": 0,
+    "total_exercises_completed": 0,
+    "total_quizzes_completed": 0,
+    "total_points": 0,
+    "current_streak": 0,
+    "longest_streak": 0,
+    "last_activity": null,
+    "weekly_goal": 5,
+    "created_at": "2026-02-19T18:02:25.647Z",
+    "updated_at": "2026-02-22T17:11:14.243Z"
+  }
+},
+{
+  "model": "progress.studentprogress",
+  "pk": 9,
+  "fields": {
+    "student": 16,
+    "total_lessons_viewed": 4,
+    "total_exercises_completed": 1,
+    "total_quizzes_completed": 0,
+    "total_points": 0,
+    "current_streak": 0,
+    "longest_streak": 0,
+    "last_activity": null,
+    "weekly_goal": 5,
+    "created_at": "2026-02-22T19:56:56.324Z",
+    "updated_at": "2026-02-22T23:27:49.668Z"
+  }
+},
+{
+  "model": "progress.achievement",
+  "pk": 1,
+  "fields": {
+    "name": "Première leçon",
+    "description": "Terminez votre première leçon",
+    "achievement_type": "lessons",
+    "icon": "book-open",
+    "color": "#3B82F6",
+    "requirement": 1
+  }
+},
+{
+  "model": "progress.achievement",
+  "pk": 2,
+  "fields": {
+    "name": "Apprenti",
+    "description": "Terminez 10 leçons",
+    "achievement_type": "lessons",
+    "icon": "graduation-cap",
+    "color": "#10B981",
+    "requirement": 10
+  }
+},
+{
+  "model": "progress.achievement",
+  "pk": 3,
+  "fields": {
+    "name": "Premier exercice",
+    "description": "Réussissez votre premier exercice",
+    "achievement_type": "exercises",
+    "icon": "check-circle",
+    "color": "#F59E0B",
+    "requirement": 1
+  }
+},
+{
+  "model": "progress.achievement",
+  "pk": 4,
+  "fields": {
+    "name": "Série de 3 jours",
+    "description": "Connectez-vous 3 jours de suite",
+    "achievement_type": "streak",
+    "icon": "flame",
+    "color": "#EF4444",
+    "requirement": 3
+  }
+},
+{
+  "model": "progress.achievement",
+  "pk": 5,
+  "fields": {
+    "name": "Expert",
+    "description": "Obtenez 1000 points",
+    "achievement_type": "score",
+    "icon": "star",
+    "color": "#8B5CF6",
+    "requirement": 1000
+  }
+}
+]

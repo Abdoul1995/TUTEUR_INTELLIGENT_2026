@@ -10,7 +10,7 @@ services:
     name: tuteur-backend
     env: python
     pythonVersion: "3.12.8"
-    buildCommand: "pip install -r requirements.txt && python manage.py collectstatic --noinput && python manage.py migrate && python create_admin.py && python init_data.py"
+    buildCommand: "pip install -r requirements.txt && python manage.py collectstatic --noinput && python manage.py migrate && python create_admin.py && python init_data.py && python manage.py loaddata data_export.json"
     startCommand: "gunicorn backend.wsgi:application"
     envVars:
       - key: DATABASE_URL
