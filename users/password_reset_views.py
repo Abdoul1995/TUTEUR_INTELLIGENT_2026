@@ -7,12 +7,14 @@ from django.utils.http import urlsafe_base64_encode, urlsafe_base64_decode
 from django.utils.encoding import force_bytes, force_str
 from django.core.mail import send_mail
 from django.conf import settings
+import logging
 from rest_framework import status, views
 from rest_framework.response import Response
 from rest_framework.permissions import AllowAny
 from .serializers import PasswordResetSerializer, PasswordResetConfirmSerializer
 
 User = get_user_model()
+logger = logging.getLogger(__name__)
 
 class PasswordResetRequestView(views.APIView):
     """Vue pour demander la réinitialisation du mot de passe."""
@@ -38,13 +40,19 @@ class PasswordResetRequestView(views.APIView):
                           f"Si vous n'êtes pas à l'origine de cette demande, vous pouvez ignorer cet email.\n\n" \
                           f"L'équipe Tuteur Intelligent"
                 
-                send_mail(
-                    subject,
-                    message,
-                    settings.DEFAULT_FROM_EMAIL,
-                    [email],
-                    fail_silently=False,
-                )
+                try:
+                    send_mail(
+                        subject,
+                        message,
+                        settings.DEFAULT_FROM_EMAIL,
+                        [email],
+                        fail_silently=False,
+                    )
+                except Exception as e:
+                    logger.error(f"Failed to send password reset email to {email}: {str(e)}")
+                    return Response({
+                        "error": "Une erreur est survenue lors de l'envoi de l'email de réinitialisation. Veuillez vérifier la configuration du serveur mail."
+                    }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
                 
                 return Response({
                     "message": "Si un compte existe avec cet email, un lien de réinitialisation vous a été envoyé."

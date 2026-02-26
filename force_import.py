@@ -1,5 +1,6 @@
 
 import os
+import json
 import django
 import sys
 from django.core.management import call_command
@@ -16,9 +17,20 @@ def clean_and_load():
     print("🚀 [FORCE IMPORT] Starting database restoration...")
     
     file_path = 'data_export.json'
+    print(f"📊 [FORCE IMPORT] Checking environment...")
+    print(f"  - Database: {connection.settings_dict.get('NAME')}")
+    print(f"  - Host: {connection.settings_dict.get('HOST')}")
+    
     if not os.path.exists(file_path):
-        print(f"❌ [FORCE IMPORT] Error: {file_path} not found!")
+        print(f"❌ [FORCE IMPORT] Error: {file_path} not found in {os.getcwd()}!")
         return
+
+    try:
+        with open(file_path, 'r') as f:
+            data = json.load(f)
+            print(f"  - JSON file found: {len(data)} objects detected.")
+    except Exception as e:
+        print(f"❌ [FORCE IMPORT] Could not read JSON file: {e}")
 
     # Tables to clear to avoid conflicts
     # Order matters for foreign keys - we use CASCADE anyway
