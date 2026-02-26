@@ -18,27 +18,9 @@ import {
   Maximize2,
   X
 } from 'lucide-react'
-import { InlineMath } from 'react-katex'
+import { LatexRenderer } from '../components/common/LatexRenderer'
 import type { Exercise } from '../types'
 
-const LatexRenderer = ({ text }: { text: string }) => {
-  if (!text) return null;
-
-  // Split by $ but keep the $ as part of the match
-  const parts = text.split(/(\$[^$]+\$)/g);
-
-  return (
-    <>
-      {parts.map((part, i) => {
-        if (part.startsWith('$') && part.endsWith('$')) {
-          const mathContent = part.slice(1, -1);
-          return <InlineMath key={i} math={mathContent} />;
-        }
-        return <span key={i}>{part}</span>;
-      })}
-    </>
-  );
-};
 
 const getMediaUrl = (url: string) => {
   if (!url) return '';

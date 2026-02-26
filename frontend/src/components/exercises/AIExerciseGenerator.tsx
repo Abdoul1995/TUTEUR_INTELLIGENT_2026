@@ -3,6 +3,7 @@ import { Bot, Sparkles, BookOpen, GraduationCap, Layers } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { aiService } from '../../services/ai.service';
 import { Subject } from '../../types';
+import { LatexRenderer } from '../common/LatexRenderer';
 
 interface AIExerciseGeneratorProps {
     subjects?: Subject[];
@@ -231,13 +232,11 @@ export const AIExerciseGenerator: React.FC<AIExerciseGeneratorProps> = ({ subjec
                                         {generatedExercise.difficulty || formData.difficulty || 'Moyen'}
                                     </span>
                                 </div>
-                                <p className="text-gray-700 mb-4">{generatedExercise.description}</p>
+                                <p className="text-gray-700 mb-4"><LatexRenderer text={generatedExercise.description} /></p>
 
                                 {/* Display Question Content Preview */}
                                 <div className="bg-white p-4 rounded-lg border border-purple-100 shadow-sm">
-                                    {generatedExercise.content.question && (
-                                        <p className="font-medium mb-3">{generatedExercise.content.question}</p>
-                                    )}
+                                    <p className="font-medium mb-3"><LatexRenderer text={generatedExercise.content.question} /></p>
 
                                     {/* QCM Preview */}
                                     {generatedExercise.content.options && (
@@ -247,7 +246,7 @@ export const AIExerciseGenerator: React.FC<AIExerciseGeneratorProps> = ({ subjec
                                                     <div className="w-6 h-6 rounded-full bg-gray-100 text-gray-500 flex items-center justify-center text-xs font-bold">
                                                         {String.fromCharCode(65 + idx)}
                                                     </div>
-                                                    <span>{opt}</span>
+                                                    <span><LatexRenderer text={opt} /></span>
                                                 </div>
                                             ))}
                                         </div>
@@ -256,7 +255,7 @@ export const AIExerciseGenerator: React.FC<AIExerciseGeneratorProps> = ({ subjec
                                     {/* Classic Preview */}
                                     {generatedExercise.content.text && (
                                         <div className="mb-4 text-gray-700 italic border-l-4 border-purple-200 pl-3">
-                                            {generatedExercise.content.text}
+                                            <LatexRenderer text={generatedExercise.content.text} />
                                         </div>
                                     )}
                                     {generatedExercise.content.questions && Array.isArray(generatedExercise.content.questions) && (
@@ -266,20 +265,20 @@ export const AIExerciseGenerator: React.FC<AIExerciseGeneratorProps> = ({ subjec
                                                     return (
                                                         <div key={idx} className="bg-gray-50 p-3 rounded-lg">
                                                             <span className="font-bold text-purple-600 mr-2">{idx + 1}.</span>
-                                                            {q}
+                                                            <LatexRenderer text={q} />
                                                         </div>
                                                     );
                                                 }
                                                 return (
                                                     <div key={idx} className="bg-gray-50 p-3 rounded-lg">
                                                         <span className="font-bold text-purple-600 mr-2">{idx + 1}.</span>
-                                                        <span>{q.question || q.text || ''}</span>
+                                                        <span><LatexRenderer text={q.question || q.text || ''} /></span>
                                                         {q.options && Array.isArray(q.options) && (
                                                             <div className="mt-2 pl-6 space-y-1">
                                                                 {q.options.map((opt: string, i: number) => (
                                                                     <div key={i} className="text-sm text-gray-600 flex items-center gap-2">
                                                                         <div className="w-5 h-5 rounded-full bg-white border border-gray-300 text-xs flex items-center justify-center">{String.fromCharCode(65 + i)}</div>
-                                                                        {opt}
+                                                                        <LatexRenderer text={opt} />
                                                                     </div>
                                                                 ))}
                                                             </div>
