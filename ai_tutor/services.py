@@ -83,9 +83,15 @@ class AIService:
             )
 
         # LaTeX instruction for math
-        math_instruction = ""
-        if "math" in subject_lower:
-            math_instruction = "IMPORTANT: Puisque c'est un exercice de mathématiques, utilise la notation LaTeX pour toutes les expressions mathématiques (ex: $x^2$, $\\frac{1}{2}$, $\\sqrt{x}$). Toutes les formules doivent être entourées de symboles $.\n"
+        # Instruction for scientific/math content
+        math_instruction = (
+            "IMPORTANT for mathematics and science: Use LaTeX notation for ALL mathematical expressions, "
+            "chemical formulas, and technical symbols. \n"
+            "EVERY LaTeX expression MUST be enclosed in single dollar signs for inline (e.g., $x^2$) "
+            "or double dollar signs for blocks (e.g., $$\\frac{1}{2}$$). \n"
+            "Examples: $\\lim_{x \\to \\infty}$, $\\sqrt{a^2 + b^2}$, $H_2O$, $\\alpha \\neq \\beta$.\n"
+            "DO NOT use bare backslashes without delimiters."
+        )
 
         # Language instruction
         lang_name = "Français" if language == 'fr' else "Anglais"
