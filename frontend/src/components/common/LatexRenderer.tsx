@@ -6,21 +6,26 @@ interface LatexRendererProps {
     text: string;
 }
 
+/**
+ * Fixes common LaTeX commands that might have been interpreted as JS escape sequences
+ * (e.g., \theta becoming \t + heta, \frac becoming \f + rac)
+ */
+const fixEscapedLatex = (s: string) => {
+    return s
+        .replace(/\t/g, '\\t')   // tab -> \t
+        .replace(/\f/g, '\\f')   // form feed -> \f
+        .replace(/\v/g, '\\v')   // vertical tab -> \v
+        .replace(/\b/g, '\\b')   // backspace -> \b
+        .replace(/\r/g, '\\r');  // carriage return -> \r
+    // Note: we don't fix \n here as it's often intended as a newline in the text
+};
+
 export const LatexRenderer: React.FC<LatexRendererProps> = ({ text }) => {
     if (!text) return null;
 
-    // First, try to detect if there's LaTeX that isn't wrapped in delimiters
-    // We look for common LaTeX commands like \frac, \sqrt, \lim, \int, \sum, \alpha, \beta, etc.
-    // If we find them NOT inside $, $$, \[, or \(, we might want to wrap the whole text or parts of it.
-    // However, a better approach is to improve the regex to also capture these commands if they're not delimited.
-
-    // Regex to capture:
-    // 1. $$ ... $$ (Block)
-    // 2. \[ ... \] (Block)
-    // 3. $ ... $ (Inline)
-    // 4. \( ... \) (Inline)
-    // 5. Common LaTeX commands: \frac, \sqrt, \lim, \infty, etc. (when not already captured)
-    const regex = /(\$\$[\s\S]+?\$\$|\\\[[\s\S]+?\\\]|\$[\s\S]+?\$|\\\([\s\S]+?\\\)|\\frac\{[\s\S]*?\}\{[\s\S]*?\}|\\sqrt\{[\s\S]*?\}|\\lim_\{[\s\S]*?\}|\\infty|\\times|\\div|\\pm|\\neq|\\leq|\\geq|\\alpha|\\beta|\\gamma|\\delta|\\theta|\\pi|\\sigma|\\omega)/g;
+    // Use a standard delimiter-based regex for stability.
+    // The AI is now instructed to always use these delimiters.
+    const regex = /(\$\$[\s\S]+?\$\$|\\\[[\s\S]+?\\\]|\$[\s\S]+?\$|\\\([\s\S]+?\\\))/g;
 
     const parts = text.split(regex);
 
@@ -34,7 +39,7 @@ export const LatexRenderer: React.FC<LatexRendererProps> = ({ text }) => {
                     (part.startsWith('\\[') && part.endsWith('\\]'))) {
                     const math = part.startsWith('$$') ? part.slice(2, -2) : part.slice(2, -2);
                     try {
-                        return <BlockMath key={i} math={math} />;
+                        return <BlockMath key={i} math={fixEscapedLatex(math)} />;
                     } catch (e) {
                         return <span key={i} className="text-red-500">{part}</span>;
                     }
@@ -45,23 +50,18 @@ export const LatexRenderer: React.FC<LatexRendererProps> = ({ text }) => {
                     (part.startsWith('\\(') && part.endsWith('\\)'))) {
                     const math = part.startsWith('$') ? part.slice(1, -1) : part.slice(2, -2);
                     try {
-                        return <InlineMath key={i} math={math} />;
+                        return <InlineMath key={i} math={fixEscapedLatex(math)} />;
                     } catch (e) {
                         return <span key={i} className="text-red-500">{part}</span>;
                     }
                 }
 
-                // Bare LaTeX commands caught by the regex
-                if (part.startsWith('\\')) {
-                    try {
-                        return <InlineMath key={i} math={part} />;
-                    } catch (e) {
-                        return <span key={i}>{part}</span>;
-                    }
-                }
-
-                // Plain text
-                return <span key={i}>{part}</span>;
+                // Plain text - also apply fixEscapedLatex but carefully
+                // In plain text, we only want to fix them if they look like they were meant to be LaTeX
+                // but for simplicity and safety, let's just render the text. 
+                // If it's not in a math block, it's safer to leave as is or only fix very obvious ones.
+                const fixedPlainText = fixEscapedLatex(part);
+                return <span key={i}>{fixedPlainText}</span>;
             })}
         </>
     );
