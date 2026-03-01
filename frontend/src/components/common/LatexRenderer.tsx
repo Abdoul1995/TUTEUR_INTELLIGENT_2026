@@ -15,16 +15,41 @@ const fixEscapedLatex = (s: string) => {
         .replace(/\t/g, '\\t')   // tab -> \t
         .replace(/\f/g, '\\f')   // form feed -> \f
         .replace(/\v/g, '\\v')   // vertical tab -> \v
-        .replace(/\b/g, '\\b')   // backspace -> \b
+        .replace(/[\b]/g, '\\b') // backspace -> \b
         .replace(/\r/g, '\\r');  // carriage return -> \r
     // Note: we don't fix \n here as it's often intended as a newline in the text
+};
+
+/**
+ * Automatically wraps common LaTeX commands in $ $ if they are missing delimiters
+ */
+const wrapBareLatex = (s: string) => {
+    // List of common LaTeX commands that should likely be in math mode
+    const commonCommands = [
+        'frac', 'sqrt', 'lim', 'sum', 'int', 'alpha', 'beta', 'gamma',
+        'delta', 'epsilon', 'zeta', 'eta', 'theta', 'iota', 'kappa', 'lambda',
+        'mu', 'nu', 'xi', 'omicron', 'pi', 'rho', 'sigma', 'tau', 'upsilon',
+        'phi', 'chi', 'psi', 'omega', 'pm', 'times', 'div', 'neq', 'le', 'ge',
+        'approx', 'infty', 'rightarrow', 'leftarrow', 'log', 'sin', 'cos', 'tan',
+        'nabla', 'partial', 'forall', 'exists', 'emptyset', 'in', 'notin', 'ni',
+        'prod', 'coprod', 'cap', 'cup', 'subset', 'supset', 'subseteq', 'supseteq'
+    ];
+
+    // Matche \command suivi par zéro ou plusieurs {arg}
+    const generalRegex = /\\([a-zA-Z]+)((?:\{[^{}]*\})*)/g;
+
+    return s.replace(generalRegex, (match, cmd) => {
+        if (commonCommands.includes(cmd)) {
+            return `$${match}$`;
+        }
+        return match;
+    });
 };
 
 export const LatexRenderer: React.FC<LatexRendererProps> = ({ text }) => {
     if (!text) return null;
 
     // Use a standard delimiter-based regex for stability.
-    // The AI is now instructed to always use these delimiters.
     const regex = /(\$\$[\s\S]+?\$\$|\\\[[\s\S]+?\\\]|\$[\s\S]+?\$|\\\([\s\S]+?\\\))/g;
 
     const parts = text.split(regex);
@@ -41,7 +66,7 @@ export const LatexRenderer: React.FC<LatexRendererProps> = ({ text }) => {
                     try {
                         return <BlockMath key={i} math={fixEscapedLatex(math)} />;
                     } catch (e) {
-                        return <span key={i} className="text-red-500">{part}</span>;
+                        return <span key={i} className="bg-red-100 text-red-700 px-1 rounded">{part}</span>;
                     }
                 }
 
@@ -52,15 +77,24 @@ export const LatexRenderer: React.FC<LatexRendererProps> = ({ text }) => {
                     try {
                         return <InlineMath key={i} math={fixEscapedLatex(math)} />;
                     } catch (e) {
-                        return <span key={i} className="text-red-500">{part}</span>;
+                        return <span key={i} className="bg-red-100 text-red-700 px-1 rounded">{part}</span>;
                     }
                 }
 
-                // Plain text - also apply fixEscapedLatex but carefully
-                // In plain text, we only want to fix them if they look like they were meant to be LaTeX
-                // but for simplicity and safety, let's just render the text. 
-                // If it's not in a math block, it's safer to leave as is or only fix very obvious ones.
+                // Plain text - apply wrapBareLatex to catch missed commands
                 const fixedPlainText = fixEscapedLatex(part);
+                const wrappedText = wrapBareLatex(fixedPlainText);
+
+                // If wrapBareLatex added $, we need to split again or recursively render
+                // For simplicity here, if it contains $, we just return it as a string 
+                // but the better way is to avoid adding $ and instead return a nested LatexRenderer
+                // However, react-katex's InlineMath already handles the $ if we pass it correctly.
+
+                if (wrappedText !== fixedPlainText) {
+                    // Recurse once if we added delimiters
+                    return <LatexRenderer key={i} text={wrappedText} />;
+                }
+
                 return <span key={i}>{fixedPlainText}</span>;
             })}
         </>

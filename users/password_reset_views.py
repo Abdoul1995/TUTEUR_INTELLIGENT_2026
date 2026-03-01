@@ -61,13 +61,13 @@ class PasswordResetRequestView(views.APIView):
                     }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
                 
                 return Response({
-                    "message": "Si un compte existe avec cet email, un lien de réinitialisation vous a été envoyé."
+                    "message": "Un lien de réinitialisation vous a été envoyé par email."
                 }, status=status.HTTP_200_OK)
             
-            # Security: we don't reveal if the user exists or not
+            # Notifying if user is not found
             return Response({
-                "message": "Si un compte existe avec cet email, un lien de réinitialisation vous a été envoyé."
-            }, status=status.HTTP_200_OK)
+                "error": "Aucun compte n'est associé à cette adresse email."
+            }, status=status.HTTP_404_NOT_FOUND)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 class PasswordResetConfirmView(views.APIView):

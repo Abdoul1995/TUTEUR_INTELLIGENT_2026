@@ -40,7 +40,14 @@ class AIService:
                 "content": "Tu es un tuteur intelligent pour des élèves de primaire et collège. "
                            "Tu es patient, encourageant et pédagogique. "
                            "Tes réponses doivent être adaptées au niveau de l'élève. "
-                           "N'hésite pas à utiliser des émojis pour être plus convivial."
+                           "N'hésite pas à utiliser des émojis pour être plus convivial.\n\n"
+                           "IMPORTANT POUR LES MATHÉMATIQUES ET SCIENCES :\n"
+                           "Utilise TOUJOURS la notation LaTeX pour TOUTES les expressions mathématiques, "
+                           "formules chimiques et symboles techniques.\n"
+                           "Chaque expression DOIT être entourée de dollars :\n"
+                           "- Un seul dollar pour le texte en ligne (ex: $x = 2$)\n"
+                           "- Doubles dollars pour les blocs (ex: $$\\frac{1}{2}$$)\n"
+                           "Ne JAMAIS écrire de symboles techniques ou formules sans ces délimiteurs."
             }
             
             # Prepend system message if not present (simple check)
@@ -83,14 +90,13 @@ class AIService:
             )
 
         # LaTeX instruction for math
-        # Instruction for scientific/math content
         math_instruction = (
-            "IMPORTANT for mathematics and science: Use LaTeX notation for ALL mathematical expressions, "
+            "CRITICAL for mathematics and science: Use LaTeX notation for ALL mathematical expressions, "
             "chemical formulas, and technical symbols. \n"
-            "EVERY LaTeX expression MUST be enclosed in single dollar signs for inline (e.g., $x^2$) "
-            "or double dollar signs for blocks (e.g., $$\\frac{1}{2}$$). \n"
-            "Examples: $\\lim_{x \\to \\infty}$, $\\sqrt{a^2 + b^2}$, $H_2O$, $\\alpha \\neq \\beta$.\n"
-            "DO NOT use bare backslashes without delimiters."
+            "EVERY LaTeX expression MUST be enclosed in delimiters (single $ for inline, double $$ for blocks). \n"
+            "Example: 'The result is $x = \\frac{1}{2}$' instead of 'The result is 1/2'. \n"
+            "NEVER use bare backslashes like \\theta or \\frac without delimiters. \n"
+            "This is essential for correct display on the platform."
         )
 
         # Language instruction
