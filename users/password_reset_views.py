@@ -48,10 +48,16 @@ class PasswordResetRequestView(views.APIView):
                         [email],
                         fail_silently=False,
                     )
+                    logger.info(f"Successfully sent password reset email to {email}")
                 except Exception as e:
-                    logger.error(f"Failed to send password reset email to {email}: {str(e)}")
+                    logger.error(f"Failed to send password reset email to {email}")
+                    logger.error(f"Error type: {type(e).__name__}")
+                    logger.error(f"Error message: {str(e)}")
+                    # Traceback for deeper debugging
+                    import traceback
+                    logger.error(traceback.format_exc())
                     return Response({
-                        "error": "Une erreur est survenue lors de l'envoi de l'email de réinitialisation. Veuillez vérifier la configuration du serveur mail."
+                        "error": f"Erreur d'envoi d'email: {str(e)}"
                     }, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
                 
                 return Response({

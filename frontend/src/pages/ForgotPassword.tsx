@@ -20,7 +20,21 @@ export function ForgotPassword() {
                 setIsSent(true)
             }
         } catch (err: any) {
-            setError(err.response?.data?.error || "Une erreur est survenue. Veuillez réessayer.")
+            const errorData = err.response?.data
+            let errorMessage = "Une erreur est survenue. Veuillez réessayer."
+
+            if (errorData) {
+                if (typeof errorData === 'string') {
+                    errorMessage = errorData
+                } else if (errorData.error) {
+                    errorMessage = errorData.error
+                } else if (errorData.email) {
+                    errorMessage = errorData.email[0]
+                } else {
+                    errorMessage = JSON.stringify(errorData)
+                }
+            }
+            setError(errorMessage)
         } finally {
             setIsLoading(false)
         }
